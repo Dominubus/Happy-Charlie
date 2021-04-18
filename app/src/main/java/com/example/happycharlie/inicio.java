@@ -23,6 +23,7 @@ inicio extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+        conexionSQLiteHelper.ConexionSQLiteHelper conn= new ConexionSQLiteHelper(this,"bd mensajes",null,1);
     }
 
 }
