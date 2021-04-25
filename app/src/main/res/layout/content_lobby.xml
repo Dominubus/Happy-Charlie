@@ -8,6 +8,21 @@
     tools:context=".lobby"
     tools:showIn="@layout/activity_lobby">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="411dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="151dp"
+        android:contentDescription="@string/pug"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.249"
+        app:srcCompat="@drawable/pug1" />
+
     <ImageButton
         android:id="@+id/charlie"
         android:layout_width="411dp"
