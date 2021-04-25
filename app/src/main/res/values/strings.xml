@@ -17,5 +17,6 @@
     <string name="Mns">Mensaje</string>
     <string name="B">B</string>
     <string name="Imag">Informacion</string>
+    <string name="configuracion">configuracion</string>
 
 </resources>
