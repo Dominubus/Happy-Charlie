@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Happy Charlie</string>
+    <string name="app_name" translatable="false">Happy Charlie</string>
     <string name="title_activity_inicio">Inicio</string>
     <string name="bienvenida">Bienvenid@</string>
     <string name="tocar">Toca para continuar</string>
+    <string name="base_de_datos" translatable="false">BASE DE DATOS</string>
+
 </resources>

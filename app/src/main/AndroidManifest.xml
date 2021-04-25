@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".inicio"
+            android:name=".MainActivity"
             android:label="@string/title_activity_inicio"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
