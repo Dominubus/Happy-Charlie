@@ -18,5 +18,8 @@
     <string name="B">B</string>
     <string name="Imag">Informacion</string>
     <string name="configuracion">configuracion</string>
+    <string name="globo_imagen">globo_imagen</string>
+    <string name="mensaje_de_animo">mensaje_de_animo</string>
+    <string name="msj_principal">el mensaje de animo irá aquí</string>
 
 </resources>
