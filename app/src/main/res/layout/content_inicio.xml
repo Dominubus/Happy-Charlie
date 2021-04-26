@@ -110,8 +110,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
+        android:layout_width="194dp"
+        android:layout_height="75dp"
         android:layout_marginTop="42dp"
         android:layout_marginBottom="88dp"
         android:contentDescription="@string/mensaje_de_animo"

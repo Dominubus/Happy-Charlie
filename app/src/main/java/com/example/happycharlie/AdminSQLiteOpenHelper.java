@@ -23,6 +23,16 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('7','Sé que ha sido duro, pero todavía te estoy animando.')");
         BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('8','Es muy sencillo, si pretendes volar tendrás que desprenderte de las cosas que te pesan.')");
         BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('9','Un poco de progreso todos los días se suma a los grandes resultados.')");
+        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('10','Las cosas buenas llegan a los que saben esperar.')");
+        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('11','No importa lo que pase, siempre tendrás una historia que contar.')");
+        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('12','Todo error deja una enseñanza, toda enseñanza deja una experiencia, y toda experiencia deja una huella.')");
+        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('13','No busques el momento perfecto, solo busca el momento y hazlo perfecto.')");
+        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('14','Cada día es una nueva oportunidad para cambiar tu vida.')");
+        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('15','Ningún mar en calma hizo experto a un marinero.')");
+        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('16','El momento que da más miedo es siempre justo antes de empezar.')");
+        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('17','Esperar ser otra persona es una pérdida de tiempo.')");
+        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('18','Eres suficiente tal y como eres.')");
+        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('19','Tu mejor mentor es tu mayor error.')");
     }
 
     @Override
