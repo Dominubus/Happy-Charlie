@@ -1,84 +1,72 @@
 package com.example.happycharlie;
 
 import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Toast;
+
+import com.example.happycharlie.funcionalidadMensajeAnimo.CrearSqliteMensajes;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 
 public class MainActivity extends AppCompatActivity {
-        private EditText etCodigo, etTipo, etMensaje;
 
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.base_de_datos);
-
-        etCodigo=(EditText)findViewById(R.id.etCodigoMe);
-        etTipo=(EditText)findViewById(R.id.etTipoMe);
-        etMensaje=(EditText)findViewById(R.id.etMensajeMe);
-
-
+        setContentView(R.layout.base_de_datos);  //cambiar lugar de
+        iniciar();
     }
 
-    // metodo para registrar los mensajes
-    public void guardarMensaje(View view){
-        AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(this, "BDMensajes",  null, 1);
-        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
-
-        String codigo = etCodigo.getText().toString();
-        String tipo= etTipo.getText().toString();
-        String mensaje= etMensaje.getText().toString();
-
-        if(!codigo.isEmpty() && !tipo.isEmpty() && !mensaje.isEmpty()){
-            ContentValues registro= new ContentValues();
-            registro.put ("codigo", codigo);
-            registro.put ("tipo", tipo);
-            registro.put ("mensaje", mensaje);
-
-            BaseDeDatos.insert("mensajesAnimo", null, registro);
-
-            BaseDeDatos.close();
-            etCodigo.setText("");
-            etTipo.setText("");
-            etMensaje.setText("");
-            Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
-
-        }else{
-            Toast.makeText( this, "Debes llenar todos los campos", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-    // ver mensaje
-    public void MostrarMensaje(View view){
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"BDMensajes",  null,  1);
-        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
-
-        String codigo = etCodigo.getText().toString();
-
-        if(!codigo.isEmpty()){
-            Cursor fila = BaseDeDatos.rawQuery("select Mensaje from mensajesAnimo where cod=" + codigo,  null);
-
-            if (fila.moveToFirst()){
-                etMensaje.setText(fila.getString(0));
-                BaseDeDatos.close();
-
-            }else{
-                Toast.makeText(this, "No existe Mensaje", Toast.LENGTH_SHORT).show();
-                BaseDeDatos.close();
+    private void iniciar(){
+        if (tamanhoRegistros() == 0) {
+            String[] texto= leerArchivo();
+            CrearSqliteMensajes admin= new CrearSqliteMensajes(this, "mensajesDeAnimo", null, 1);
+            SQLiteDatabase db = admin.getWritableDatabase();
+            db.beginTransaction();
+            for (int i=0; i< texto.length; i++){
+                String[] linea = texto[i].split(";");
+                ContentValues contentValues= new ContentValues();
+                contentValues.put("id", linea[0]);
+                contentValues.put("tipoMensaje", linea[1]);
+                contentValues.put("mensaje", linea[2]);
+                db.insert("mensajesDeAnimo",null,contentValues);
             }
-
-        }else{
-            Toast.makeText(this, "número de codigo aleatorio", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
+            db.setTransactionSuccessful();
+            db.endTransaction();
+        }else {
+            Toast.makeText(this, "Tabla ya esta Registrada", Toast.LENGTH_SHORT).show();
         }
+    }
+    private long tamanhoRegistros(){
+        CrearSqliteMensajes admin= new CrearSqliteMensajes(this, "mensajesDeAnimo",null, 1);
+        SQLiteDatabase db= admin.getReadableDatabase();
+        long cantidad =  DatabaseUtils.queryNumEntries(db,"mensajesDeAnimo" );
+        db.close();
+        return cantidad;
+    }
+
+    private String[] leerArchivo(){
+        InputStream inputStream = getResources().openRawResource(R.raw.registros);
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        try{
+            int i= inputStream.read();
+            while (i !=-1){
+                byteArrayOutputStream.write(i);
+                i= inputStream.read();
+            }
+            inputStream.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return byteArrayOutputStream.toString().split("\n");
     }
 }
-
