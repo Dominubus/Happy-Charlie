@@ -43,7 +43,7 @@ public class inicio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
-        mHideHandler.postDelayed(mHideRunnable, 30000);
+        mHideHandler.postDelayed(mHideRunnable, 20000);
         tv = (TextView)findViewById(R.id.textView2);
         tv.setText(BuscarCodigo());
 
