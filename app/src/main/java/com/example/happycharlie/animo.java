@@ -30,16 +30,16 @@ public class animo extends AppCompatActivity {
     //Genera numero random y lo convierte en String
     public String generarNroRandom(){
         Random miRandom = new Random();
-        return String.valueOf(miRandom.nextInt(10));
+        return String.valueOf(miRandom.nextInt(115)+1);
     }
 
     //Metodo para buscar codigo del mensaje en la BD con un numero random
     public String BuscarCodigo() {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "mensajesDeAnimo", null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
         String men = "";
         String codigo = generarNroRandom();
-        Cursor fila = BaseDeDatos.rawQuery("select mensaje from mensajes where codigo =" + codigo, null);
+        Cursor fila = BaseDeDatos.rawQuery("select mensaje from mensajesDeAnimo where id =" + codigo, null);
         if(fila.moveToFirst()){
             men = fila.getString(0);
             BaseDeDatos.close();

@@ -9,8 +9,10 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase BaseDeDatos){
-        BaseDeDatos.execSQL("create table mensajes(codigo int primary key, mensaje text)");
+    public void onCreate(SQLiteDatabase bd){
+        bd.execSQL("CREATE TABLE mensajesDeAnimo (id int PRIMARY KEY , tipoMensaje TEXT, mensaje TEXT)");
+        System.out.println("Base creada");
+        /*BaseDeDatos.execSQL("create table mensajes(codigo int primary key, mensaje text)");
 
         //Mensajes de Anime insertados manualmente
         BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('0','Todo lo que necesitas para lograr tus objetivos ya está en ti.')");
@@ -32,11 +34,12 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('16','El momento que da más miedo es siempre justo antes de empezar.')");
         BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('17','Esperar ser otra persona es una pérdida de tiempo.')");
         BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('18','Eres suficiente tal y como eres.')");
-        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('19','Tu mejor mentor es tu mayor error.')");
+        BaseDeDatos.execSQL("insert into mensajes(codigo, mensaje) values('19','Tu mejor mentor es tu mayor error.')");*/
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+    public void onUpgrade(SQLiteDatabase bd, int oldVersion, int newVersion) {
+        bd.execSQL("DROP TABLE mensajesDeAnimo");
+        onCreate(bd);
     }
 }
