@@ -22,5 +22,10 @@
     <string name="mensaje_de_animo">mensaje_de_animo</string>
     <string name="msj_principal">el mensaje de animo irá aquí</string>
     <string name="globo_imagen_msj">globo_imagen_msj</string>
+    <string name="title_activity_ruido">ruido</string>
+    <string name="title_activity_musica">musica</string>
+    <string name="title_activity_meditacion">meditacion</string>
+    <string name="title_activity_calculadora">calculadora</string>
+    <string name="title_activity_configuracion">configuracion</string>
 
 </resources>

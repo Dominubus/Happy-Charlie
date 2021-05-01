@@ -114,10 +114,7 @@ public class inicio extends AppCompatActivity {
             Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
             db.setTransactionSuccessful();
             db.endTransaction();
-        }else {
-            Toast.makeText(this, "Tabla ya esta Registrada", Toast.LENGTH_SHORT).show();
         }
-
     }
     private long tamanhoRegistros(){
         SQLiteDatabase db= admin.getReadableDatabase();

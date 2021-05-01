@@ -29,6 +29,26 @@ public class lobby extends AppCompatActivity {
         Intent siguiente = new Intent(this, animo.class);
         startActivity(siguiente);
     }
+    public void pantallaRuido(View view) {
+        Intent siguiente = new Intent(this, ruido.class);
+        startActivity(siguiente);
+    }
+    public void pantallaMusica(View view) {
+        Intent siguiente = new Intent(this, musica.class);
+        startActivity(siguiente);
+    }
+    public void pantallaMeditacion(View view) {
+        Intent siguiente = new Intent(this, meditacion.class);
+        startActivity(siguiente);
+    }
+    public void pantallaCalculadora(View view) {
+        Intent siguiente = new Intent(this, calculadora.class);
+        startActivity(siguiente);
+    }
+    public void pantallaConfiguracion(View view) {
+        Intent siguiente = new Intent(this, configuracion.class);
+        startActivity(siguiente);
+    }
 
     public void cambioEmocion(View view) {
         ImageButton charlie = (ImageButton)findViewById(R.id.charlie);

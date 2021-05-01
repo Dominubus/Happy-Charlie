@@ -9,52 +9,45 @@
     tools:showIn="@layout/activity_lobby">
 
 
-
     <ImageButton
         android:id="@+id/charlie"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="127dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="151dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="45dp"
-        android:contentDescription="@string/pug"
+        android:layout_marginTop="100dp"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/pug"
         android:onClick="cambioEmocion"
-        app:layout_constraintBottom_toTopOf="@+id/btnRuido"
+
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pug1" />
+
     <ImageButton
         android:id="@+id/btnRuido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="43dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="244dp"
-        android:layout_marginBottom="212dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/ruido"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="pantallaRuido"
+        app:layout_constraintBottom_toTopOf="@id/btnMeditacion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/charlie"
         app:srcCompat="@drawable/ruido" />
 
     <ImageButton
         android:id="@+id/btnMusica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="212dp"
-        android:contentDescription="@string/musica"
+        android:layout_marginEnd="43dp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/musica"
+        android:onClick="pantallaMusica"
+        app:layout_constraintBottom_toTopOf="@id/btnAnimo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnRuido"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/charlie"
         app:srcCompat="@drawable/musica" />
 
     <ImageButton
@@ -63,28 +56,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="43dp"
         android:layout_marginEnd="244dp"
-        android:layout_marginBottom="102dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/meditacion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="pantallaMeditacion"
+        app:layout_constraintBottom_toTopOf="@id/btnCalculadora"
         app:layout_constraintTop_toBottomOf="@+id/btnRuido"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/meditacion" />
 
     <ImageButton
         android:id="@+id/btnAnimo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="102dp"
+        android:layout_marginEnd="43dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/mensajes"
         android:onClick="pantallaAnimo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnConfiguracion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnMeditacion"
         app:layout_constraintTop_toBottomOf="@+id/btnMusica"
         app:srcCompat="@drawable/animo" />
 
@@ -94,30 +83,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="43dp"
         android:layout_marginEnd="244dp"
-        android:layout_marginBottom="3dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/calculadora"
+        android:onClick="pantallaCalculadora"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMeditacion"
         app:srcCompat="@drawable/calculadora" />
 
     <ImageButton
-        android:id="@+id/button3"
+        android:id="@+id/btnConfiguracion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="43dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/configuracion"
         android:text="@string/configuracion"
         android:visibility="visible"
+        android:onClick="pantallaConfiguracion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnCalculadora"
         app:layout_constraintTop_toBottomOf="@+id/btnAnimo"
         app:srcCompat="@drawable/configuracion" />
 

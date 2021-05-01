@@ -24,8 +24,9 @@ public class animo extends AppCompatActivity {
     }
 
     public void volverLobby(View view) {
-        Intent anterior = new Intent(this, lobby.class);
-        startActivity(anterior);
+        //Intent anterior = new Intent(this, lobby.class);
+        //startActivity(anterior);
+        finish();
     }
     //Genera numero random y lo convierte en String
     public String generarNroRandom(){

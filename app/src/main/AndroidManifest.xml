@@ -10,32 +10,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PruebaD"></activity>
+        <activity
+            android:name=".configuracion"
+            android:label="@string/title_activity_configuracion"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".calculadora"
+            android:label="@string/title_activity_calculadora"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".meditacion"
+            android:label="@string/title_activity_meditacion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".musica"
+            android:label="@string/title_activity_musica"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ruido"
+            android:label="@string/title_activity_ruido"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PruebaD" />
         <activity
             android:name=".animo"
             android:label="@string/title_activity_animo"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".lobby"
             android:label="@string/title_activity_lobby"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".inicio"
             android:label="Inicio"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
