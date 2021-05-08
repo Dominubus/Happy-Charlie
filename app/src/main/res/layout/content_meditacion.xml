@@ -28,7 +28,94 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:orientation="vertical" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:contentDescription="@string/title_activity_meditacion"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/skymed" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:background="#8888"
+                        android:fontFamily="@font/condiment"
+                        android:text="@string/guia_para_principiantes"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@id/imageView7"
+                        app:layout_constraintStart_toStartOf="@id/imageView7"
+                        app:layout_constraintEnd_toEndOf="@id/imageView7"
+                         />
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:contentDescription="@string/title_activity_meditacion"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imageView7"
+                        app:srcCompat="@drawable/beachmed" />
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:background="#8888"
+                        android:fontFamily="@font/condiment"
+                        android:text="@string/guia_relajacion"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@id/imageView8"
+                        app:layout_constraintStart_toStartOf="@id/imageView8"
+                        app:layout_constraintEnd_toEndOf="@id/imageView8"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:contentDescription="@string/title_activity_meditacion"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imageView8"
+                        app:srcCompat="@drawable/salarmed" />
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:background="#8888"
+                        android:fontFamily="@font/condiment"
+                        android:text="@string/guia_paz"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@id/imageView9"
+                        app:layout_constraintStart_toStartOf="@id/imageView9"
+                        app:layout_constraintEnd_toEndOf="@id/imageView9"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
         </ScrollView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
