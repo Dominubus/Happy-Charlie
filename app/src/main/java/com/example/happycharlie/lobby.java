@@ -9,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -16,6 +17,13 @@ import java.util.Random;
 
 public class lobby extends AppCompatActivity {
     int actual = 2;
+    Handler mHideHandler = new Handler();
+    Runnable mHideRunnable = new Runnable() {
+        @Override
+        public void run() {
+            estadoNormal();
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,8 +57,14 @@ public class lobby extends AppCompatActivity {
         Intent siguiente = new Intent(this, configuracion.class);
         startActivity(siguiente);
     }
+    public void estadoNormal(){
+        ImageButton charlie = (ImageButton)findViewById(R.id.charlie);
+        charlie.setImageResource(R.drawable.pug1);
+    }
 
     public void cambioEmocion(View view) {
+        mHideHandler.removeCallbacks(mHideRunnable);
+        mHideHandler.postDelayed(mHideRunnable, 20000);
         ImageButton charlie = (ImageButton)findViewById(R.id.charlie);
         int random2 = new Random().nextInt(1) + 1;
         if(actual==5){

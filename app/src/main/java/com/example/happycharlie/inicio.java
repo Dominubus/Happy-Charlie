@@ -67,7 +67,7 @@ public class inicio extends AppCompatActivity {
 
 
     public void SiguientePantalla(View view) {
-
+        mHideHandler.removeCallbacks(mHideRunnable);
         Intent siguiente = new Intent(this, lobby.class);
         startActivity(siguiente);
     }
