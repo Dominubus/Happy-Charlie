@@ -20,6 +20,7 @@
     <string name="configuracion">configuracion</string>
     <string name="globo_imagen">globo_imagen</string>
     <string name="mensaje_de_animo">mensaje_de_animo</string>
+    <string name="msj_lobby">En que puedo ayudarte?</string>
     <string name="msj_principal">el mensaje de animo irá aquí</string>
     <string name="globo_imagen_msj">globo_imagen_msj</string>
     <string name="title_activity_ruido">ruido</string>

@@ -9,19 +9,45 @@
     tools:showIn="@layout/activity_lobby">
 
 
+    <ImageView
+        android:id="@+id/msg_lobby"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/globo_imagen"
+        android:src="@drawable/clod"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="88dp"
+        android:contentDescription="@string/mensaje_de_animo"
+        android:text="@string/msj_lobby"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="@+id/msg_lobby"
+        app:layout_constraintEnd_toStartOf="@+id/msg_lobby"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/msg_lobby"
+        app:layout_constraintTop_toTopOf="@+id/msg_lobby" />
+
     <ImageButton
         android:id="@+id/charlie"
         android:layout_width="match_parent"
         android:layout_height="127dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/pug"
         android:onClick="cambioEmocion"
 
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/msg_lobby"
         app:srcCompat="@drawable/pug1" />
 
     <ImageButton
