@@ -1,5 +1,6 @@
 package com.example.happycharlie;
 
+import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
 
@@ -27,11 +28,26 @@ public class meditacion extends AppCompatActivity {
         int yOffset = v.getHeight();
         Toast t=Toast.makeText(this, "Escoge una de estas fabulosas guías", Toast.LENGTH_LONG);
         View view = t.getView();
-
         TextView text = (TextView)view.findViewById(android.R.id.message);
         text.setTextAppearance(R.style.toastTextStyle);
         t.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, -yOffset);
         t.show();
+    }
+
+    public void pasarAReproducir1(View view) {
+        Intent siguiente = new Intent(this, repMeditacion.class);
+        siguiente.putExtra("bg",1);
+        startActivity(siguiente);
+    }
+    public void pasarAReproducir2(View view) {
+        Intent siguiente = new Intent(this, repMeditacion.class);
+        siguiente.putExtra("bg",2);
+        startActivity(siguiente);
+    }
+    public void pasarAReproducir3(View view) {
+        Intent siguiente = new Intent(this, repMeditacion.class);
+        siguiente.putExtra("bg",3);
+        startActivity(siguiente);
     }
 
 }
