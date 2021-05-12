@@ -11,9 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".PopupTemporizador"
+            android:label="@string/title_activity_PopupTemporizador"
+            android:theme="@style/AppTheme.TemaPopup"
+
+            ></activity>
+        <activity
             android:name=".repMeditacion"
             android:label="@string/title_activity_rep_meditacion"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".configuracion"
             android:label="@string/title_activity_configuracion"

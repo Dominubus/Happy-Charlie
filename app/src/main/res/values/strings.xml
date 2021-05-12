@@ -24,10 +24,12 @@
     <string name="msj_principal">el mensaje de animo irá aquí</string>
     <string name="globo_imagen_msj">globo_imagen_msj</string>
     <string name="title_activity_ruido">ruido</string>
+    <string name="temporizador">boton_temporizador</string>
     <string name="title_activity_musica">musica</string>
     <string name="title_activity_meditacion">meditacion</string>
     <string name="title_activity_calculadora">calculadora</string>
     <string name="title_activity_configuracion">configuracion</string>
+    <string name="title_activity_PopupTemporizador">Popup</string>
     <string name="guia_para_principiantes">Meditación sencilla</string>
     <string name="guia_relajacion">Relajar cuerpo y mente</string>
     <string name="guia_paz">Paz interior</string>
