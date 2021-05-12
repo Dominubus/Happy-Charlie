@@ -9,4 +9,40 @@
     tools:context=".repMeditacion"
     tools:showIn="@layout/activity_rep_meditacion">
 
+    <ImageButton
+        android:id="@+id/btn_play_pause"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/btn_play"
+        android:contentDescription="@string/meditacion"
+        android:onClick="reproducir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_retroceder"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/btn_retroceder"
+        android:contentDescription="@string/meditacion"
+        android:onClick="retoceder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_adelantar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/btn_adelantar"
+        android:contentDescription="@string/meditacion"
+        android:onClick="adelantar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

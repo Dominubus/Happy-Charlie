@@ -38,4 +38,22 @@ public class repMeditacion extends AppCompatActivity {
         }
     }
 
+    public void retoceder(View view){
+
+    }
+
+    public void adelantar(View view){
+
+    }
+    public void reproducir(View view){
+        play();
+        pause();
+    }
+    public void play(){
+
+    }
+    public void pause(){
+
+    }
+
 }
