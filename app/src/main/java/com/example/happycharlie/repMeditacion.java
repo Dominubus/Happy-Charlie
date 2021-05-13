@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
 public class repMeditacion extends AppCompatActivity {
@@ -46,8 +47,14 @@ public class repMeditacion extends AppCompatActivity {
 
     }
     public void reproducir(View view){
-        play();
-        pause();
+        ImageButton btn = (ImageButton)findViewById(R.id.btn_play_pause);
+        if(btn.getBackground().equals(R.drawable.btn_play)){
+            pause();
+        }else{
+            if(btn.getBackground().equals(R.drawable.btn_pause)){
+                play();
+            }
+        }
     }
     public void play(){
 
