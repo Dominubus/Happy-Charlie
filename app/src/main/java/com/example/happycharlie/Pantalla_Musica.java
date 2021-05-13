@@ -17,8 +17,8 @@ public class Pantalla_Musica extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla__musica);
     }
 
-    //Metodo para enviar Numero de Cancion
-    public void RecuperarNumero(View view){
+    //Metodo para enviar Numero de Cancion y Pasar a Pantalla Reproductor
+    public void IrPantallaReproductor(View view){
         Intent pasarPantalla = new Intent(this, Pantalla_Reproductor.class);
         switch (view.getId()){
             case R.id.btn_mus_1:

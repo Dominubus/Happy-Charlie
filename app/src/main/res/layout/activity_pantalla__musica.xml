@@ -23,7 +23,7 @@
         android:layout_height="109dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="264dp"
-        android:onClick="RecuperarNumero"
+        android:onClick="IrPantallaReproductor"
         android:text="@string/BM1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +34,7 @@
         android:layout_height="111dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="264dp"
-        android:onClick="RecuperarNumero"
+        android:onClick="IrPantallaReproductor"
         android:text="@string/BM2"
         app:layout_constraintStart_toEndOf="@+id/btn_mus_1"
         app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +45,7 @@
         android:layout_height="111dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="264dp"
-        android:onClick="RecuperarNumero"
+        android:onClick="IrPantallaReproductor"
         android:text="@string/BM3"
         app:layout_constraintStart_toEndOf="@+id/btn_mus_2"
         app:layout_constraintTop_toTopOf="parent" />
