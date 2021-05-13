@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pantalla_Musica"></activity>
+        <activity android:name=".Pantalla_Reproductor"></activity>
+        <activity android:name=".Pantalla_Musica" />
         <activity
             android:name=".inicio"
             android:label="@string/title_activity_inicio"

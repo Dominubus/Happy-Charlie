@@ -6,4 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".Pantalla_Musica">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="234dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <Button
+        android:id="@+id/btn_mus_1"
+        android:layout_width="89dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="264dp"
+        android:onClick="RecuperarNumero"
+        android:text="@string/BM1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_mus_2"
+        android:layout_width="88dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="264dp"
+        android:onClick="RecuperarNumero"
+        android:text="@string/BM2"
+        app:layout_constraintStart_toEndOf="@+id/btn_mus_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_mus_3"
+        android:layout_width="99dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="264dp"
+        android:onClick="RecuperarNumero"
+        android:text="@string/BM3"
+        app:layout_constraintStart_toEndOf="@+id/btn_mus_2"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
