@@ -4,6 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Pantalla_Reproductor">
+
+    <TextView
+        android:id="@+id/nomb_cancion"
+        android:layout_width="251dp"
+        android:layout_height="71dp"
+        android:text="@string/TV"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="302dp"
+        android:layout_height="303dp"
+        app:srcCompat="@drawable/img_cancion_1"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="159dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
