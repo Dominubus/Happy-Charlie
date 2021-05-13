@@ -8,11 +8,198 @@
     tools:context=".ruido"
     tools:showIn="@layout/activity_ruido">
 
-    <TextView
-        android:id="@+id/textView6"
+    <ImageView
+        android:id="@+id/petViewRB"
+        android:layout_width="304dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/petViewDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pug3" />
+
+    <Button
+        android:id="@+id/botonR1"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CDDC39"
+        android:backgroundTint="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/botonR3"
+        app:layout_constraintEnd_toStartOf="@+id/botonR4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petViewRB" />
+
+    <Button
+        android:id="@+id/botonR6"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CDDC39"
+        android:backgroundTint="#009688"
+        app:layout_constraintBottom_toTopOf="@+id/toolbarRB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botonR5"
+        app:layout_constraintTop_toBottomOf="@+id/botonR4" />
+
+    <Button
+        android:id="@+id/botonR2"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CDDC39"
+        android:backgroundTint="#D81B60"
+        app:layout_constraintBottom_toTopOf="@+id/botonR4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botonR1"
+        app:layout_constraintTop_toBottomOf="@+id/petViewRB" />
+
+    <Button
+        android:id="@+id/botonR5"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CDDC39"
+        android:backgroundTint="#F44336"
+        app:layout_constraintBottom_toTopOf="@+id/toolbarRB"
+        app:layout_constraintEnd_toStartOf="@+id/botonR6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonR3" />
+
+    <Button
+        android:id="@+id/botonR3"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CDDC39"
+        android:backgroundTint="#00BCD4"
+        app:layout_constraintBottom_toTopOf="@+id/botonR5"
+        app:layout_constraintEnd_toStartOf="@+id/botonR4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonR1" />
+
+    <Button
+        android:id="@+id/botonR4"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CDDC39"
+        android:backgroundTint="#8BC34A"
+        app:layout_constraintBottom_toTopOf="@+id/botonR6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botonR3"
+        app:layout_constraintTop_toBottomOf="@+id/botonR2" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/botonR6"
+        app:layout_constraintEnd_toEndOf="@+id/botonR6"
+        app:layout_constraintStart_toStartOf="@+id/botonR6"
+        app:layout_constraintTop_toTopOf="@+id/botonR6"
+        app:srcCompat="@drawable/ic_wind_01" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/botonR5"
+        app:layout_constraintEnd_toEndOf="@+id/botonR5"
+        app:layout_constraintStart_toStartOf="@+id/botonR5"
+        app:layout_constraintTop_toTopOf="@+id/botonR5"
+        app:srcCompat="@drawable/ic_waterfall_01" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/botonR4"
+        app:layout_constraintEnd_toEndOf="@+id/botonR4"
+        app:layout_constraintStart_toStartOf="@+id/botonR4"
+        app:layout_constraintTop_toTopOf="@+id/botonR4"
+        app:srcCompat="@drawable/ic_trees_01" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/botonR3"
+        app:layout_constraintEnd_toEndOf="@+id/botonR3"
+        app:layout_constraintStart_toStartOf="@+id/botonR3"
+        app:layout_constraintTop_toTopOf="@+id/botonR3"
+        app:srcCompat="@drawable/ic_sea_01" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/botonR2"
+        app:layout_constraintEnd_toEndOf="@+id/botonR2"
+        app:layout_constraintStart_toStartOf="@+id/botonR2"
+        app:layout_constraintTop_toTopOf="@+id/botonR2"
+        app:srcCompat="@drawable/ic_rain_01" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/botonR1"
+        app:layout_constraintEnd_toEndOf="@+id/botonR1"
+        app:layout_constraintStart_toStartOf="@+id/botonR1"
+        app:layout_constraintTop_toTopOf="@+id/botonR1"
+        app:srcCompat="@drawable/ic_fire_01" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarRB"
         android:layout_width="match_parent"
-        android:layout_height="97dp"
-        android:text="En Construcción"
-        android:textSize="42sp"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/timerIcon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="11dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarRB"
+        app:layout_constraintEnd_toStartOf="@+id/timerIcon3"
+        app:layout_constraintStart_toEndOf="@+id/timerIcon"
+        app:layout_constraintTop_toTopOf="@+id/toolbarRB"
+        app:srcCompat="@drawable/round_play_arrow_black_36" />
+
+    <ImageView
+        android:id="@+id/timerIcon3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="11dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarRB"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarRB"
+        app:layout_constraintTop_toTopOf="@+id/toolbarRB"
+        app:srcCompat="@drawable/round_volume_up_black_36" />
+
+    <ImageView
+        android:id="@+id/timerIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="11dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarRB"
+        app:layout_constraintStart_toStartOf="@+id/toolbarRB"
+        app:layout_constraintTop_toTopOf="@+id/toolbarRB"
+        app:srcCompat="@drawable/outline_timer_black_36" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

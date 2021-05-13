@@ -32,5 +32,6 @@
     <string name="guia_relajacion">Relajar cuerpo y mente</string>
     <string name="guia_paz">Paz interior</string>
     <string name="title_activity_rep_meditacion">repMeditacion</string>
+    <string name="petViewDesc">Imagen de la mascota</string>
 
 </resources>
