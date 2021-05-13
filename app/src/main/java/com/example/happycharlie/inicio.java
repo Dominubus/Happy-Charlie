@@ -1,5 +1,6 @@
 package com.example.happycharlie;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -18,8 +19,11 @@ public class inicio extends AppCompatActivity {
         setContentView(R.layout.activity_inicio);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
     }
 
+    //Metodo auxiliar para ir Pantalla Musica
+    public void IrPantallaMusica(View view){
+        Intent pant_mus = new Intent(this, Pantalla_Musica.class);
+        startActivity(pant_mus);
+    }
 }
