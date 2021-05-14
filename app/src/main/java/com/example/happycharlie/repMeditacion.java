@@ -1,6 +1,7 @@
 package com.example.happycharlie;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -11,6 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.view.View;
+import android.widget.TextView;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
@@ -22,16 +24,35 @@ public class repMeditacion extends AppCompatActivity {
         setContentView(R.layout.activity_rep_meditacion);
         ConstraintLayout layout = findViewById(R.id.repMeditacion);
         Intent rm = getIntent();
+        TextView tv;
         int i = rm.getIntExtra("bg", 1);
         switch(i) {
             case 1:
                 layout.setBackgroundResource(R.drawable.skymedbg);
+                tv =(TextView) findViewById(R.id.textView8);
+                tv.setText(R.string.guia_para_principiantes);
+                tv.setTextColor(Color.parseColor("#6C35A6"));
+                tv =(TextView) findViewById(R.id.textView11);
+                tv.setText(R.string.meditacion1);
+                tv.setTextColor(Color.parseColor("#6C35A6"));
                 break;
             case 2:
                 layout.setBackgroundResource(R.drawable.beachmedbg);
+                tv =(TextView) findViewById(R.id.textView8);
+                tv.setText(R.string.guia_relajacion);
+                tv.setTextColor(Color.parseColor("#000000"));
+                tv =(TextView) findViewById(R.id.textView11);
+                tv.setText(R.string.meditacion2);
+                tv.setTextColor(Color.parseColor("#000000"));
                 break;
             case 3:
                 layout.setBackgroundResource(R.drawable.salarmedbg);
+                tv =(TextView) findViewById(R.id.textView8);
+                tv.setText(R.string.guia_paz);
+                tv.setTextColor(Color.parseColor("#000000"));
+                tv =(TextView) findViewById(R.id.textView11);
+                tv.setText(R.string.meditacion3);
+                tv.setTextColor(Color.parseColor("#000000"));
                 break;
             default:
                 break;
