@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Pantalla_Reproductor extends AppCompatActivity {
 
@@ -114,6 +115,30 @@ public class Pantalla_Reproductor extends AppCompatActivity {
             posicion = 0;
             play_pause.setBackgroundResource(R.drawable.btn_play);
             iv.setImageResource(R.drawable.portada1);
+        }
+    }
+
+    //Metodo para ir a la siguiente cancion
+    public void Siguiente(View view){
+        if(posicion < vectormp.length -1){
+            if(vectormp[posicion].isPlaying()){
+                vectormp[posicion].stop();
+                posicion++;
+                vectormp[posicion].start();
+                int aux2 = AsignarImagNomb();
+            } else {
+                posicion++;
+                int aux2 = AsignarImagNomb();
+            }
+        } else {
+            if(vectormp[posicion].isPlaying()){
+                vectormp[posicion].stop();
+                int aux3 = AsignarCanciones();
+                vectormp[posicion].start();
+                Toast.makeText(this, "Ultima Cancion", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Ultima Cancion", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }
