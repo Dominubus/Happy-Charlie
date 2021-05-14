@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -90,5 +91,18 @@ public class Pantalla_Reproductor extends AppCompatActivity {
                 break;
         }
         return 0;
+    }
+
+    //Metodo para el boton PlayPause
+    public void PlayPause(View view){
+        if(vectormp[posicion].isPlaying()){
+            vectormp[posicion].pause();
+            play_pause.setBackgroundResource(R.drawable.btn_play);
+        } else {
+            vectormp[posicion].start();
+            iv.setImageResource(R.drawable.img_cancion_1);
+            tv.setText("Don’t Stop Me Now – Queen");
+            play_pause.setBackgroundResource(R.drawable.btn_pause);
+        }
     }
 }
