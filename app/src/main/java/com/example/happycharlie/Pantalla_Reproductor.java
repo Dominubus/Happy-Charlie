@@ -27,16 +27,63 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla__reproductor);
 
+        /*if(vectormp[posicion].isPlaying()){
+            vectormp[posicion].stop();
+        }*/
         dato = getIntent().getStringExtra("dato");
+
         play_pause = (Button)findViewById(R.id.btn_play);
         iv = (ImageView)findViewById(R.id.imageView);
         tv = (TextView)findViewById(R.id.nomb_cancion);
         int aux = AsignarCanciones();
         posicion = Integer.valueOf(dato);
+
+        int id = 0;
+        switch (posicion){
+            case 0:
+                id = getResources().getIdentifier("img_cancion_1", "drawable", getPackageName());
+                tv.setText("Don’t Stop Me Now – Queen");
+                break;
+            case 1:
+                id = getResources().getIdentifier("img_cancion_2", "drawable", getPackageName());
+                tv.setText("Dancing Queen – Abba");
+                break;
+            case 2:
+                id = getResources().getIdentifier("img_cancion_3", "drawable", getPackageName());
+                tv.setText("Good Vibrations – The Beach Boys");
+                break;
+            case 3:
+                id = getResources().getIdentifier("img_cancion_4", "drawable", getPackageName());
+                tv.setText("Uptown Girl – Billy Joel");
+                break;
+            case 4:
+                id = getResources().getIdentifier("img_cancion_5", "drawable", getPackageName());
+                tv.setText("Eye Of The Tiger – Survivor");
+                break;
+            case 5:
+                id = getResources().getIdentifier("img_cancion_6", "drawable", getPackageName());
+                tv.setText("I’m a Believer – The Monkees");
+                break;
+            case 6:
+                id = getResources().getIdentifier("img_cancion_7", "drawable", getPackageName());
+                tv.setText("Girls Just Wanna Have Fun – Cyndi Lauper");
+                break;
+            case 7:
+                id = getResources().getIdentifier("img_cancion_8", "drawable", getPackageName());
+                tv.setText("Livin’ On A Prayer – Bon Jovi");
+                break;
+            case 8:
+                id = getResources().getIdentifier("img_cancion_9", "drawable", getPackageName());
+                tv.setText("I Will Survive – Gloria Gaynor");
+                break;
+            case 9:
+                id = getResources().getIdentifier("img_cancion_10", "drawable", getPackageName());
+                tv.setText("Walking on Sunshine – Katrina & The Waves");
+                break;
+        }
+        iv.setImageResource(id);
         vectormp[posicion].start();
-        int aux1 = AsignarCanciones();
-        int aux2 = AsignarImagNomb();
-        play_pause.setBackgroundResource(R.drawable.btn_pause);
+
     }
 
     //Metodo auxiliar para asignar posicion a las canciones
@@ -46,11 +93,11 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         vectormp [2] = MediaPlayer.create(this,R.raw.cancion_3);
         vectormp [3] = MediaPlayer.create(this,R.raw.cancion_4);
         vectormp [4] = MediaPlayer.create(this,R.raw.cancion_5);
-        vectormp [4] = MediaPlayer.create(this,R.raw.cancion_6);
-        vectormp [4] = MediaPlayer.create(this,R.raw.cancion_7);
-        vectormp [4] = MediaPlayer.create(this,R.raw.cancion_8);
-        vectormp [4] = MediaPlayer.create(this,R.raw.cancion_9);
-        vectormp [4] = MediaPlayer.create(this,R.raw.cancion_10);
+        vectormp [5] = MediaPlayer.create(this,R.raw.cancion_6);
+        vectormp [6] = MediaPlayer.create(this,R.raw.cancion_7);
+        vectormp [7] = MediaPlayer.create(this,R.raw.cancion_8);
+        vectormp [8] = MediaPlayer.create(this,R.raw.cancion_9);
+        vectormp [9] = MediaPlayer.create(this,R.raw.cancion_10);
         return 0;
     }
 
@@ -108,8 +155,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
             play_pause.setBackgroundResource(R.drawable.btn_play);
         } else {
             vectormp[posicion].start();
-            iv.setImageResource(R.drawable.img_cancion_1);
-            tv.setText("Don’t Stop Me Now – Queen");
+            int aux1 = AsignarImagNomb();
             play_pause.setBackgroundResource(R.drawable.btn_pause);
         }
     }
