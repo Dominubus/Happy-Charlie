@@ -141,4 +141,30 @@ public class Pantalla_Reproductor extends AppCompatActivity {
             }
         }
     }
+
+    //Metodo para la anterior Cancion
+    public void Anterior(View view){
+        if(posicion >= 1){
+            if(vectormp[posicion].isPlaying()){
+                vectormp[posicion].stop();
+                int aux3 = AsignarCanciones();
+                posicion--;
+                int aux4 = AsignarImagNomb();
+                vectormp[posicion].start();
+            } else {
+                posicion--;
+                int aux4 = AsignarImagNomb();
+            }
+        } else {
+            if(vectormp[posicion].isPlaying()){
+                vectormp[posicion].stop();
+                int aux3 = AsignarCanciones();
+                vectormp[posicion].start();
+                Toast.makeText(this, "Primera Cancion", Toast.LENGTH_SHORT).show();
+            } else {
+                posicion = 4;
+                Toast.makeText(this, "Primera Cancion", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 }
