@@ -105,4 +105,15 @@ public class Pantalla_Reproductor extends AppCompatActivity {
             play_pause.setBackgroundResource(R.drawable.btn_pause);
         }
     }
+
+    //Metodo para el boton Stop
+    public void Stop(View view){
+        if(vectormp[posicion] != null){
+            vectormp[posicion].stop();
+            int aux1 = AsignarCanciones();
+            posicion = 0;
+            play_pause.setBackgroundResource(R.drawable.btn_play);
+            iv.setImageResource(R.drawable.portada1);
+        }
+    }
 }
