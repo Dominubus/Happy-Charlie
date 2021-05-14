@@ -21,6 +21,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
     ImageView iv;
     TextView tv;
     int posicion = 0;
+    int aux1 = 0;
     MediaPlayer vectormp [] = new MediaPlayer[10];
 
     @Override
@@ -34,6 +35,15 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         iv = (ImageView)findViewById(R.id.imageView);
         tv = (TextView)findViewById(R.id.nomb_cancion);
         int aux = AsignarCanciones();
+
+        /*aux1 = posicion;
+        if (vectormp[aux].isPlaying()) {
+            vectormp[aux].stop();
+            int aux3 = AsignarCanciones();
+        }
+        posicion = 0;
+
+         */
         posicion = Integer.valueOf(dato);
 
         int id = 0;
