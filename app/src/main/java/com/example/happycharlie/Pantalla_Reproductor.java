@@ -2,6 +2,7 @@ package com.example.happycharlie;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -27,9 +28,6 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla__reproductor);
 
-        /*if(vectormp[posicion].isPlaying()){
-            vectormp[posicion].stop();
-        }*/
         dato = getIntent().getStringExtra("dato");
 
         play_pause = (Button)findViewById(R.id.btn_play);
@@ -245,6 +243,12 @@ public class Pantalla_Reproductor extends AppCompatActivity {
             int aux = generarNroRandom();
             return aux;
         }
+    }
+
+    //Metodo para el boton atras
+    public void atras(View view){
+        Intent atras = new Intent(this, Pantalla_Musica.class);
+        startActivity(atras);
     }
 
 }
