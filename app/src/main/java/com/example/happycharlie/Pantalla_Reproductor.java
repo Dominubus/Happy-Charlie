@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class Pantalla_Reproductor extends AppCompatActivity {
 
     private String dato;
@@ -30,6 +32,11 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         iv = (ImageView)findViewById(R.id.imageView);
         tv = (TextView)findViewById(R.id.nomb_cancion);
         int aux = AsignarCanciones();
+        posicion = Integer.valueOf(dato);
+        vectormp[posicion].start();
+        int aux1 = AsignarCanciones();
+        int aux2 = AsignarImagNomb();
+        play_pause.setBackgroundResource(R.drawable.btn_pause);
     }
 
     //Metodo auxiliar para asignar posicion a las canciones
@@ -162,9 +169,36 @@ public class Pantalla_Reproductor extends AppCompatActivity {
                 vectormp[posicion].start();
                 Toast.makeText(this, "Primera Cancion", Toast.LENGTH_SHORT).show();
             } else {
-                posicion = 4;
                 Toast.makeText(this, "Primera Cancion", Toast.LENGTH_SHORT).show();
             }
         }
     }
+
+    //Metodo para cancion aleatorea
+    public void Aleatoreo(View view){
+        int nr = generarNroRandom();
+        if(vectormp[posicion].isPlaying()){
+            vectormp[posicion].stop();
+            int aux3 = AsignarCanciones();
+            posicion = nr;
+            int aux4 = AsignarImagNomb();
+            vectormp[posicion].start();
+        } else {
+            posicion = nr;
+            int aux4= AsignarImagNomb();
+        }
+    }
+
+    //Genera numero random
+    public int generarNroRandom(){
+        Random miRandom = new Random();
+        int rn = miRandom.nextInt(10);
+        if(rn != posicion){
+            return rn;
+        } else {
+            int aux = generarNroRandom();
+            return aux;
+        }
+    }
+
 }
