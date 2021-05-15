@@ -3,18 +3,13 @@ package com.example.happycharlie;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
-import android.view.View;
-import android.widget.TextView;
-import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 
 public class repMeditacion extends AppCompatActivity {
 
@@ -25,6 +20,7 @@ public class repMeditacion extends AppCompatActivity {
         ConstraintLayout layout = findViewById(R.id.repMeditacion);
         Intent rm = getIntent();
         TextView tv;
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         int i = rm.getIntExtra("bg", 1);
         switch(i) {
             case 1:
@@ -58,6 +54,10 @@ public class repMeditacion extends AppCompatActivity {
                 break;
 
         }
+    }
+    protected void onDestroy() {
+        super.onDestroy();
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
     public void retoceder(View view){

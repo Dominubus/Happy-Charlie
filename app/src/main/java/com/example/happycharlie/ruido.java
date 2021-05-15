@@ -13,10 +13,11 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class ruido extends AppCompatActivity {
 
-    ImageButton btnTempo;
+    ImageView btnTempo;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -24,7 +25,7 @@ public class ruido extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ruido);
 
-        btnTempo = findViewById(R.id.timerIcon);
+        btnTempo =(ImageView) findViewById(R.id.timerIcon);
 
         btnTempo.setOnClickListener(new View.OnClickListener(){
 
