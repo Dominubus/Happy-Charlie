@@ -28,6 +28,8 @@
     <string name="title_activity_meditacion">meditacion</string>
     <string name="title_activity_calculadora">calculadora</string>
     <string name="title_activity_configuracion">configuracion</string>
+    <string name="title_activity_popupTempo">Popup</string>
+    <string name="imaBTempo">btnTempo</string>
     <string name="guia_para_principiantes">Meditación sencilla</string>
     <string name="guia_relajacion">Relajar cuerpo y mente</string>
     <string name="guia_paz">Paz interior</string>
