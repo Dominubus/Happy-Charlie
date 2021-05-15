@@ -21,12 +21,12 @@ public class PopupTemporizador extends AppCompatActivity {
         int ancho = medidasVentana.widthPixels;
         int alto = medidasVentana.heightPixels;
 
-        getWindow().setLayout((int)(ancho * 1), (int)(alto * 0.18));
+        getWindow().setLayout((int)(ancho * 1), (int)(alto * 0.20));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.BOTTOM;
         params.x =0;
-        params.y = +190;
+        params.y = +148;
 
         getWindow().setAttributes(params);
 

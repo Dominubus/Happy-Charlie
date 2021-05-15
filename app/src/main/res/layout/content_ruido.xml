@@ -203,4 +203,18 @@
         app:layout_constraintTop_toTopOf="@+id/toolbarRB"
         app:srcCompat="@drawable/outline_timer_black_36" />
 
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="46dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/iboton_atras"
+        android:onClick="volverLobby"
+        app:layout_constraintBottom_toTopOf="@+id/petViewRB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_arrow_back_black_48" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
