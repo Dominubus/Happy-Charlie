@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".inicio"
-    android:background="@drawable/background"><![CDATA[>
+    android:background="@drawable/bgpaisaje2"><![CDATA[>
 
     ]]>
 
