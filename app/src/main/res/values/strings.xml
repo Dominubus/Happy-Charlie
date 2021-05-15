@@ -33,5 +33,16 @@
     <string name="guia_paz">Paz interior</string>
     <string name="title_activity_rep_meditacion">repMeditacion</string>
     <string name="petViewDesc">Imagen de la mascota</string>
+    <string name="windIcon">Icono viento</string>
+    <string name="waterfallIcon">Icono Cascada</string>
+    <string name="forestIcon">Icono bosque</string>
+    <string name="seaIcon">Icono Mar</string>
+    <string name="rainIcon">Icono lluvia</string>
+    <string name="fireIcon">Icono Fuego</string>
+    <string name="playIcon">Botón de Reproduccion </string>
+    <string name="pauseIcon">Botón de Pausa</string>
+    <string name="volumeOn">Botón Volumen ON</string>
+    <string name="volumeOff">Botón Volumen OFF</string>
+    <string name="timerIcon">Botón del Temporizador</string>
 
 </resources>

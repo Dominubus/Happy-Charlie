@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ruido"
     tools:showIn="@layout/activity_ruido">
@@ -27,8 +28,10 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#FF9800"
+        android:onClick="playFire"
         app:layout_constraintBottom_toTopOf="@+id/botonR3"
-        app:layout_constraintEnd_toStartOf="@+id/botonR4"
+        app:layout_constraintEnd_toStartOf="@+id/botonR2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/petViewRB" />
 
@@ -39,6 +42,7 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#009688"
+        android:onClick="playWind"
         app:layout_constraintBottom_toTopOf="@+id/toolbarRB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonR5"
@@ -51,10 +55,13 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#D81B60"
+        android:onClick="playRain"
         app:layout_constraintBottom_toTopOf="@+id/botonR4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/botonR1"
-        app:layout_constraintTop_toBottomOf="@+id/petViewRB" />
+        app:layout_constraintTop_toBottomOf="@+id/petViewRB"
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <Button
         android:id="@+id/botonR5"
@@ -63,8 +70,10 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#F44336"
+        android:onClick="playWaterfall"
         app:layout_constraintBottom_toTopOf="@+id/toolbarRB"
         app:layout_constraintEnd_toStartOf="@+id/botonR6"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonR3" />
 
@@ -75,8 +84,10 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#00BCD4"
+        android:onClick="playSea"
         app:layout_constraintBottom_toTopOf="@+id/botonR5"
         app:layout_constraintEnd_toStartOf="@+id/botonR4"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonR1" />
 
@@ -87,15 +98,17 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#8BC34A"
+        android:onClick="playForest"
         app:layout_constraintBottom_toTopOf="@+id/botonR6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonR3"
         app:layout_constraintTop_toBottomOf="@+id/botonR2" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/windIcon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/windIcon"
         app:layout_constraintBottom_toBottomOf="@+id/botonR6"
         app:layout_constraintEnd_toEndOf="@+id/botonR6"
         app:layout_constraintStart_toStartOf="@+id/botonR6"
@@ -103,9 +116,10 @@
         app:srcCompat="@drawable/ic_wind_01" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/waterfallIcon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/waterfallIcon"
         app:layout_constraintBottom_toBottomOf="@+id/botonR5"
         app:layout_constraintEnd_toEndOf="@+id/botonR5"
         app:layout_constraintStart_toStartOf="@+id/botonR5"
@@ -113,9 +127,10 @@
         app:srcCompat="@drawable/ic_waterfall_01" />
 
     <ImageView
-        android:id="@+id/imageView20"
+        android:id="@+id/forestIcon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/forestIcon"
         app:layout_constraintBottom_toBottomOf="@+id/botonR4"
         app:layout_constraintEnd_toEndOf="@+id/botonR4"
         app:layout_constraintStart_toStartOf="@+id/botonR4"
@@ -123,9 +138,10 @@
         app:srcCompat="@drawable/ic_trees_01" />
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/seaIcon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/seaIcon"
         app:layout_constraintBottom_toBottomOf="@+id/botonR3"
         app:layout_constraintEnd_toEndOf="@+id/botonR3"
         app:layout_constraintStart_toStartOf="@+id/botonR3"
@@ -133,9 +149,10 @@
         app:srcCompat="@drawable/ic_sea_01" />
 
     <ImageView
-        android:id="@+id/imageView18"
+        android:id="@+id/rainIcon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/rainIcon"
         app:layout_constraintBottom_toBottomOf="@+id/botonR2"
         app:layout_constraintEnd_toEndOf="@+id/botonR2"
         app:layout_constraintStart_toStartOf="@+id/botonR2"
@@ -143,9 +160,10 @@
         app:srcCompat="@drawable/ic_rain_01" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/fireIcon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/fireIcon"
         app:layout_constraintBottom_toBottomOf="@+id/botonR1"
         app:layout_constraintEnd_toEndOf="@+id/botonR1"
         app:layout_constraintStart_toStartOf="@+id/botonR1"
@@ -164,30 +182,68 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/timerIcon2"
+        android:id="@+id/playIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
         android:layout_marginBottom="11dp"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/playIcon"
+        android:onClick="resume"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/toolbarRB"
-        app:layout_constraintEnd_toStartOf="@+id/timerIcon3"
+        app:layout_constraintEnd_toStartOf="@+id/volumeOn"
         app:layout_constraintStart_toEndOf="@+id/timerIcon"
         app:layout_constraintTop_toTopOf="@+id/toolbarRB"
         app:srcCompat="@drawable/round_play_arrow_black_36" />
 
     <ImageView
-        android:id="@+id/timerIcon3"
+        android:id="@+id/pauseIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="11dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/pauseIcon"
+        android:onClick="pause"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarRB"
+        app:layout_constraintEnd_toStartOf="@+id/volumeOn"
+        app:layout_constraintStart_toEndOf="@+id/timerIcon"
+        app:layout_constraintTop_toTopOf="@+id/toolbarRB"
+        app:srcCompat="@drawable/round_pause_black_36" />
+
+    <ImageView
+        android:id="@+id/volumeOn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="11dp"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/volumeOn"
+        android:onClick="mute"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/toolbarRB"
         app:layout_constraintEnd_toEndOf="@+id/toolbarRB"
         app:layout_constraintTop_toTopOf="@+id/toolbarRB"
         app:srcCompat="@drawable/round_volume_up_black_36" />
+
+    <ImageView
+        android:id="@+id/volumeOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="11dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/volumeOff"
+        android:onClick="unmute"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarRB"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarRB"
+        app:layout_constraintTop_toTopOf="@+id/toolbarRB"
+        app:srcCompat="@drawable/round_volume_off_black_36" />
 
     <ImageView
         android:id="@+id/timerIcon"
@@ -197,6 +253,7 @@
         android:layout_marginTop="9dp"
         android:layout_marginBottom="11dp"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/timerIcon"
         app:layout_constraintBottom_toBottomOf="@+id/toolbarRB"
         app:layout_constraintStart_toStartOf="@+id/toolbarRB"
         app:layout_constraintTop_toTopOf="@+id/toolbarRB"
