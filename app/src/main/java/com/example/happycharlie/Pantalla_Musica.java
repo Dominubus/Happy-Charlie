@@ -14,6 +14,7 @@ public class Pantalla_Musica extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla__musica);
+
     }
 
     //Metodo para enviar Numero de Cancion y Pasar a Pantalla Reproductor

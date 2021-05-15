@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/back5"
     tools:context=".Pantalla_Reproductor">
 
     <TextView
@@ -22,11 +22,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="208dp"
-        android:layout_height="160dp"
+        android:layout_width="274dp"
+        android:layout_height="269dp"
         android:layout_marginTop="184dp"
         android:contentDescription="@string/IV"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/portada1" />
@@ -36,7 +37,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="550dp"
         android:background="@drawable/btn_stop"
         android:onClick="Stop"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +48,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="550dp"
         android:background="@drawable/btn_anterior"
         android:onClick="Anterior"
         app:layout_constraintStart_toEndOf="@+id/btn_stop"
@@ -58,7 +59,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="550dp"
         android:background="@drawable/btn_siguiente"
         android:onClick="Siguiente"
         app:layout_constraintStart_toEndOf="@+id/btn_play"
@@ -69,7 +70,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="550dp"
         android:background="@drawable/btn_aleatoreo_white"
         android:onClick="Aleatoreo"
         app:layout_constraintStart_toEndOf="@+id/btn_siguiente"
@@ -80,7 +81,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="550dp"
         android:background="@drawable/btn_pause"
         android:onClick="PlayPause"
         app:layout_constraintStart_toEndOf="@+id/btn_anterior"

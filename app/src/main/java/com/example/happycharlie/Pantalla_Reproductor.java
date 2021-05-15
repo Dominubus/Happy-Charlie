@@ -36,14 +36,6 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         tv = (TextView)findViewById(R.id.nomb_cancion);
         int aux = AsignarCanciones();
 
-        /*aux1 = posicion;
-        if (vectormp[aux].isPlaying()) {
-            vectormp[aux].stop();
-            int aux3 = AsignarCanciones();
-        }
-        posicion = 0;
-
-         */
         posicion = Integer.valueOf(dato);
 
         int id = 0;
@@ -91,7 +83,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         }
         iv.setImageResource(id);
         vectormp[posicion].start();
-
+        vectormp[posicion].setLooping(true);
     }
 
     //Metodo auxiliar para asignar posicion a las canciones
@@ -257,8 +249,17 @@ public class Pantalla_Reproductor extends AppCompatActivity {
 
     //Metodo para el boton atras
     public void atras(View view){
+        vectormp[posicion].stop();
+        vectormp[posicion].release();
         Intent atras = new Intent(this, Pantalla_Musica.class);
         startActivity(atras);
     }
 
+    @Override
+    public void onBackPressed(){
+        vectormp[posicion].stop();
+        vectormp[posicion].release();
+        Intent atras = new Intent(this, Pantalla_Musica.class);
+        startActivity(atras);
+    }
 }
