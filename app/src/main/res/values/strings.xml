@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Happy Charlie</string>
     <string name="title_activity_inicio">Inicio</string>
-<<<<<<< HEAD
+>>>>>>> HEAD
     <string name="bienvenida">Bienvenid@</string>
     <string name="image">gif mano</string>
     <string name="tocar">Toca para continuar</string>

@@ -1,14 +1,14 @@
 package com.example.happycharlie;
 
-<<<<<<< HEAD
+
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
-=======
+
 import android.content.Intent;
->>>>>>> Pantalla_Reproductor
+
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -54,7 +54,7 @@ public class inicio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
-<<<<<<< HEAD
+
         mHideHandler.postDelayed(mHideRunnable, 20000);
         iniciar();
         tv = (TextView)findViewById(R.id.textView2);
@@ -68,10 +68,9 @@ public class inicio extends AppCompatActivity {
             }
         });
 
-=======
-        Toolbar toolbar = findViewById(R.id.toolbar);
+
+        Toolbar toolbar = findViewById(R.id.toolbarRB);
         setSupportActionBar(toolbar);
->>>>>>> Pantalla_Reproductor
     }
 
 
