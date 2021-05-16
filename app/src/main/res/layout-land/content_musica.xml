@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="volverLobby"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".musica"
     tools:showIn="@layout/activity_musica">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:background="@drawable/beachmed"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="wrap_content"
-            android:layout_height="33dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
@@ -35,35 +35,38 @@
             app:srcCompat="@drawable/atras" />
 
         <FrameLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/avatarmusica"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="250dp"
+                android:layout_height="400dp"
                 android:contentDescription="avatar_musica"
-                app:srcCompat="@drawable/avatarmusica" />
+                app:srcCompat="@drawable/avatarmusica"
+                tools:ignore="HardcodedText" />
+
         </FrameLayout>
 
         <ScrollView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:layout_editor_absoluteX="1dp">
 
                     <ImageButton
                         android:id="@+id/cancion1"
                         style="@android:style/Widget.ImageButton"
-                        android:layout_width="135dp"
+                        android:layout_width="120dp"
                         android:layout_height="180dp"
                         android:contentDescription="@string/MenuMusica"
                         android:onClick="IrPantallaReproductor"
@@ -72,7 +75,7 @@
                     <ImageButton
                         android:id="@+id/cancion2"
                         style="@android:style/Widget.ImageButton"
-                        android:layout_width="135dp"
+                        android:layout_width="120dp"
                         android:layout_height="180dp"
                         android:contentDescription="@string/MenuMusica"
                         android:onClick="IrPantallaReproductor"
@@ -81,7 +84,7 @@
                     <ImageButton
                         android:id="@+id/cancion3"
                         style="@android:style/Widget.ImageButton"
-                        android:layout_width="135dp"
+                        android:layout_width="120dp"
                         android:layout_height="180dp"
                         android:contentDescription="@string/MenuMusica"
                         android:onClick="IrPantallaReproductor"
@@ -97,7 +100,7 @@
                     <ImageButton
                         android:id="@+id/cancion4"
                         style="@android:style/Widget.ImageButton"
-                        android:layout_width="135dp"
+                        android:layout_width="120dp"
                         android:layout_height="180dp"
                         android:contentDescription="@string/MenuMusica"
                         android:onClick="IrPantallaReproductor"
@@ -106,7 +109,7 @@
                     <ImageButton
                         android:id="@+id/cancion5"
                         style="@android:style/Widget.ImageButton"
-                        android:layout_width="135dp"
+                        android:layout_width="120dp"
                         android:layout_height="180dp"
                         android:contentDescription="@string/MenuMusica"
                         android:onClick="IrPantallaReproductor"
@@ -115,7 +118,7 @@
                     <ImageButton
                         android:id="@+id/cancion6"
                         style="@android:style/Widget.ImageButton"
-                        android:layout_width="135dp"
+                        android:layout_width="120dp"
                         android:layout_height="180dp"
                         android:contentDescription="@string/MenuMusica"
                         android:onClick="IrPantallaReproductor"
@@ -130,7 +133,7 @@
 
                     <ImageButton
                         android:id="@+id/cancion7"
-                        android:layout_width="135dp"
+                        android:layout_width="120dp"
                         android:layout_height="180dp"
                         android:contentDescription="@string/MenuMusica"
                         android:onClick="IrPantallaReproductor"
@@ -138,7 +141,7 @@
 
                     <ImageButton
                         android:id="@+id/cancion8"
-                        android:layout_width="135dp"
+                        android:layout_width="120dp"
                         android:layout_height="180dp"
                         android:contentDescription="@string/MenuMusica"
                         android:onClick="IrPantallaReproductor"
@@ -146,7 +149,7 @@
 
                     <ImageButton
                         android:id="@+id/cancion9"
-                        android:layout_width="135dp"
+                        android:layout_width="120dp"
                         android:layout_height="180dp"
                         android:contentDescription="@string/MenuMusica"
                         android:onClick="IrPantallaReproductor"
@@ -160,7 +163,7 @@
 
                     <ImageButton
                         android:id="@+id/cancion10"
-                        android:layout_width="135dp"
+                        android:layout_width="120dp"
                         android:layout_height="180dp"
                         android:contentDescription="@string/MenuMusica"
                         android:onClick="IrPantallaReproductor"
