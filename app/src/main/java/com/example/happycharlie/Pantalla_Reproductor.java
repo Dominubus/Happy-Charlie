@@ -251,7 +251,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
     public void atras(View view){
         vectormp[posicion].stop();
         vectormp[posicion].release();
-        Intent atras = new Intent(this, Pantalla_Musica.class);
+        Intent atras = new Intent(this, musica.class);
         startActivity(atras);
     }
 
@@ -259,7 +259,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
     public void onBackPressed(){
         vectormp[posicion].stop();
         vectormp[posicion].release();
-        Intent atras = new Intent(this, Pantalla_Musica.class);
+        Intent atras = new Intent(this, musica.class);
         startActivity(atras);
     }
 }
