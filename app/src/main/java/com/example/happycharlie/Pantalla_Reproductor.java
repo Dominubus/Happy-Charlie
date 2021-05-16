@@ -41,43 +41,43 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         int id = 0;
         switch (posicion){
             case 0:
-                id = getResources().getIdentifier("img_cancion_1", "drawable", getPackageName());
+                id = getResources().getIdentifier("cancion1", "drawable", getPackageName());
                 tv.setText("Don’t Stop Me Now – Queen");
                 break;
             case 1:
-                id = getResources().getIdentifier("img_cancion_2", "drawable", getPackageName());
+                id = getResources().getIdentifier("cancion2", "drawable", getPackageName());
                 tv.setText("Dancing Queen – Abba");
                 break;
             case 2:
-                id = getResources().getIdentifier("img_cancion_3", "drawable", getPackageName());
+                id = getResources().getIdentifier("cancion3", "drawable", getPackageName());
                 tv.setText("Good Vibrations – The Beach Boys");
                 break;
             case 3:
-                id = getResources().getIdentifier("img_cancion_4", "drawable", getPackageName());
+                id = getResources().getIdentifier("cancion4", "drawable", getPackageName());
                 tv.setText("Uptown Girl – Billy Joel");
                 break;
             case 4:
-                id = getResources().getIdentifier("img_cancion_5", "drawable", getPackageName());
+                id = getResources().getIdentifier("cancion5", "drawable", getPackageName());
                 tv.setText("Eye Of The Tiger – Survivor");
                 break;
             case 5:
-                id = getResources().getIdentifier("img_cancion_6", "drawable", getPackageName());
+                id = getResources().getIdentifier("cancion6", "drawable", getPackageName());
                 tv.setText("I’m a Believer – The Monkees");
                 break;
             case 6:
-                id = getResources().getIdentifier("img_cancion_7", "drawable", getPackageName());
+                id = getResources().getIdentifier("cancion7", "drawable", getPackageName());
                 tv.setText("Girls Just Wanna Have Fun – Cyndi Lauper");
                 break;
             case 7:
-                id = getResources().getIdentifier("img_cancion_8", "drawable", getPackageName());
+                id = getResources().getIdentifier("cancion8", "drawable", getPackageName());
                 tv.setText("Livin’ On A Prayer – Bon Jovi");
                 break;
             case 8:
-                id = getResources().getIdentifier("img_cancion_9", "drawable", getPackageName());
+                id = getResources().getIdentifier("cancion9", "drawable", getPackageName());
                 tv.setText("I Will Survive – Gloria Gaynor");
                 break;
             case 9:
-                id = getResources().getIdentifier("img_cancion_10", "drawable", getPackageName());
+                id = getResources().getIdentifier("cancion10", "drawable", getPackageName());
                 tv.setText("Walking on Sunshine – Katrina & The Waves");
                 break;
         }
@@ -88,16 +88,16 @@ public class Pantalla_Reproductor extends AppCompatActivity {
 
     //Metodo auxiliar para asignar posicion a las canciones
     public int AsignarCanciones(){
-        vectormp [0] = MediaPlayer.create(this,R.raw.cancion_1);
-        vectormp [1] = MediaPlayer.create(this,R.raw.cancion_2);
-        vectormp [2] = MediaPlayer.create(this,R.raw.cancion_3);
-        vectormp [3] = MediaPlayer.create(this,R.raw.cancion_4);
-        vectormp [4] = MediaPlayer.create(this,R.raw.cancion_5);
-        vectormp [5] = MediaPlayer.create(this,R.raw.cancion_6);
-        vectormp [6] = MediaPlayer.create(this,R.raw.cancion_7);
-        vectormp [7] = MediaPlayer.create(this,R.raw.cancion_8);
-        vectormp [8] = MediaPlayer.create(this,R.raw.cancion_9);
-        vectormp [9] = MediaPlayer.create(this,R.raw.cancion_10);
+        vectormp [0] = MediaPlayer.create(this,R.raw.a1_dont_stop_me_now);
+        vectormp [1] = MediaPlayer.create(this,R.raw.a2_dancing_queen);
+        vectormp [2] = MediaPlayer.create(this,R.raw.a3_good_vibrations);
+        vectormp [3] = MediaPlayer.create(this,R.raw.a4_uptown_girl);
+        vectormp [4] = MediaPlayer.create(this,R.raw.a5_eye_of_the_tiger);
+        vectormp [5] = MediaPlayer.create(this,R.raw.a6_im_a_believer);
+        vectormp [6] = MediaPlayer.create(this,R.raw.a7_girls_just_want_to_have_fun);
+        vectormp [7] = MediaPlayer.create(this,R.raw.a8_livin_on_a_prayer);
+        vectormp [8] = MediaPlayer.create(this,R.raw.a9_i_will_survive);
+        vectormp [9] = MediaPlayer.create(this,R.raw.a10_walking_on_sunshine);
         return 0;
     }
 
@@ -105,43 +105,43 @@ public class Pantalla_Reproductor extends AppCompatActivity {
     public int AsignarImagNomb(){
         switch (posicion){
             case 0:
-                iv.setImageResource(R.drawable.img_cancion_1);
+                iv.setImageResource(R.drawable.cancion1);
                 tv.setText("Don’t Stop Me Now – Queen");
                 break;
             case 1:
-                iv.setImageResource(R.drawable.img_cancion_2);
+                iv.setImageResource(R.drawable.cancion2);
                 tv.setText("Dancing Queen – Abba");
                 break;
             case 2:
-                iv.setImageResource(R.drawable.img_cancion_3);
+                iv.setImageResource(R.drawable.cancion3);
                 tv.setText("Good Vibrations – The Beach Boys");
                 break;
             case 3:
-                iv.setImageResource(R.drawable.img_cancion_4);
+                iv.setImageResource(R.drawable.cancion4);
                 tv.setText("Uptown Girl – Billy Joel");
                 break;
             case 4:
-                iv.setImageResource(R.drawable.img_cancion_5);
+                iv.setImageResource(R.drawable.cancion5);
                 tv.setText("Eye Of The Tiger – Survivor");
                 break;
             case 5:
-                iv.setImageResource(R.drawable.img_cancion_6);
+                iv.setImageResource(R.drawable.cancion6);
                 tv.setText("I’m a Believer – The Monkees");
                 break;
             case 6:
-                iv.setImageResource(R.drawable.img_cancion_7);
+                iv.setImageResource(R.drawable.cancion7);
                 tv.setText("Girls Just Wanna Have Fun – Cyndi Lauper");
                 break;
             case 7:
-                iv.setImageResource(R.drawable.img_cancion_8);
+                iv.setImageResource(R.drawable.cancion8);
                 tv.setText("Livin’ On A Prayer – Bon Jovi");
                 break;
             case 8:
-                iv.setImageResource(R.drawable.img_cancion_9);
+                iv.setImageResource(R.drawable.cancion9);
                 tv.setText("I Will Survive – Gloria Gaynor");
                 break;
             case 9:
-                iv.setImageResource(R.drawable.img_cancion_10);
+                iv.setImageResource(R.drawable.cancion10);
                 tv.setText("Walking on Sunshine – Katrina & The Waves");
                 break;
         }
