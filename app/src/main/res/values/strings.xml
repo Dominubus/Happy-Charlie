@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Happy Charlie</string>
     <string name="title_activity_inicio">Inicio</string>
->>>>>>> HEAD
     <string name="bienvenida">Bienvenid@</string>
     <string name="image">gif mano</string>
     <string name="tocar">Toca para continuar</string>
@@ -53,14 +52,26 @@
     <string name="ivin_on_a_prayer">ivin_on_a_prayer</string>
     <string name="i_will_survive">i_will_survive</string>
     <string name="walking_on_sunshine">walking_on_sunshine</string>
-
-
-=======
+    <string name="windIcon">Icono viento</string>
+    <string name="waterfallIcon">Icono Cascada</string>
+    <string name="forestIcon">Icono bosque</string>
+    <string name="seaIcon">Icono Mar</string>
+    <string name="rainIcon">Icono lluvia</string>
+    <string name="fireIcon">Icono Fuego</string>
+    <string name="playIcon">Botón de Reproduccion </string>
+    <string name="pauseIcon">Botón de Pausa</string>
+    <string name="volumeOn">Botón Volumen ON</string>
+    <string name="volumeOff">Botón Volumen OFF</string>
+    <string name="timerIcon">Botón del Temporizador</string>
+    <string name="botonOne">15 Min</string>
+    <string name="botonTwo">30 Min</string>
+    <string name="botonThree">1 hora</string>
+    <string name="botonFour">3 horas</string>
     <string name="BSL">Musica</string>
     <string name="BM1">Musica 1</string>
     <string name="BM2">Musica 2</string>
     <string name="BM3">Musica 3</string>
     <string name="TV">NOMBRE DE LA CANCION</string>
     <string name="IV">DESCRIPCION</string>
->>>>>>> Pantalla_Reproductor
+
 </resources>

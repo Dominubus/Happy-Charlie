@@ -17,12 +17,10 @@
             android:theme="@style/AppTheme.TemaPopup"
             ></activity>
         <activity
-            android:name=".repMeditacion"
-            android:label="@string/title_activity_rep_meditacion"
+            android:name=".repMeditacion"            android:label="@string/title_activity_rep_meditacion"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".configuracion"
-            android:label="@string/title_activity_configuracion"
+            android:name=".configuracion"            android:label="@string/title_activity_configuracion"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".calculadora"
@@ -39,8 +37,8 @@
         <activity
             android:name=".ruido"
             android:label="@string/title_activity_ruido"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".PruebaD" />
+            android:theme="@style/AppTheme.NoActionBar" 
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".animo"
             android:label="@string/title_activity_animo"
@@ -62,6 +60,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
