@@ -33,16 +33,10 @@
     <string name="guia_paz">Paz interior</string>
     <string name="title_activity_rep_meditacion">repMeditacion</string>
     <string name="MenuMusica">tituloCancion</string>
-    <string name="numCam">numCam</string>
-    <string name="dont_stop_me_now">dont_stop_me_now</string>
-    <string name="dancing_queen">dancing_queen</string>
-    <string name="good_vibrations">good_vibrations</string>
-    <string name="uptown_girl">uptown_girl</string>
-    <string name="eye_of_the_tiger">eye_of_the_tiger</string>
-    <string name="im_a_believer">im_a_believer</string>
-    <string name="girls_just_want_to_have_fun">girls_just_want_to_have_fun</string>
-    <string name="ivin_on_a_prayer">ivin_on_a_prayer</string>
-    <string name="i_will_survive">i_will_survive</string>
-    <string name="walking_on_sunshine">walking_on_sunshine</string>
+
+
+
+
+
 
 </resources>
