@@ -1,9 +1,7 @@
 package com.example.happycharlie;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
@@ -38,8 +36,6 @@ public class musica extends AppCompatActivity {
                 });
                 mediaPlayer.start();
 
-                Intent siguiente = new Intent(this, Pantalla_Reproductor.class);
-                startActivity(siguiente);
 
                 break;
             case R.id.cancion2:
@@ -54,8 +50,6 @@ public class musica extends AppCompatActivity {
                     }
                 });
                 mediaPlayer.start();
-                Intent siguiente = new Intent(this, Pantalla_Reproductor.class);
-                startActivity(siguiente);
                 break;
             case R.id.cancion3:
                 Toast.makeText(this, "Good Vibrations",Toast.LENGTH_SHORT).show();
@@ -69,8 +63,6 @@ public class musica extends AppCompatActivity {
                     }
                 });
                 mediaPlayer.start();
-                Intent siguiente = new Intent(this, Pantalla_Reproductor.class);
-                startActivity(siguiente);
                 break;
             case R.id.cancion4:
                 Toast.makeText(this, "Uptown Girl",Toast.LENGTH_SHORT).show();
@@ -84,8 +76,6 @@ public class musica extends AppCompatActivity {
                     }
                 });
                 mediaPlayer.start();
-                Intent siguiente = new Intent(this, Pantalla_Reproductor.class);
-                startActivity(siguiente);
                 break;
             case R.id.cancion5:
                 Toast.makeText(this, "Eye Of The Tiger",Toast.LENGTH_SHORT).show();
@@ -99,8 +89,6 @@ public class musica extends AppCompatActivity {
                     }
                 });
                 mediaPlayer.start();
-                Intent siguiente = new Intent(this, Pantalla_Reproductor.class);
-                startActivity(siguiente);
                 break;
             case R.id.cancion6:
                 Toast.makeText(this, "I'm a Believer",Toast.LENGTH_SHORT).show();
@@ -114,8 +102,6 @@ public class musica extends AppCompatActivity {
                     }
                 });
                 mediaPlayer.start();
-                Intent siguiente = new Intent(this, Pantalla_Reproductor.class);
-                startActivity(siguiente);
                 break;
             case R.id.cancion7:
                 Toast.makeText(this, "Girls Just Want To Have Fun",Toast.LENGTH_SHORT).show();
@@ -129,8 +115,6 @@ public class musica extends AppCompatActivity {
                     }
                 });
                 mediaPlayer.start();
-                Intent siguiente = new Intent(this, Pantalla_Reproductor.class);
-                startActivity(siguiente);
                 break;
             case R.id.cancion8:
                 Toast.makeText(this, "Living On A Prayer",Toast.LENGTH_SHORT).show();
@@ -144,8 +128,6 @@ public class musica extends AppCompatActivity {
                     }
                 });
                 mediaPlayer.start();
-                Intent siguiente = new Intent(this, Pantalla_Reproductor.class);
-                startActivity(siguiente);
                 break;
             case R.id.cancion9:
                 Toast.makeText(this, "I Will Survive",Toast.LENGTH_SHORT).show();
@@ -159,8 +141,6 @@ public class musica extends AppCompatActivity {
                     }
                 });
                 mediaPlayer.start();
-                Intent siguiente = new Intent(this, Pantalla_Reproductor.class);
-                startActivity(siguiente);
                 break;
             case R.id.cancion10:
                 Toast.makeText(this, "Walking On Sunshine",Toast.LENGTH_SHORT).show();
@@ -174,8 +154,6 @@ public class musica extends AppCompatActivity {
                     }
                 });
                 mediaPlayer.start();
-                Intent siguiente = new Intent(this, Pantalla_Reproductor.class);
-                startActivity(siguiente);
                 break;
         }
     }
