@@ -2,7 +2,9 @@ package com.example.happycharlie;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
@@ -11,8 +13,15 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import java.io.File;
+
+import android.provider.MediaStore.Audio.Media;
+//MediaStore.Audio;
+
 public class repMeditacion extends AppCompatActivity {
 
+    private MediaPlayer mp = null;
+    private boolean reproduciendo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +31,7 @@ public class repMeditacion extends AppCompatActivity {
         TextView tv;
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         int i = rm.getIntExtra("bg", 1);
+        reproduciendo = false;
         switch(i) {
             case 1:
                 layout.setBackgroundResource(R.drawable.skymedbg);
@@ -31,6 +41,7 @@ public class repMeditacion extends AppCompatActivity {
                 tv =(TextView) findViewById(R.id.textView11);
                 tv.setText(R.string.meditacion1);
                 tv.setTextColor(Color.parseColor("#6C35A6"));
+                mp = MediaPlayer.create(this, R.raw.sencilla);
                 break;
             case 2:
                 layout.setBackgroundResource(R.drawable.beachmedbg);
@@ -40,6 +51,7 @@ public class repMeditacion extends AppCompatActivity {
                 tv =(TextView) findViewById(R.id.textView11);
                 tv.setText(R.string.meditacion2);
                 tv.setTextColor(Color.parseColor("#000000"));
+                mp = MediaPlayer.create(this, R.raw.relajar_cuerpo_mente);
                 break;
             case 3:
                 layout.setBackgroundResource(R.drawable.salarmedbg);
@@ -49,6 +61,7 @@ public class repMeditacion extends AppCompatActivity {
                 tv =(TextView) findViewById(R.id.textView11);
                 tv.setText(R.string.meditacion3);
                 tv.setTextColor(Color.parseColor("#000000"));
+                mp = MediaPlayer.create(this, R.raw.paz_interior);
                 break;
             default:
                 break;
@@ -69,19 +82,15 @@ public class repMeditacion extends AppCompatActivity {
     }
     public void reproducir(View view){
         ImageButton btn = (ImageButton)findViewById(R.id.btn_play_pause);
-        if(btn.getBackground().equals(R.drawable.btn_play)){
-            pause();
+        if(reproduciendo){
+            reproduciendo = false;
+            mp.pause();
+            btn.setImageResource(R.drawable.round_pause_black_48);
         }else{
-            if(btn.getBackground().equals(R.drawable.btn_pause)){
-                play();
-            }
+            reproduciendo = true;
+            mp.start();
+            btn.setImageResource(R.drawable.round_play_arrow_black_48);
         }
-    }
-    public void play(){
-
-    }
-    public void pause(){
-
     }
 
 }
