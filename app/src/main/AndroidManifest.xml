@@ -40,6 +40,7 @@
             android:name=".ruido"
             android:label="@string/title_activity_ruido"
             android:theme="@style/AppTheme.NoActionBar" />
+            android:screenOrientation="portrait"
         <activity android:name=".PruebaD" />
         <activity
             android:name=".animo"
@@ -62,6 +63,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
