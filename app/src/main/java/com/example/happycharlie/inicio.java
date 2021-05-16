@@ -21,9 +21,4 @@ public class inicio extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    //Metodo auxiliar para ir Pantalla Musica
-    public void IrPantallaMusica(View view){
-        Intent pant_mus = new Intent(this, Pantalla_Musica.class);
-        startActivity(pant_mus);
-    }
 }

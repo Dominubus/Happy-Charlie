@@ -23,11 +23,4 @@
 
     <include layout="@layout/content_inicio" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="243dp"
-        android:layout_height="176dp"
-        android:onClick="IrPantallaMusica"
-        android:text="@string/BSL" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
