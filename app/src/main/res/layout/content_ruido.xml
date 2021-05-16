@@ -27,8 +27,10 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#FF9800"
+        android:onClick="playFire"
         app:layout_constraintBottom_toTopOf="@+id/botonR3"
-        app:layout_constraintEnd_toStartOf="@+id/botonR4"
+        app:layout_constraintEnd_toStartOf="@+id/botonR2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/petViewRB" />
 
@@ -39,6 +41,7 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#009688"
+        android:onClick="playWind"
         app:layout_constraintBottom_toTopOf="@+id/toolbarRB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonR5"
@@ -51,10 +54,13 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#D81B60"
+        android:onClick="playRain"
         app:layout_constraintBottom_toTopOf="@+id/botonR4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/botonR1"
-        app:layout_constraintTop_toBottomOf="@+id/petViewRB" />
+        app:layout_constraintTop_toBottomOf="@+id/petViewRB"
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <Button
         android:id="@+id/botonR5"
@@ -63,8 +69,10 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#F44336"
+        android:onClick="playWaterfall"
         app:layout_constraintBottom_toTopOf="@+id/toolbarRB"
         app:layout_constraintEnd_toStartOf="@+id/botonR6"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonR3" />
 
@@ -75,8 +83,10 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#00BCD4"
+        android:onClick="playSea"
         app:layout_constraintBottom_toTopOf="@+id/botonR5"
         app:layout_constraintEnd_toStartOf="@+id/botonR4"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonR1" />
 
@@ -87,15 +97,17 @@
         android:layout_height="0dp"
         android:background="#CDDC39"
         android:backgroundTint="#8BC34A"
+        android:onClick="playForest"
         app:layout_constraintBottom_toTopOf="@+id/botonR6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonR3"
         app:layout_constraintTop_toBottomOf="@+id/botonR2" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/windIcon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/windIcon"
         app:layout_constraintBottom_toBottomOf="@+id/botonR6"
         app:layout_constraintEnd_toEndOf="@+id/botonR6"
         app:layout_constraintStart_toStartOf="@+id/botonR6"
@@ -247,9 +259,9 @@
         app:srcCompat="@drawable/outline_timer_black_36" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="46dp"
-        android:layout_height="37dp"
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginTop="50dp"
         android:background="@android:color/transparent"

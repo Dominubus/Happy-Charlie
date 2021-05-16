@@ -52,6 +52,10 @@
     <string name="volumeOn">Botón Volumen ON</string>
     <string name="volumeOff">Botón Volumen OFF</string>
     <string name="timerIcon">Botón del Temporizador</string>
+    <string name="botonOne">15 Min</string>
+    <string name="botonTwo">30 Min</string>
+    <string name="botonThree">1 hora</string>
+    <string name="botonFour">3 horas</string>
 
 =======
     <string name="BSL">Musica</string>
