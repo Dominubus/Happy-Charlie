@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Happy Charlie</string>
     <string name="title_activity_inicio">Inicio</string>
+<<<<<<< HEAD
     <string name="bienvenida">Bienvenid@</string>
     <string name="image">gif mano</string>
     <string name="tocar">Toca para continuar</string>
@@ -41,4 +42,12 @@
     <string name="meditacion3">Para meditadores experimentados, ya sabes los beneficios de meditar sin embargo por que parar con solo relajarse cuando
         puedes ir más allá y lograr una paz que cambie tu vida.</string>
 
+=======
+    <string name="BSL">Musica</string>
+    <string name="BM1">Musica 1</string>
+    <string name="BM2">Musica 2</string>
+    <string name="BM3">Musica 3</string>
+    <string name="TV">NOMBRE DE LA CANCION</string>
+    <string name="IV">DESCRIPCION</string>
+>>>>>>> Pantalla_Reproductor
 </resources>
