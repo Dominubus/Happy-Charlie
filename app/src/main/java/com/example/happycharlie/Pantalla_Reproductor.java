@@ -152,11 +152,11 @@ public class Pantalla_Reproductor extends AppCompatActivity {
     public void PlayPause(View view){
         if(vectormp[posicion].isPlaying()){
             vectormp[posicion].pause();
-            play_pause.setBackgroundResource(R.drawable.btn_play);
+            play_pause.setBackgroundResource(R.drawable.btn_play_1);
         } else {
             vectormp[posicion].start();
             int aux1 = AsignarImagNomb();
-            play_pause.setBackgroundResource(R.drawable.btn_pause);
+            play_pause.setBackgroundResource(R.drawable.btn_pause_1);
         }
     }
 
@@ -166,7 +166,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
             vectormp[posicion].stop();
             int aux1 = AsignarCanciones();
             posicion = 0;
-            play_pause.setBackgroundResource(R.drawable.btn_play);
+            play_pause.setBackgroundResource(R.drawable.btn_play_1);
             iv.setImageResource(R.drawable.portada1);
         }
     }
