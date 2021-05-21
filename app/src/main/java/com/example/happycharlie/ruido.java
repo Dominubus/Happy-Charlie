@@ -111,21 +111,25 @@ public class ruido extends AppCompatActivity {
     }
 
     public void onPlay(){
+        icon = (ImageView) findViewById(R.id.playIcon);
+        icon.setVisibility(View.INVISIBLE);
         icon = (ImageView) findViewById(R.id.pauseIcon);
         icon.setVisibility(View.VISIBLE);
+        icon = (ImageView) findViewById(R.id.continueIcon);
+        icon.setVisibility(View.INVISIBLE);
     }
 
     public void pause(View v) {
             icon = (ImageView) findViewById(R.id.pauseIcon);
             icon.setVisibility(View.INVISIBLE);
-            icon = (ImageView) findViewById(R.id.playIcon);
+            icon = (ImageView) findViewById(R.id.continueIcon);
             icon.setVisibility(View.VISIBLE);
             myService.pauseSound();
     }
     public void resume(View v){
         icon = (ImageView) findViewById(R.id.pauseIcon);
         icon.setVisibility(View.VISIBLE);
-        icon = (ImageView) findViewById(R.id.playIcon);
+        icon = (ImageView) findViewById(R.id.continueIcon);
         icon.setVisibility(View.INVISIBLE);
         myService.continueSound();
     }
@@ -151,6 +155,8 @@ public class ruido extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         icon = (ImageView) findViewById(R.id.playIcon);
+        icon.setVisibility(View.VISIBLE);
+        icon = (ImageView) findViewById(R.id.continueIcon);
         icon.setVisibility(View.INVISIBLE);
         icon = (ImageView) findViewById(R.id.pauseIcon);
         icon.setVisibility(View.INVISIBLE);
