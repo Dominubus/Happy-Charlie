@@ -15,6 +15,8 @@ import android.widget.ImageButton;
 
 import java.util.Random;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class lobby extends AppCompatActivity {
     int actual = 2;
     Handler mHideHandler = new Handler();
@@ -58,26 +60,26 @@ public class lobby extends AppCompatActivity {
         startActivity(siguiente);
     }
     public void estadoNormal(){
-        ImageButton charlie = (ImageButton)findViewById(R.id.charlie);
-        charlie.setImageResource(R.drawable.pug1);
+        GifImageView charlie = (GifImageView) findViewById(R.id.charlie);
+        charlie.setImageResource(R.drawable.pug_tv);
     }
 
     public void cambioEmocion(View view) {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, 20000);
-        ImageButton charlie = (ImageButton)findViewById(R.id.charlie);
+        GifImageView charlie = (GifImageView) findViewById(R.id.charlie);
         int random2 = new Random().nextInt(1) + 1;
         if(actual==5){
             actual = new Random().nextInt(2) + 2;
             switch(actual){
                 case 2:
-                    charlie.setImageResource(R.drawable.pug2);
+                    charlie.setImageResource(R.drawable.pug_dish);
                     break;
                 case 3:
-                    charlie.setImageResource(R.drawable.pug3);
+                    charlie.setImageResource(R.drawable.pug_gym);
                     break;
                 case 4:
-                    charlie.setImageResource(R.drawable.pug4);
+                    charlie.setImageResource(R.drawable.pug_book);
                     break;
                 default:
                     break;
@@ -92,19 +94,19 @@ public class lobby extends AppCompatActivity {
             }
             switch(actual){
                     case 2:
-                        charlie.setImageResource(R.drawable.pug2);
+                        charlie.setImageResource(R.drawable.pug_dish);
                         break;
                     case 3:
-                        charlie.setImageResource(R.drawable.pug3);
+                        charlie.setImageResource(R.drawable.pug_gym);
                         break;
                     case 4:
-                        charlie.setImageResource(R.drawable.pug4);
+                        charlie.setImageResource(R.drawable.pug_book);
                         break;
                     case 5:
-                        charlie.setImageResource(R.drawable.pug5);
+                        charlie.setImageResource(R.drawable.pug_belly);
                         break;
                     default:
-                        charlie.setImageResource(R.drawable.pug5);
+                        charlie.setImageResource(R.drawable.pug_belly);
                         actual=5;
                         break;
             }

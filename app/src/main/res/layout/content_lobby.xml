@@ -12,125 +12,230 @@
     <ImageView
         android:id="@+id/msg_lobby"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="150dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/globo_imagen"
         android:src="@drawable/clod"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="88dp"
         android:contentDescription="@string/mensaje_de_animo"
+        android:fontFamily="@font/merriweather"
         android:text="@string/msj_lobby"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/msg_lobby"
         app:layout_constraintEnd_toStartOf="@+id/msg_lobby"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/msg_lobby"
         app:layout_constraintTop_toTopOf="@+id/msg_lobby" />
 
-    <ImageButton
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/charlie"
         android:layout_width="match_parent"
-        android:layout_height="127dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="200dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/pug"
         android:onClick="cambioEmocion"
-
+        android:src="@drawable/pug_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/msg_lobby"
-        app:srcCompat="@drawable/pug1" />
+        />
 
-    <ImageButton
-        android:id="@+id/btnRuido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+
+    <FrameLayout
+        android:id="@+id/frameRuido"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
         android:layout_marginStart="43dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/ruido"
         android:onClick="pantallaRuido"
-        app:layout_constraintBottom_toTopOf="@id/btnMeditacion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/charlie"
-        app:srcCompat="@drawable/ruido" />
+        app:layout_constraintTop_toBottomOf="@id/charlie">
 
-    <ImageButton
-        android:id="@+id/btnMusica"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/ruido"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/outline_graphic_eq_24" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:contentDescription="@string/ruido"
+            android:fontFamily="@font/merriweather"
+            android:text="Ruido Blanco"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameMusica"
+        android:layout_width="175dp"
+        android:layout_height="90dp"
         android:layout_marginEnd="43dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/musica"
         android:onClick="pantallaMusica"
-        app:layout_constraintBottom_toTopOf="@id/btnAnimo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/charlie"
-        app:srcCompat="@drawable/musica" />
+        app:layout_constraintTop_toBottomOf="@id/charlie">
 
-    <ImageButton
-        android:id="@+id/btnMeditacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/ruido"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/outline_audiotrack_24" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:contentDescription="@string/ruido"
+            android:fontFamily="@font/merriweather"
+            android:text="Música Relajante"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameMeditacion"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
         android:layout_marginStart="43dp"
-        android:layout_marginEnd="244dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/meditacion"
         android:onClick="pantallaMeditacion"
-        app:layout_constraintBottom_toTopOf="@id/btnCalculadora"
-        app:layout_constraintTop_toBottomOf="@+id/btnRuido"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/meditacion" />
+        app:layout_constraintTop_toBottomOf="@id/frameRuido">
 
-    <ImageButton
-        android:id="@+id/btnAnimo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/ruido"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/outline_self_improvement_24" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:contentDescription="@string/ruido"
+            android:fontFamily="@font/merriweather"
+            android:text="Meditación"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameAnimo"
+        android:layout_width="175dp"
+        android:layout_height="90dp"
         android:layout_marginEnd="43dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/mensajes"
         android:onClick="pantallaAnimo"
-        app:layout_constraintBottom_toTopOf="@id/btnConfiguracion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMusica"
-        app:srcCompat="@drawable/animo" />
+        app:layout_constraintTop_toBottomOf="@id/frameMusica">
 
-    <ImageButton
-        android:id="@+id/btnCalculadora"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/ruido"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/outline_message_24" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:contentDescription="@string/ruido"
+            android:fontFamily="@font/merriweather"
+            android:text="Mensajes de ánimo"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameCalculadora"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
         android:layout_marginStart="43dp"
-        android:layout_marginEnd="244dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/calculadora"
         android:onClick="pantallaCalculadora"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMeditacion"
-        app:srcCompat="@drawable/calculadora" />
+        app:layout_constraintTop_toBottomOf="@id/frameMeditacion">
 
-    <ImageButton
-        android:id="@+id/btnConfiguracion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/ruido"
+            app:layout_constraintBottom_toTopOf="@id/textView16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/outline_hotel_24" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:contentDescription="@string/ruido"
+            android:fontFamily="@font/merriweather"
+            android:text="Calculadora de sueño"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            android:textAlignment="center"
+             />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameConfig"
+        android:layout_width="175dp"
+        android:layout_height="90dp"
         android:layout_marginEnd="43dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/configuracion"
-        android:text="@string/configuracion"
-        android:visibility="visible"
         android:onClick="pantallaConfiguracion"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAnimo"
-        app:srcCompat="@drawable/configuracion" />
+        app:layout_constraintTop_toBottomOf="@id/frameAnimo">
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/ruido"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/outline_settings_24" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:contentDescription="@string/ruido"
+            android:fontFamily="@font/merriweather"
+            android:text="Configuración"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
