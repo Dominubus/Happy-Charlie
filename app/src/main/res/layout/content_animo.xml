@@ -64,7 +64,7 @@
         android:onClick="mandarMensaje"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/pug_sun"
+        android:src="@drawable/pug_hope"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
