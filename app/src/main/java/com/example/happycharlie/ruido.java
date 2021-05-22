@@ -11,7 +11,6 @@ import android.os.CountDownTimer;
 import android.os.IBinder;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.happycharlie.AudioService.SoundBinder;
 
@@ -24,11 +23,12 @@ public class ruido extends AppCompatActivity {
     private ImageView icon;
     ImageView btnTempo;
 
-    private static long START_TIME_IN_MILLIS = 3600000;
+    private static long tiempoSet = 3600000;
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning;
-    private long mTimeLeftInMillis;
-    private long mEndTime;
+    private long tiempoLeft;
+    private long tiempoEnd;
+    private long tiempoStart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,6 +135,9 @@ public class ruido extends AppCompatActivity {
             icon = (ImageView) findViewById(R.id.continueIcon);
             icon.setVisibility(View.VISIBLE);
             myService.pauseSound();
+            mCountDownTimer.cancel();
+            setTimer(tiempoEnd - System.currentTimeMillis());
+
     }
 
     public void resume(View v){
@@ -143,6 +146,7 @@ public class ruido extends AppCompatActivity {
         icon = (ImageView) findViewById(R.id.continueIcon);
         icon.setVisibility(View.INVISIBLE);
         myService.continueSound();
+        startTimer();
     }
 
     public void stop(){
@@ -169,11 +173,11 @@ public class ruido extends AppCompatActivity {
     }
 
     public void setTimer(long t){
-        START_TIME_IN_MILLIS = t;
+        tiempoSet = t;
     }
 
     public long getTimer(){
-        return START_TIME_IN_MILLIS;
+        return tiempoSet;
     }
 
     public void startTimer(){
@@ -200,11 +204,14 @@ public class ruido extends AppCompatActivity {
                 stop();
             }
         }.start();
+        tiempoStart = System.currentTimeMillis();
+        tiempoEnd =  tiempoStart + getTimer();
         mTimerRunning = true;
     }
 
     @Override
     protected void onStop() {
+        setTimer(3600000);
         super.onStop();
     }
 
