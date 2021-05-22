@@ -3,12 +3,10 @@ package com.example.happycharlie;
 import android.app.Service;
 import android.content.Intent;
 import android.media.AudioAttributes;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.IBinder;
 import android.os.PowerManager;
-import android.widget.Toast;
 
 public class AudioService extends Service{
     static MediaPlayer myPlayer;
@@ -85,7 +83,6 @@ public class AudioService extends Service{
             myPlayer.start();
         }
     }
-
 
     public void pauseSound(){
         myPlayer.pause();

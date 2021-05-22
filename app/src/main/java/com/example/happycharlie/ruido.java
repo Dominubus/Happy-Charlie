@@ -24,7 +24,7 @@ public class ruido extends AppCompatActivity {
     private ImageView icon;
     ImageView btnTempo;
 
-    private static final long START_TIME_IN_MILLIS = 3600000;
+    private static long START_TIME_IN_MILLIS = 3600000;
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis;
@@ -125,10 +125,6 @@ public class ruido extends AppCompatActivity {
             icon.setVisibility(View.VISIBLE);
             icon = (ImageView) findViewById(R.id.continueIcon);
             icon.setVisibility(View.INVISIBLE);
-            if (mCountDownTimer != null) {
-                mCountDownTimer.cancel();
-            }
-            mTimeLeftInMillis = START_TIME_IN_MILLIS;
             startTimer();
         }
     }
@@ -151,6 +147,7 @@ public class ruido extends AppCompatActivity {
 
     public void stop(){
         myService.stopSound();
+        setTimer(3600000);
     }
 
     public void mute(View v) {
@@ -171,13 +168,24 @@ public class ruido extends AppCompatActivity {
         icon.setVisibility(View.INVISIBLE);
     }
 
+    public void setTimer(long t){
+        START_TIME_IN_MILLIS = t;
+    }
+
+    public long getTimer(){
+        return START_TIME_IN_MILLIS;
+    }
+
     public void startTimer(){
-        mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
+        if (mTimerRunning) {
+            mCountDownTimer.cancel();
+        }
+        icon = (ImageView) findViewById(R.id.timerIcon);
+        icon.setClickable(false);
+        mCountDownTimer = new CountDownTimer(getTimer(), 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-
             }
-
             @Override
             public void onFinish() {
                 icon = (ImageView) findViewById(R.id.playIcon);
@@ -186,10 +194,13 @@ public class ruido extends AppCompatActivity {
                 icon.setVisibility(View.INVISIBLE);
                 icon = (ImageView) findViewById(R.id.pauseIcon);
                 icon.setVisibility(View.INVISIBLE);
+                mTimerRunning = false;
+                icon = (ImageView) findViewById(R.id.timerIcon);
+                icon.setClickable(true);
                 stop();
             }
         }.start();
-
+        mTimerRunning = true;
     }
 
     @Override
