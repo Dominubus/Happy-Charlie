@@ -2,7 +2,6 @@ package com.example.happycharlie;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -19,13 +18,13 @@ public class musica extends AppCompatActivity {
         numCan="";
     }
 
-    public void volverLobby(View view) {
-        //Intent anterior = new Intent(this, lobby.class);
-        //startActivity(anterior);
+    public void irLobby(View view) {
+        Intent irLobby = new Intent(this, lobby.class);
+        startActivity(irLobby);
         finish();
     }
 
-    @SuppressLint("NonConstantResourceId")
+
     public void IrPantallaReproductor(View view){
 
         switch (view.getId()){
@@ -79,6 +78,7 @@ public class musica extends AppCompatActivity {
                 break;
 
         }
+
         Intent pasarpantalla = new Intent(this, Pantalla_Reproductor.class);
         pasarpantalla.putExtra("dato",numCan);
         startActivity(pasarpantalla);
