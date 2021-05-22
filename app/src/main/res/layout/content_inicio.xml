@@ -8,31 +8,29 @@
     tools:context=".inicio"
     tools:showIn="@layout/activity_inicio">
 
-    <ImageView
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="127dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="1dp"
         android:contentDescription="@string/pug"
+        android:src="@drawable/pug_hope"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/pug1" />
+
+         />
 
     <ImageButton
         android:id="@+id/btnClose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/salir"
-        app:layout_constraintBottom_toTopOf="@id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/salir" />
 
@@ -40,12 +38,12 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/condiment"
+        android:fontFamily="@font/merriweather"
+        android:gravity="center"
         android:text="@string/bienvenida"
         android:textColor="@android:color/background_light"
         android:textSize="45sp"
         android:textStyle="bold|italic"
-        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@id/gifImageView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -55,13 +53,13 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/condiment"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/merriweather"
+        android:gravity="center"
         android:text="@string/tocar"
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
         android:textStyle="bold|italic"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -69,8 +67,8 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:clickable="true"
         android:contentDescription="@string/image"
         android:focusable="true"
@@ -84,25 +82,26 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="250dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/globo_imagen"
         android:src="@drawable/clod"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnClose" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="194dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="42dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="88dp"
         android:contentDescription="@string/mensaje_de_animo"
+        android:fontFamily="@font/merriweather"
         android:text="@string/msj_principal"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toStartOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.5"
