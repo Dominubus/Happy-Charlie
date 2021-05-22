@@ -169,6 +169,10 @@ public class repMeditacion extends AppCompatActivity {
             btn.setImageResource(R.drawable.round_pause_black_48);
         }
     }
-
+    public void volverLobby(View view) {
+        //Intent anterior = new Intent(this, lobby.class);
+        //startActivity(anterior);
+        finish();
+    }
 
 }

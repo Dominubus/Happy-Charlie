@@ -12,26 +12,35 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Gravity;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class meditacion extends AppCompatActivity {
 
+    Toast t;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meditacion);
-
+        t=Toast.makeText(this, "Escoge una de estas fabulosas guías", Toast.LENGTH_SHORT);
     }
 
     public void mostrarMensaje(View v){
-        int yOffset = v.getHeight();
-        Toast t=Toast.makeText(this, "Escoge una de estas fabulosas guías", Toast.LENGTH_LONG);
-        View view = t.getView();
-        TextView text = (TextView)view.findViewById(android.R.id.message);
-        text.setTextAppearance(R.style.toastTextStyle);
-        t.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, -yOffset);
-        t.show();
+        if(!t.getView().isShown()) {
+            int yOffset = v.getHeight();
+            View view = t.getView();
+            TextView text = (TextView) view.findViewById(android.R.id.message);
+            text.setTextAppearance(R.style.toastTextStyle);
+            LinearLayout layout = (LinearLayout) t.getView();
+            if (layout.getChildCount() > 0) {
+                TextView tv = (TextView) layout.getChildAt(0);
+                tv.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
+                t.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, -yOffset);
+            }
+            t.show();
+        }
     }
 
     public void pasarAReproducir1(View view) {
@@ -50,4 +59,11 @@ public class meditacion extends AppCompatActivity {
         startActivity(siguiente);
     }
 
+    public void volverLobby(View view) {
+        finish();
+    }
+    public void onDestroy() {
+        t.cancel();
+        super.onDestroy();
+    }
 }
