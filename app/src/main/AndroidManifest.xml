@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pantalla_Reproductor"></activity>
+        <activity
+            android:name=".Pantalla_Reproductor"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".PopupTemporizador"
             android:label="@string/title_activity_popupTempo"
@@ -34,6 +36,7 @@
         <activity
             android:name=".musica"
             android:label="@string/title_activity_musica"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ruido"
