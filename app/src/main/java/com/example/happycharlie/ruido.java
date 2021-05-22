@@ -28,19 +28,19 @@ public class ruido extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ruido);
         amgr = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-        if(amgr.isStreamMute(amgr.getMode()))
+        if(amgr.isStreamMute(AudioManager.STREAM_MUSIC))
         {
             icon = (ImageView) findViewById(R.id.volumeOn);
-            icon.setVisibility(View.VISIBLE);
-            icon = (ImageView) findViewById(R.id.volumeOff);
             icon.setVisibility(View.INVISIBLE);
+            icon = (ImageView) findViewById(R.id.volumeOff);
+            icon.setVisibility(View.VISIBLE);
         }
         else
         {
             icon = (ImageView) findViewById(R.id.volumeOn);
-            icon.setVisibility(View.INVISIBLE);
-            icon = (ImageView) findViewById(R.id.volumeOff);
             icon.setVisibility(View.VISIBLE);
+            icon = (ImageView) findViewById(R.id.volumeOff);
+            icon.setVisibility(View.INVISIBLE);
         }
         btnTempo =findViewById(R.id.timerIcon);
 
