@@ -63,5 +63,6 @@
     <string name="BM3">Musica 3</string>
     <string name="TV">NOMBRE DE LA CANCION</string>
     <string name="IV">DESCRIPCION</string>
+    <string name="temp">00:00</string>
 
 </resources>
