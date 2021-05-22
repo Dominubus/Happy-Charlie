@@ -1,24 +1,24 @@
 package com.example.happycharlie;
 
+import android.content.ComponentName;
 import android.content.Intent;
-import android.media.Image;
 import android.content.Context;
+import android.content.ServiceConnection;
 import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import android.os.IBinder;
 import android.view.View;
 import android.widget.ImageView;
-import java.io.IOException;
-import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.example.happycharlie.AudioService.SoundBinder;
+
 
 public class ruido extends AppCompatActivity {
-    MediaPlayer player;
+    AudioService myService;
+    private Intent playIntent;
+    private boolean soundBound;
     AudioManager amgr;
     private ImageView icon;
     ImageView btnTempo;
@@ -45,107 +45,89 @@ public class ruido extends AppCompatActivity {
         btnTempo =findViewById(R.id.timerIcon);
 
         btnTempo.setOnClickListener(new View.OnClickListener(){
-
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(ruido.this, PopupTemporizador.class));
-            }
+            public void onClick(View view) {startActivity(new Intent(ruido.this, PopupTemporizador.class));}
         });
-
     }
 
-    public void volverLobby(View view) {
-        finish();
-        stopPlayer();
+    protected void onStart() {
+        super.onStart();
+        if(playIntent==null){
+            playIntent = new Intent(this, AudioService.class);
+            bindService(playIntent, soundConnection, Context.BIND_AUTO_CREATE);
+            startService(playIntent);
+        }
     }
-    public void playFire(View v) {
-        if (player != null)
-            stopPlayer();
-        player = MediaPlayer.create(getApplicationContext(),R.raw.fire);
-        play(v);
-        //player.setLooping(true);
-        //player.start();
+
+    private ServiceConnection soundConnection = new ServiceConnection(){
+
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            SoundBinder binder = (SoundBinder) service;
+            myService = binder.getService();
+            soundBound = true;
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            soundBound = false;
+        }
+    };
+
+    public void playFire(View v){
+        myService.setSource("fire");
+        myService.playSound();
+        onPlay();
     }
-    public void playWind(View v) {
-        if (player != null)
-            stopPlayer();
-        player = MediaPlayer.create(this,R.raw.wind);
-        play(v);
-        //player.setLooping(true);
-        //player.start();
+
+    public void playForest(View v){
+        myService.setSource("forest");
+        myService.playSound();
+        onPlay();
     }
-    public void playRain(View v) {
-        if (player != null)
-            stopPlayer();
-        player = MediaPlayer.create(this,R.raw.rain);
-        play(v);
-        //player.setLooping(true);
-        //player.start();
+
+    public void playRain(View v){
+        myService.setSource("rain");
+        myService.playSound();
+        onPlay();
     }
-    public void playWaterfall(View v) {
-        if (player != null)
-            stopPlayer();
-        player = MediaPlayer.create(this,R.raw.waterfall);
-        play(v);
-        //player.setLooping(true);
-        //player.start();
+
+    public void playSea(View v){
+        myService.setSource("sea");
+        myService.playSound();
+        onPlay();
     }
-    public void playForest(View v) {
-        if (player != null)
-            stopPlayer();
-        player = MediaPlayer.create(this,R.raw.forest);
-        play(v);
-        //player.setLooping(true);
-        //player.start();
+
+    public void playWaterfall(View v){
+        myService.setSource("waterfall");
+        myService.playSound();
+        onPlay();
     }
-    public void playSea(View v) {
-        if (player != null)
-            stopPlayer();
-        player = MediaPlayer.create(this,R.raw.sea);
-        play(v);
-        //player.setLooping(true);
-        //player.start();
+
+    public void playWind(View v){
+        myService.setSource("wind");
+        myService.playSound();
+        onPlay();
     }
-    public void play(View v) {
-        player.setLooping(true);
-        //player.prepareAsync();
-        player.start();
-        onPlay(v);
-    }
-    public void onPlay(View v){
+
+    public void onPlay(){
         icon = (ImageView) findViewById(R.id.pauseIcon);
         icon.setVisibility(View.VISIBLE);
     }
 
     public void pause(View v) {
-        if (player != null) {
-            player.pause();
             icon = (ImageView) findViewById(R.id.pauseIcon);
             icon.setVisibility(View.INVISIBLE);
             icon = (ImageView) findViewById(R.id.playIcon);
             icon.setVisibility(View.VISIBLE);
-        }
+            myService.pauseSound();
     }
     public void resume(View v){
         icon = (ImageView) findViewById(R.id.pauseIcon);
         icon.setVisibility(View.VISIBLE);
         icon = (ImageView) findViewById(R.id.playIcon);
         icon.setVisibility(View.INVISIBLE);
-        player.start();
-    }
-    public void stop(View v) {
-
-        stopPlayer();
-    }
-    private void stopPlayer() {
-        if (player != null) {
-            player.release();
-            player = null;
-            icon = (ImageView) findViewById(R.id.playIcon);
-            icon.setVisibility(View.INVISIBLE);
-            icon = (ImageView) findViewById(R.id.pauseIcon);
-            icon.setVisibility(View.INVISIBLE);
-        }
+        myService.continueSound();
     }
 
     public void mute(View v) {
@@ -168,7 +150,21 @@ public class ruido extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        stopPlayer();
+        icon = (ImageView) findViewById(R.id.playIcon);
+        icon.setVisibility(View.INVISIBLE);
+        icon = (ImageView) findViewById(R.id.pauseIcon);
+        icon.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void onDestroy(){
+        stopService(playIntent);
+        myService = null;
+        super.onDestroy();
+    }
+
+    public void volverLobby(View view) {
+        finish();
     }
 
 }
