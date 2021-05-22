@@ -2,6 +2,7 @@ package com.example.happycharlie;
 
 import android.app.Service;
 import android.content.Intent;
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Binder;
@@ -13,6 +14,7 @@ public class AudioService extends Service{
     static MediaPlayer myPlayer;
     private final IBinder soundBind = new SoundBinder();
     static String soundName = null;
+    private boolean isPlaying = false;
 
     @Override
     public void onCreate() {
@@ -23,7 +25,10 @@ public class AudioService extends Service{
     @Override
     public void onStart(Intent intent, int startid) {
         myPlayer.setWakeMode(getApplicationContext(), PowerManager.PARTIAL_WAKE_LOCK);
-        myPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        myPlayer.setAudioAttributes(new AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_MEDIA)
+                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                .build());
     }
 
     public class SoundBinder extends Binder {
@@ -39,36 +44,39 @@ public class AudioService extends Service{
 
     @Override
     public boolean onUnbind(Intent intent){
-        myPlayer.stop();
-        myPlayer.release();
+        stopSound();
         return false;
     }
 
-    public void setSource(String s){
-        if (myPlayer != null && s != soundName){
-            myPlayer.stop();
+    public void setSource(String s) {
+        if (s != soundName) {
+            if (myPlayer != null)
+                myPlayer.reset();
             switch (s) {
                 case "fire":
-                    myPlayer = MediaPlayer.create(this,R.raw.fire);
+                    myPlayer = MediaPlayer.create(this, R.raw.fire);
                     break;
                 case "forest":
-                    myPlayer = MediaPlayer.create(this,R.raw.forest);
+                    myPlayer = MediaPlayer.create(this, R.raw.forest);
                     break;
                 case "sea":
-                    myPlayer = MediaPlayer.create(this,R.raw.sea);
+                    myPlayer = MediaPlayer.create(this, R.raw.sea);
                     break;
                 case "rain":
-                    myPlayer = MediaPlayer.create(this,R.raw.rain);
+                    myPlayer = MediaPlayer.create(this, R.raw.rain);
                     break;
                 case "waterfall":
-                    myPlayer = MediaPlayer.create(this,R.raw.waterfall);
+                    myPlayer = MediaPlayer.create(this, R.raw.waterfall);
                     break;
                 case "wind":
-                    myPlayer = MediaPlayer.create(this,R.raw.wind);
+                    myPlayer = MediaPlayer.create(this, R.raw.wind);
                     break;
             }
             soundName = s;
+            isPlaying = false;
         }
+        else
+            isPlaying = true;
     }
 
     public void playSound(){
@@ -78,6 +86,7 @@ public class AudioService extends Service{
         }
     }
 
+
     public void pauseSound(){
         myPlayer.pause();
     }
@@ -86,11 +95,22 @@ public class AudioService extends Service{
         myPlayer.start();
     }
 
+    public void stopSound(){
+        if(myPlayer != null) {
+            myPlayer.stop();
+            myPlayer.release();
+            myPlayer = null;
+            soundName = null;
+        }
+    }
+
+    public boolean sameSound() {
+        return isPlaying;
+    }
+
     @Override
     public void onDestroy() {
-        myPlayer.release();
         super.onDestroy();
-        soundName = null;
     }
 
 }
