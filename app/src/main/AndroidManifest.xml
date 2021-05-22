@@ -20,7 +20,9 @@
             android:theme="@style/AppTheme.TemaPopup"
             ></activity>
         <activity
-            android:name=".repMeditacion"            android:label="@string/title_activity_rep_meditacion"
+            android:name=".repMeditacion"
+            android:label="@string/title_activity_rep_meditacion"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".configuracion"            android:label="@string/title_activity_configuracion"
@@ -32,6 +34,7 @@
         <activity
             android:name=".meditacion"
             android:label="@string/title_activity_meditacion"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".musica"

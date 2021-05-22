@@ -10,6 +10,21 @@
     tools:showIn="@layout/activity_rep_meditacion">
 
     <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:contentDescription="@string/iboton_atras"
+        android:focusable="true"
+        android:onClick="volverLobby"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn_atras" />
+
+    <ImageButton
         android:id="@+id/btn_play_pause"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -52,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="100dp"
-        android:fontFamily="@font/condiment"
+        android:fontFamily="@font/merriweather"
         android:text="@string/guia_para_principiantes"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
@@ -62,8 +77,9 @@
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:fontFamily="@font/condiment"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/merriweather"
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
         android:text="@string/meditacion1"

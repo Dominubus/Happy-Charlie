@@ -18,7 +18,7 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="toastTextStyle" parent="TextAppearance.AppCompat">
-        <item name="android:fontFamily">@font/condiment</item>
+        <item name="android:fontFamily">@font/merriweather</item>
         <item name="android:textColor">#ffffffff</item>
         <item name="android:textSize">18dp</item>
     </style>
