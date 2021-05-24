@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.happycharlie">
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -11,8 +12,54 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Pantalla_Reproductor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PopupTemporizador"
+            android:label="@string/title_activity_popupTempo"
+            android:theme="@style/AppTheme.TemaPopup"
+            ></activity>
+        <activity
+            android:name=".repMeditacion"
+            android:label="@string/title_activity_rep_meditacion"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".configuracion"            android:label="@string/title_activity_configuracion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".calculadora"
+            android:label="@string/title_activity_calculadora"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".meditacion"
+            android:label="@string/title_activity_meditacion"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".musica"
+            android:label="@string/title_activity_musica"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ruido"
+            android:label="@string/title_activity_ruido"
+            android:theme="@style/AppTheme.NoActionBar" 
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".animo"
+            android:label="@string/title_activity_animo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lobby"
+            android:label="@string/title_activity_lobby"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".inicio"
-            android:label="@string/title_activity_inicio"
+            android:label="Inicio"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +67,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <service android:name=".AudioService" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
