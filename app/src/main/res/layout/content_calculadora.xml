@@ -8,6 +8,16 @@
     tools:context=".calculadora"
     tools:showIn="@layout/activity_calculadora">
 
+    <Button
+        android:id="@+id/botonBG"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/round_image_black_48dp"
+        android:text="Cambiar fondo de pantalla"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteY="75dp" />
+
     <ImageButton
         android:id="@+id/backButton2"
         android:layout_width="wrap_content"
