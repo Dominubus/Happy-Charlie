@@ -11,32 +11,44 @@
     <Button
         android:id="@+id/botonCL"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:drawableStart="@drawable/round_format_color_text_black_48dp"
         android:text="Cambiar color de texto"
         android:textColor="#000000"
-        tools:layout_editor_absoluteY="192dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonFT" />
 
     <Button
         android:id="@+id/botonFT"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:drawableStart="@drawable/round_title_black_48dp"
         android:text="Cambiar fuente del sistema"
         android:textColor="#000000"
-        tools:layout_editor_absoluteY="134dp" />
+        app:layout_constraintBottom_toTopOf="@+id/botonCL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonBG" />
 
     <Button
         android:id="@+id/botonBG"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:drawableStart="@drawable/round_image_black_48dp"
         android:text="Cambiar fondo de pantalla"
         android:textColor="#000000"
-        tools:layout_editor_absoluteY="75dp" />
+        app:layout_constraintBottom_toTopOf="@+id/botonFT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton2" />
 
     <ImageButton
         android:id="@+id/backButton2"
