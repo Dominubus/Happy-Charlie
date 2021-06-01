@@ -8,12 +8,73 @@
     tools:context=".configuracion"
     tools:showIn="@layout/activity_configuracion">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="97dp"
-        android:text="En Construcción"
-        android:textSize="42sp"
-        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/botonCL"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/round_format_color_text_black_48dp"
+        android:fontFamily="@font/merriweather"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="@string/botonCL"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonFT" />
+
+    <Button
+        android:id="@+id/botonFT"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:drawableStart="@drawable/round_title_black_48dp"
+        android:fontFamily="@font/merriweather"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="@string/botonFT"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/botonCL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonBG" />
+
+    <Button
+        android:id="@+id/botonBG"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/round_image_black_48dp"
+        android:fontFamily="@font/merriweather"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="@string/botonBG"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/botonFT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton2" />
+
+    <ImageButton
+        android:id="@+id/backButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/iboton_atras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_arrow_back_black_48" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
