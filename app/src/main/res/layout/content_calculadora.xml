@@ -9,6 +9,16 @@
     tools:showIn="@layout/activity_calculadora">
 
     <Button
+        android:id="@+id/botonFT"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/round_title_black_48dp"
+        android:text="Cambiar fuente del sistema"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <Button
         android:id="@+id/botonBG"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="393dp"
