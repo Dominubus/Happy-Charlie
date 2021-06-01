@@ -9,6 +9,16 @@
     tools:showIn="@layout/activity_calculadora">
 
     <Button
+        android:id="@+id/botonCL"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/round_format_color_text_black_48dp"
+        android:text="Cambiar color de texto"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <Button
         android:id="@+id/botonFT"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="393dp"
