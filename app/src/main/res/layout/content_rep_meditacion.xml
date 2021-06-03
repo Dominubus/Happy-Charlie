@@ -28,20 +28,22 @@
         android:id="@+id/btn_play_pause"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="172dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="400dp"
+        android:layout_marginEnd="50dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/meditacion"
         android:onClick="reproducir"
         android:src="@drawable/round_play_arrow_black_48"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_adelantar"
+        app:layout_constraintStart_toEndOf="@id/btn_retroceder"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/btn_retroceder"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="400dp"
         android:background="@drawable/btn_retroceder"
         android:contentDescription="@string/meditacion"
@@ -53,12 +55,12 @@
         android:id="@+id/btn_adelantar"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="272dp"
         android:layout_marginTop="400dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/btn_adelantar"
         android:contentDescription="@string/meditacion"
         android:onClick="adelantar"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -95,6 +97,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_play_pause" />
 
@@ -102,18 +106,15 @@
         android:id="@+id/texView_temp"
         android:layout_width="190dp"
         android:layout_height="70dp"
-        android:layout_marginTop="89dp"
-        android:fontFamily="@font/condiment"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/merriweather"
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
         android:text="@string/temp"
         android:textColor="@android:color/black"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.63"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_play_pause"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

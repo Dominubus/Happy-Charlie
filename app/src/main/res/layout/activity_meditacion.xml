@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".meditacion"
-    android:background="@drawable/meditacionbg" >
+    android:background="@drawable/bgnoche" >
     <include layout="@layout/content_meditacion" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
