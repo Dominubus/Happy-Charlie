@@ -65,5 +65,8 @@
     <string name="IV">DESCRIPCION</string>
     <string name="continueIcon">Botón de reanudar</string>
     <string name="temp">00:00</string>
+    <string name="botonCL">Cambiar color del texto</string>
+    <string name="botonFT">Cambiar fuente del sistema</string>
+    <string name="botonBG">Cambiar fondo de pantalla</string>
 
 </resources>
