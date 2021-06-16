@@ -29,6 +29,7 @@
     <string name="title_activity_calculadora">calculadora</string>
     <string name="title_activity_configuracion">configuracion</string>
     <string name="title_activity_popupTempo">Popup</string>
+    <string name="title_activity_menuemergentefondo">mefondo</string>
     <string name="imaBTempo">btnTempo</string>
     <string name="guia_para_principiantes">Meditación sencilla</string>
     <string name="guia_relajacion">Relajar cuerpo y mente</string>
@@ -68,5 +69,8 @@
     <string name="botonCL">Cambiar color del texto</string>
     <string name="botonFT">Cambiar fuente del sistema</string>
     <string name="botonBG">Cambiar fondo de pantalla</string>
+    <string name="imageBtnbg1">bg1</string>
+    <string name="imageBtnbg2">bg2</string>
+    <string name="imageBtnbg3">bg3</string>
 
 </resources>
