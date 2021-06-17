@@ -1,0 +1,1520 @@
+Index: app/src/main/res/layout/content_calculadora.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    app:layout_behavior=\"@string/appbar_scrolling_view_behavior\"\n    tools:context=\".calculadora\"\n    tools:showIn=\"@layout/activity_calculadora\">\n\n    <TextView\n        android:id=\"@+id/textView9\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"97dp\"\n        android:text=\"En Construcción\"\n        android:textSize=\"42sp\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/content_calculadora.xml	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
++++ app/src/main/res/layout/content_calculadora.xml	(date 1622045611890)
+@@ -10,9 +10,12 @@
+ 
+     <TextView
+         android:id="@+id/textView9"
+-        android:layout_width="match_parent"
+-        android:layout_height="97dp"
++        android:layout_width="404dp"
++        android:layout_height="127dp"
++        android:layout_marginTop="172dp"
+         android:text="En Construcción"
+         android:textSize="42sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_50_p__m__[Default_Changelist]/shelved.patch
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_50_p__m__[Default_Changelist]/shelved.patch	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
++++ .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_50_p__m__[Default_Changelist]/shelved.patch	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
+@@ -1,709 +0,0 @@
+-Index: app/src/main/res/layout/activity_musica.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".musica\">\n    <include layout=\"@layout/content_musica\" />\n\n</androidx.coordinatorlayout.widget.CoordinatorLayout>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- app/src/main/res/layout/activity_musica.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-+++ app/src/main/res/layout/activity_musica.xml	(date 1621730648967)
+-@@ -1,9 +1,12 @@
+- <?xml version="1.0" encoding="utf-8"?>
+--<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-     xmlns:tools="http://schemas.android.com/tools"
+-     android:layout_width="match_parent"
+--    android:layout_height="match_parent"
+-+    android:layout_height="match_parent">
+-     tools:context=".musica">
+-     <include layout="@layout/content_musica" />
+- 
+--</androidx.coordinatorlayout.widget.CoordinatorLayout>
+-\ No newline at end of file
+-+
+-+
+-+
+-+</androidx.constraintlayout.widget.ConstraintLayout>
+-\ No newline at end of file
+-Index: app/src/main/res/layout/content_musica.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:onClick=\"volverLobby\"\n    app:layout_behavior=\"@string/appbar_scrolling_view_behavior\"\n    tools:context=\".musica\"\n    tools:showIn=\"@layout/activity_musica\">\n\n    <LinearLayout\n        android:id=\"@+id/linearLayout\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"match_parent\"\n        android:orientation=\"vertical\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\">\n\n        <ImageButton\n            android:id=\"@+id/imageButton\"\n            android:layout_width=\"wrap_content\"\n            android:layout_height=\"33dp\"\n            android:layout_marginStart=\"8dp\"\n            android:layout_marginTop=\"8dp\"\n            android:background=\"@android:color/transparent\"\n            android:clickable=\"true\"\n            android:contentDescription=\"@string/iboton_atras\"\n            android:focusable=\"true\"\n            android:onClick=\"volverLobby\"\n            app:layout_constraintStart_toStartOf=\"parent\"\n            app:layout_constraintTop_toTopOf=\"parent\"\n            app:srcCompat=\"@drawable/atras\" />\n\n        <FrameLayout\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"wrap_content\">\n\n            <ImageView\n                android:id=\"@+id/avatarmusica\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"wrap_content\"\n                android:contentDescription=\"avatar_musica\"\n                app:srcCompat=\"@drawable/avatarmusica\" />\n        </FrameLayout>\n\n        <ScrollView\n            android:layout_width=\"wrap_content\"\n            android:layout_height=\"wrap_content\">\n\n            <LinearLayout\n                android:layout_width=\"wrap_content\"\n                android:layout_height=\"wrap_content\"\n                android:orientation=\"vertical\">\n\n                <LinearLayout\n                    android:layout_width=\"wrap_content\"\n                    android:layout_height=\"match_parent\"\n                    android:orientation=\"horizontal\">\n\n                    <ImageButton\n                        android:id=\"@+id/cancion1\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion1\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion2\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion2\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion3\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion3\" />\n\n                </LinearLayout>\n\n                <LinearLayout\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:orientation=\"horizontal\">\n\n                    <ImageButton\n                        android:id=\"@+id/cancion4\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion4\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion5\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion5\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion6\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion6\" />\n\n                </LinearLayout>\n\n                <LinearLayout\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:orientation=\"horizontal\">\n\n                    <ImageButton\n                        android:id=\"@+id/cancion7\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion7\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion8\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion8\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion9\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion9\" />\n                </LinearLayout>\n\n                <LinearLayout\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:orientation=\"horizontal\">\n\n                    <ImageButton\n                        android:id=\"@+id/cancion10\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion10\" />\n\n                </LinearLayout>\n\n            </LinearLayout>\n\n        </ScrollView>\n\n    </LinearLayout>\n\n</androidx.constraintlayout.widget.ConstraintLayout>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- app/src/main/res/layout/content_musica.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-+++ app/src/main/res/layout/content_musica.xml	(date 1621730226258)
+-@@ -4,7 +4,7 @@
+-     xmlns:tools="http://schemas.android.com/tools"
+-     android:layout_width="match_parent"
+-     android:layout_height="match_parent"
+--    android:onClick="volverLobby"
+-+    tools:ignore="ExtraText">
+-     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+-     tools:context=".musica"
+-     tools:showIn="@layout/activity_musica">
+-@@ -13,165 +13,277 @@
+-         android:id="@+id/linearLayout"
+-         android:layout_width="wrap_content"
+-         android:layout_height="match_parent"
+-+        android:layout_marginStart="2dp"
+-+        android:layout_marginTop="2dp"
+-+        android:layout_marginEnd="2dp"
+-+        android:layout_marginBottom="2dp"
+-         android:orientation="vertical"
+-         app:layout_constraintBottom_toBottomOf="parent"
+-         app:layout_constraintEnd_toEndOf="parent"
+-         app:layout_constraintStart_toStartOf="parent"
+-         app:layout_constraintTop_toTopOf="parent">
+- 
+--        <ImageButton
+--            android:id="@+id/imageButton"
+--            android:layout_width="wrap_content"
+--            android:layout_height="33dp"
+--            android:layout_marginStart="8dp"
+--            android:layout_marginTop="8dp"
+--            android:background="@android:color/transparent"
+--            android:clickable="true"
+--            android:contentDescription="@string/iboton_atras"
+--            android:focusable="true"
+--            android:onClick="volverLobby"
+--            app:layout_constraintStart_toStartOf="parent"
+--            app:layout_constraintTop_toTopOf="parent"
+--            app:srcCompat="@drawable/atras" />
+- 
+--        <FrameLayout
+-+        <LinearLayout
+-             android:layout_width="match_parent"
+--            android:layout_height="wrap_content">
+-+            android:layout_height="match_parent"
+-+            android:orientation="vertical"
+-+            tools:ignore="UselessParent">
+- 
+--            <ImageView
+--                android:id="@+id/avatarmusica"
+-+            <FrameLayout
+-                 android:layout_width="match_parent"
+-                 android:layout_height="wrap_content"
+--                android:contentDescription="avatar_musica"
+--                app:srcCompat="@drawable/avatarmusica" />
+--        </FrameLayout>
+-+                android:background="@drawable/avatarmusica">
+-+
+-+                <ImageButton
+-+                    android:id="@+id/salir_musica"
+-+                    android:layout_width="30dp"
+-+                    android:layout_height="30dp"
+-+                    android:onClick="irLobby"
+-+                    app:srcCompat="@drawable/atras"
+-+                    tools:ignore="ContentDescription" />
+-+
+-+
+-+            </FrameLayout>
+- 
+--        <ScrollView
+--            android:layout_width="wrap_content"
+--            android:layout_height="wrap_content">
+-+            <ScrollView
+-+                android:layout_width="match_parent"
+-+                android:layout_height="match_parent"
+-+                android:layout_gravity="center">
+- 
+--            <LinearLayout
+--                android:layout_width="wrap_content"
+--                android:layout_height="wrap_content"
+--                android:orientation="vertical">
+-+                <LinearLayout
+-+                    android:layout_width="match_parent"
+-+                    android:layout_height="match_parent"
+-+                    android:orientation="vertical"
+-+                    tools:ignore="ScrollViewSize">
+- 
+--                <LinearLayout
+--                    android:layout_width="wrap_content"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+-+                    <LinearLayout
+-+                        android:layout_width="match_parent"
+-+                        android:layout_height="match_parent"
+-+                        android:orientation="horizontal">
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion1"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion1" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion1">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion1"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Don't Stop Me Now"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606"
+-+                                tools:ignore="HardcodedText" />
+-+
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion2"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion2" />
+-+                        </FrameLayout>
+-+
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion2">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion2"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Dancing Queen"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606"
+-+                                tools:ignore="HardcodedText" />
+-+
+-+                        </FrameLayout>
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion3"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion3" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion3">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion3"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Good Vibrations"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606"
+-+                                tools:ignore="HardcodedText" />
+-+
+-+                        </FrameLayout>
+- 
+--                </LinearLayout>
+-+                    </LinearLayout>
+- 
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+-+                    <LinearLayout
+-+                        android:layout_width="match_parent"
+-+                        android:layout_height="match_parent"
+-+                        android:orientation="horizontal">
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion4"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion4" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion4">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion4"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Uptown Girl"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606"
+-+                                tools:ignore="HardcodedText" />
+-+
+-+                        </FrameLayout>
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion5"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion5" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion5">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion5"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Eye Of The Tiger"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606"
+-+                                tools:ignore="HardcodedText" />
+-+
+-+                        </FrameLayout>
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion6"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion6" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion6">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion6"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="I'm a Believer"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                tools:ignore="HardcodedText" />
+-+                            android:textColorHint="#2B0606"/>_
+- 
+--                </LinearLayout>
+-+                        </FrameLayout>
+-+                    </LinearLayout>
+- 
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+-+                    <LinearLayout
+-+                        android:layout_width="match_parent"
+-+                        android:layout_height="match_parent"
+-+                        android:orientation="horizontal">
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion7"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion7" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion7">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion7"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Girls Just Want To Have Fun"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606"
+-+                                tools:ignore="HardcodedText" />
+-+                        </FrameLayout>
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion8"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion8" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion8">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion8"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Living On A Prayer"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                tools:ignore="HardcodedText" />
+-+
+-+                        </FrameLayout>
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion9"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion9" />
+--                </LinearLayout>
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion9">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion9"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="I Will Survive"
+-+                                android:textColor="#144770"
+-+                                tools:ignore="HardcodedText" />
+-+
+-+                        </FrameLayout>
+-+                    </LinearLayout>
+- 
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+-+                    <LinearLayout
+-+                        android:layout_width="match_parent"
+-+                        android:layout_height="match_parent"
+-+                        android:orientation="horizontal">
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion10"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion10" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion10">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion10"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Walking On Sunshine"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606"
+-+                                tools:ignore="HardcodedText" />
+-+
+-+                        </FrameLayout>
+- 
+--                </LinearLayout>
+-+                    </LinearLayout>
+- 
+--            </LinearLayout>
+--
+--        </ScrollView>
+-+                </LinearLayout>
+-+            </ScrollView>
+- 
+-+        </LinearLayout>
+-     </LinearLayout>
+- 
+- </androidx.constraintlayout.widget.ConstraintLayout>
+-\ No newline at end of file
+-Index: app/src/main/java/com/example/happycharlie/musica.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>package com.example.happycharlie;\n\nimport androidx.appcompat.app.AppCompatActivity;\n\nimport android.annotation.SuppressLint;\nimport android.content.Intent;\nimport android.os.Bundle;\n\nimport android.view.View;\nimport android.widget.Toast;\n\npublic class musica extends AppCompatActivity {\n    String numCan;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_musica);\n        numCan=\"\";\n    }\n\n    public void volverLobby(View view) {\n        //Intent anterior = new Intent(this, lobby.class);\n        //startActivity(anterior);\n        finish();\n    }\n\n    @SuppressLint(\"NonConstantResourceId\")\n    public void IrPantallaReproductor(View view){\n\n        switch (view.getId()){\n            case R.id.cancion1:\n                Toast.makeText(this, \"Don't Stop Me Now\",Toast.LENGTH_SHORT).show();\n                numCan=\"0\";\n                break;\n\n            case R.id.cancion2:\n                Toast.makeText(this, \"Dancing Queen\",Toast.LENGTH_SHORT).show();\n                numCan=\"1\";\n                break;\n\n            case R.id.cancion3:\n                Toast.makeText(this, \"Good Vibrations\",Toast.LENGTH_SHORT).show();\n                numCan=\"2\";\n                break;\n            case R.id.cancion4:\n                Toast.makeText(this, \"Uptown Girl\",Toast.LENGTH_SHORT).show();\n                numCan=\"3\";\n                break;\n\n            case R.id.cancion5:\n                Toast.makeText(this, \"Eye Of The Tiger\",Toast.LENGTH_SHORT).show();\n                numCan=\"4\";\n                break;\n\n            case R.id.cancion6:\n                Toast.makeText(this, \"I'm a Believer\",Toast.LENGTH_SHORT).show();\n                numCan=\"5\";\n                break;\n\n            case R.id.cancion7:\n                Toast.makeText(this, \"Girls Just Want To Have Fun\",Toast.LENGTH_SHORT).show();\n                numCan=\"6\";\n                break;\n\n            case R.id.cancion8:\n                Toast.makeText(this, \"Living On A Prayer\",Toast.LENGTH_SHORT).show();\n                numCan=\"7\";\n                break;\n\n            case R.id.cancion9:\n                Toast.makeText(this, \"I Will Survive\",Toast.LENGTH_SHORT).show();\n                numCan=\"8\";\n                break;\n\n            case R.id.cancion10:\n                Toast.makeText(this, \"Walking On Sunshine\",Toast.LENGTH_SHORT).show();\n                numCan=\"9\";\n                break;\n\n        }\n        Intent pasarpantalla = new Intent(this, Pantalla_Reproductor.class);\n        pasarpantalla.putExtra(\"dato\",numCan);\n        startActivity(pasarpantalla);\n        finish();\n\n    }\n}\n\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- app/src/main/java/com/example/happycharlie/musica.java	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-+++ app/src/main/java/com/example/happycharlie/musica.java	(date 1621730226272)
+-@@ -19,12 +19,13 @@
+-         numCan="";
+-     }
+- 
+--    public void volverLobby(View view) {
+--        //Intent anterior = new Intent(this, lobby.class);
+--        //startActivity(anterior);
+-+    public void irLobby(View view) {
+-+        Intent irLobby = new Intent(this, lobby.class);
+-+        startActivity(irLobby);
+-         finish();
+-     }
+- 
+-+
+-     @SuppressLint("NonConstantResourceId")
+-     public void IrPantallaReproductor(View view){
+- 
+-@@ -79,11 +80,13 @@
+-                 break;
+- 
+-         }
+-+
+-         Intent pasarpantalla = new Intent(this, Pantalla_Reproductor.class);
+-         pasarpantalla.putExtra("dato",numCan);
+-         startActivity(pasarpantalla);
+-         finish();
+- 
+-     }
+-+
+- }
+- 
+-Index: app/src/main/res/layout-land/activity_musica.xml
+-===================================================================
+---- app/src/main/res/layout-land/activity_musica.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-+++ app/src/main/res/layout-land/activity_musica.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-@@ -1,9 +0,0 @@
+--<?xml version="1.0" encoding="utf-8"?>
+--<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+--    xmlns:tools="http://schemas.android.com/tools"
+--    android:layout_width="match_parent"
+--    android:layout_height="match_parent"
+--    tools:context=".musica">
+--    <include layout="@layout/content_musica" />
+--
+--</androidx.coordinatorlayout.widget.CoordinatorLayout>
+-\ No newline at end of file
+-Index: app/src/main/res/layout-land/content_musica.xml
+-===================================================================
+---- app/src/main/res/layout-land/content_musica.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-+++ app/src/main/res/layout-land/content_musica.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-@@ -1,180 +0,0 @@
+--<?xml version="1.0" encoding="utf-8"?>
+--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+--    xmlns:app="http://schemas.android.com/apk/res-auto"
+--    xmlns:tools="http://schemas.android.com/tools"
+--    android:layout_width="match_parent"
+--    android:layout_height="match_parent"
+--    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+--    tools:context=".musica"
+--    tools:showIn="@layout/activity_musica">
+--
+--    <LinearLayout
+--        android:id="@+id/linearLayout"
+--        android:layout_width="0dp"
+--        android:layout_height="match_parent"
+--        android:background="@drawable/beachmed"
+--        android:orientation="horizontal"
+--        app:layout_constraintBottom_toBottomOf="parent"
+--        app:layout_constraintEnd_toEndOf="parent"
+--        app:layout_constraintStart_toStartOf="parent"
+--        app:layout_constraintTop_toTopOf="parent">
+--
+--        <ImageButton
+--            android:id="@+id/imageButton"
+--            android:layout_width="wrap_content"
+--            android:layout_height="wrap_content"
+--            android:layout_marginStart="8dp"
+--            android:layout_marginTop="8dp"
+--            android:background="@android:color/transparent"
+--            android:clickable="true"
+--            android:contentDescription="@string/iboton_atras"
+--            android:focusable="true"
+--            android:onClick="volverLobby"
+--            app:layout_constraintStart_toStartOf="parent"
+--            app:layout_constraintTop_toTopOf="parent"
+--            app:srcCompat="@drawable/atras" />
+--
+--        <FrameLayout
+--            android:layout_width="wrap_content"
+--            android:layout_height="wrap_content">
+--
+--            <ImageView
+--                android:id="@+id/avatarmusica"
+--                android:layout_width="250dp"
+--                android:layout_height="400dp"
+--                android:contentDescription="avatar_musica"
+--                app:srcCompat="@drawable/avatarmusica"
+--                tools:ignore="HardcodedText" />
+--
+--        </FrameLayout>
+--
+--        <ScrollView
+--            android:layout_width="match_parent"
+--            android:layout_height="wrap_content">
+--
+--            <LinearLayout
+--                android:layout_width="match_parent"
+--                android:layout_height="match_parent"
+--                android:orientation="vertical">
+--
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal"
+--                    tools:layout_editor_absoluteX="1dp">
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion1"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion1" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion2"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion2" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion3"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion3" />
+--
+--                </LinearLayout>
+--
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion4"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion4" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion5"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion5" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion6"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion6" />
+--
+--                </LinearLayout>
+--
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion7"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion7" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion8"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion8" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion9"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion9" />
+--                </LinearLayout>
+--
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion10"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion10" />
+--
+--                </LinearLayout>
+--
+--            </LinearLayout>
+--
+--        </ScrollView>
+--
+--    </LinearLayout>
+--
+--</androidx.constraintlayout.widget.ConstraintLayout>
+-\ No newline at end of file
+-Index: .idea/misc.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_8\" default=\"true\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- .idea/misc.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-+++ .idea/misc.xml	(date 1621729511330)
+-@@ -1,6 +1,6 @@
+- <?xml version="1.0" encoding="UTF-8"?>
+- <project version="4">
+--  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+-+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+-     <output url="file://$PROJECT_DIR$/build/classes" />
+-   </component>
+-   <component name="ProjectType">
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_50_p__m___Default_Changelist_.xml
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_50_p__m___Default_Changelist_.xml	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
++++ .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_50_p__m___Default_Changelist_.xml	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_22_5_2021_8_50_p__m__[Default_Changelist]" date="1621731076383" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_50_p__m__[Default_Changelist]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 22/5/2021 8:50 p. m. [Default Changelist]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_22_p__m__[Default_Changelist]/shelved.patch
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_22_p__m__[Default_Changelist]/shelved.patch	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
++++ .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_22_p__m__[Default_Changelist]/shelved.patch	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
+@@ -1,643 +0,0 @@
+-Index: app/src/main/res/layout/content_musica.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:onClick=\"volverLobby\"\n    app:layout_behavior=\"@string/appbar_scrolling_view_behavior\"\n    tools:context=\".musica\"\n    tools:showIn=\"@layout/activity_musica\">\n\n    <LinearLayout\n        android:id=\"@+id/linearLayout\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"match_parent\"\n        android:orientation=\"vertical\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\">\n\n        <ImageButton\n            android:id=\"@+id/imageButton\"\n            android:layout_width=\"wrap_content\"\n            android:layout_height=\"33dp\"\n            android:layout_marginStart=\"8dp\"\n            android:layout_marginTop=\"8dp\"\n            android:background=\"@android:color/transparent\"\n            android:clickable=\"true\"\n            android:contentDescription=\"@string/iboton_atras\"\n            android:focusable=\"true\"\n            android:onClick=\"volverLobby\"\n            app:layout_constraintStart_toStartOf=\"parent\"\n            app:layout_constraintTop_toTopOf=\"parent\"\n            app:srcCompat=\"@drawable/atras\" />\n\n        <FrameLayout\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"wrap_content\">\n\n            <ImageView\n                android:id=\"@+id/avatarmusica\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"wrap_content\"\n                android:contentDescription=\"avatar_musica\"\n                app:srcCompat=\"@drawable/avatarmusica\" />\n        </FrameLayout>\n\n        <ScrollView\n            android:layout_width=\"wrap_content\"\n            android:layout_height=\"wrap_content\">\n\n            <LinearLayout\n                android:layout_width=\"wrap_content\"\n                android:layout_height=\"wrap_content\"\n                android:orientation=\"vertical\">\n\n                <LinearLayout\n                    android:layout_width=\"wrap_content\"\n                    android:layout_height=\"match_parent\"\n                    android:orientation=\"horizontal\">\n\n                    <ImageButton\n                        android:id=\"@+id/cancion1\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion1\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion2\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion2\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion3\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion3\" />\n\n                </LinearLayout>\n\n                <LinearLayout\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:orientation=\"horizontal\">\n\n                    <ImageButton\n                        android:id=\"@+id/cancion4\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion4\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion5\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion5\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion6\"\n                        style=\"@android:style/Widget.ImageButton\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion6\" />\n\n                </LinearLayout>\n\n                <LinearLayout\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:orientation=\"horizontal\">\n\n                    <ImageButton\n                        android:id=\"@+id/cancion7\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion7\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion8\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion8\" />\n\n                    <ImageButton\n                        android:id=\"@+id/cancion9\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion9\" />\n                </LinearLayout>\n\n                <LinearLayout\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:orientation=\"horizontal\">\n\n                    <ImageButton\n                        android:id=\"@+id/cancion10\"\n                        android:layout_width=\"135dp\"\n                        android:layout_height=\"180dp\"\n                        android:contentDescription=\"@string/MenuMusica\"\n                        android:onClick=\"IrPantallaReproductor\"\n                        app:srcCompat=\"@drawable/cancion10\" />\n\n                </LinearLayout>\n\n            </LinearLayout>\n\n        </ScrollView>\n\n    </LinearLayout>\n\n</androidx.constraintlayout.widget.ConstraintLayout>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- app/src/main/res/layout/content_musica.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-+++ app/src/main/res/layout/content_musica.xml	(date 1621729218370)
+-@@ -1,11 +1,10 @@
+- <?xml version="1.0" encoding="utf-8"?>
+- <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-     xmlns:app="http://schemas.android.com/apk/res-auto"
+--    xmlns:tools="http://schemas.android.com/tools"
+-     android:layout_width="match_parent"
+-     android:layout_height="match_parent"
+--    android:onClick="volverLobby"
+-     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+-+    xmlns:tools="http://schemas.android.com/tools"
+-     tools:context=".musica"
+-     tools:showIn="@layout/activity_musica">
+- 
+-@@ -13,165 +12,267 @@
+-         android:id="@+id/linearLayout"
+-         android:layout_width="wrap_content"
+-         android:layout_height="match_parent"
+-+        android:layout_marginStart="2dp"
+-+        android:layout_marginTop="2dp"
+-+        android:layout_marginEnd="2dp"
+-+        android:layout_marginBottom="2dp"
+-         android:orientation="vertical"
+-         app:layout_constraintBottom_toBottomOf="parent"
+-         app:layout_constraintEnd_toEndOf="parent"
+-         app:layout_constraintStart_toStartOf="parent"
+-         app:layout_constraintTop_toTopOf="parent">
+- 
+--        <ImageButton
+--            android:id="@+id/imageButton"
+--            android:layout_width="wrap_content"
+--            android:layout_height="33dp"
+--            android:layout_marginStart="8dp"
+--            android:layout_marginTop="8dp"
+--            android:background="@android:color/transparent"
+--            android:clickable="true"
+--            android:contentDescription="@string/iboton_atras"
+--            android:focusable="true"
+--            android:onClick="volverLobby"
+--            app:layout_constraintStart_toStartOf="parent"
+--            app:layout_constraintTop_toTopOf="parent"
+--            app:srcCompat="@drawable/atras" />
+-+
+-+        <LinearLayout
+-+            android:layout_width="match_parent"
+-+            android:layout_height="match_parent"
+-+            android:orientation="vertical"
+-+            tools:ignore="UselessParent">
+- 
+--        <FrameLayout
+--            android:layout_width="match_parent"
+--            android:layout_height="wrap_content">
+-+            <FrameLayout
+-+                android:layout_width="match_parent"
+-+                android:layout_height="wrap_content">
+- 
+--            <ImageView
+--                android:id="@+id/avatarmusica"
+--                android:layout_width="match_parent"
+--                android:layout_height="wrap_content"
+--                android:contentDescription="avatar_musica"
+--                app:srcCompat="@drawable/avatarmusica" />
+--        </FrameLayout>
+-+                <ImageView
+-+                    android:id="@+id/avatar_musica"
+-+                    android:layout_width="wrap_content"
+-+                    android:layout_height="wrap_content"
+-+                    app:srcCompat="@drawable/avatarmusica"
+-+                    tools:ignore="ContentDescription" />
+-+
+-+            </FrameLayout>
+- 
+--        <ScrollView
+--            android:layout_width="wrap_content"
+--            android:layout_height="wrap_content">
+-+            <ScrollView
+-+                android:layout_width="match_parent"
+-+                android:layout_height="match_parent"
+-+                android:layout_gravity="center">
+- 
+--            <LinearLayout
+--                android:layout_width="wrap_content"
+--                android:layout_height="wrap_content"
+--                android:orientation="vertical">
+-+                <LinearLayout
+-+                    android:layout_width="match_parent"
+-+                    android:layout_height="match_parent"
+-+                    android:orientation="vertical"
+-+                    tools:ignore="ScrollViewSize">
+- 
+--                <LinearLayout
+--                    android:layout_width="wrap_content"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+-+                    <LinearLayout
+-+                        android:layout_width="match_parent"
+-+                        android:layout_height="match_parent"
+-+                        android:orientation="horizontal">
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion1"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion1" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion1">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion1"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Don't Stop Me Now"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606" />
+-+
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion2"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion2" />
+-+                        </FrameLayout>
+-+
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion2">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion2"
+-+                                android:text="Dancing Queen"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606"/>
+-+
+-+                        </FrameLayout>
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion3"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion3" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion3">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion3"
+-+                                android:text="Good Vibrations"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606"/>
+-+
+-+                        </FrameLayout>
+- 
+--                </LinearLayout>
+-+                    </LinearLayout>
+- 
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+-+                    <LinearLayout
+-+                        android:layout_width="match_parent"
+-+                        android:layout_height="match_parent"
+-+                        android:orientation="horizontal">
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion4"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion4" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion4">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion4"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Uptown Girl"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606" />
+-+
+-+                        </FrameLayout>
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion5"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion5" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion5">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion5"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Eye Of The Tiger"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606" />
+-+
+-+                        </FrameLayout>
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion6"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion6" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion6">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion6"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="I'm a Believer"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF" />
+-+                            android:textColorHint="#2B0606"/>_
+- 
+--                </LinearLayout>
+-+                        </FrameLayout>
+-+                    </LinearLayout>
+- 
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+-+                    <LinearLayout
+-+                        android:layout_width="match_parent"
+-+                        android:layout_height="match_parent"
+-+                        android:orientation="horizontal">
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion7"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion7" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion7">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion7"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Girls Just Want To Have Fun"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606" />
+-+                        </FrameLayout>
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion8"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion8" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion8">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion8"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Living On A Prayer"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF" />
+-+
+-+                        </FrameLayout>
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion9"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion9" />
+--                </LinearLayout>
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion9">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion9"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="I Will Survive"
+-+                                android:textColor="#144770" />
+-+
+-+                        </FrameLayout>
+-+                    </LinearLayout>
+- 
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+-+                    <LinearLayout
+-+                        android:layout_width="match_parent"
+-+                        android:layout_height="match_parent"
+-+                        android:orientation="horizontal">
+- 
+--                    <ImageButton
+--                        android:id="@+id/cancion10"
+--                        android:layout_width="135dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion10" />
+-+                        <FrameLayout
+-+                            android:layout_width="132dp"
+-+                            android:layout_height="132dp"
+-+                            android:background="@drawable/cancion10">
+-+
+-+                            <Button
+-+                                android:id="@+id/cancion10"
+-+                                android:layout_width="100dp"
+-+                                android:layout_height="wrap_content"
+-+                                android:layout_gravity="center"
+-+                                android:background="#5CFFFFFF"
+-+                                android:onClick="IrPantallaReproductor"
+-+                                android:text="Walking On Sunshine"
+-+                                android:textColor="#144770"
+-+                                android:textColorHighlight="#FFFFFF"
+-+                                android:textColorHint="#2B0606" />_
+-+                            android:onClick="IrPantallaReproductor"/>
+-+
+-+                        </FrameLayout>
+- 
+--                </LinearLayout>
+-+                    </LinearLayout>
+- 
+--            </LinearLayout>
+-+                </LinearLayout>
+- 
+--        </ScrollView>
+-+            </ScrollView>
+- 
+-+        </LinearLayout>
+-     </LinearLayout>
+- 
+-+
+- </androidx.constraintlayout.widget.ConstraintLayout>
+-\ No newline at end of file
+-Index: app/src/main/res/layout-land/content_musica.xml
+-===================================================================
+---- app/src/main/res/layout-land/content_musica.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-+++ app/src/main/res/layout-land/content_musica.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-@@ -1,180 +0,0 @@
+--<?xml version="1.0" encoding="utf-8"?>
+--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+--    xmlns:app="http://schemas.android.com/apk/res-auto"
+--    xmlns:tools="http://schemas.android.com/tools"
+--    android:layout_width="match_parent"
+--    android:layout_height="match_parent"
+--    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+--    tools:context=".musica"
+--    tools:showIn="@layout/activity_musica">
+--
+--    <LinearLayout
+--        android:id="@+id/linearLayout"
+--        android:layout_width="0dp"
+--        android:layout_height="match_parent"
+--        android:background="@drawable/beachmed"
+--        android:orientation="horizontal"
+--        app:layout_constraintBottom_toBottomOf="parent"
+--        app:layout_constraintEnd_toEndOf="parent"
+--        app:layout_constraintStart_toStartOf="parent"
+--        app:layout_constraintTop_toTopOf="parent">
+--
+--        <ImageButton
+--            android:id="@+id/imageButton"
+--            android:layout_width="wrap_content"
+--            android:layout_height="wrap_content"
+--            android:layout_marginStart="8dp"
+--            android:layout_marginTop="8dp"
+--            android:background="@android:color/transparent"
+--            android:clickable="true"
+--            android:contentDescription="@string/iboton_atras"
+--            android:focusable="true"
+--            android:onClick="volverLobby"
+--            app:layout_constraintStart_toStartOf="parent"
+--            app:layout_constraintTop_toTopOf="parent"
+--            app:srcCompat="@drawable/atras" />
+--
+--        <FrameLayout
+--            android:layout_width="wrap_content"
+--            android:layout_height="wrap_content">
+--
+--            <ImageView
+--                android:id="@+id/avatarmusica"
+--                android:layout_width="250dp"
+--                android:layout_height="400dp"
+--                android:contentDescription="avatar_musica"
+--                app:srcCompat="@drawable/avatarmusica"
+--                tools:ignore="HardcodedText" />
+--
+--        </FrameLayout>
+--
+--        <ScrollView
+--            android:layout_width="match_parent"
+--            android:layout_height="wrap_content">
+--
+--            <LinearLayout
+--                android:layout_width="match_parent"
+--                android:layout_height="match_parent"
+--                android:orientation="vertical">
+--
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal"
+--                    tools:layout_editor_absoluteX="1dp">
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion1"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion1" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion2"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion2" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion3"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion3" />
+--
+--                </LinearLayout>
+--
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion4"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion4" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion5"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion5" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion6"
+--                        style="@android:style/Widget.ImageButton"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion6" />
+--
+--                </LinearLayout>
+--
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion7"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion7" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion8"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion8" />
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion9"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion9" />
+--                </LinearLayout>
+--
+--                <LinearLayout
+--                    android:layout_width="match_parent"
+--                    android:layout_height="match_parent"
+--                    android:orientation="horizontal">
+--
+--                    <ImageButton
+--                        android:id="@+id/cancion10"
+--                        android:layout_width="120dp"
+--                        android:layout_height="180dp"
+--                        android:contentDescription="@string/MenuMusica"
+--                        android:onClick="IrPantallaReproductor"
+--                        app:srcCompat="@drawable/cancion10" />
+--
+--                </LinearLayout>
+--
+--            </LinearLayout>
+--
+--        </ScrollView>
+--
+--    </LinearLayout>
+--
+--</androidx.constraintlayout.widget.ConstraintLayout>
+-\ No newline at end of file
+-Index: app/src/main/res/layout-land/activity_musica.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".musica\">\n    <include layout=\"@layout/content_musica\" />\n\n</androidx.coordinatorlayout.widget.CoordinatorLayout>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- app/src/main/res/layout-land/activity_musica.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-+++ app/src/main/res/layout-land/activity_musica.xml	(date 1621728556452)
+-@@ -1,9 +1,0 @@
+--<?xml version="1.0" encoding="utf-8"?>
+--<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+--    xmlns:tools="http://schemas.android.com/tools"
+--    android:layout_width="match_parent"
+--    android:layout_height="match_parent"
+--    tools:context=".musica">
+--    <include layout="@layout/content_musica" />
+--
+--</androidx.coordinatorlayout.widget.CoordinatorLayout>
+-\ No newline at end of file
+-Index: .idea/misc.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_8\" default=\"true\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- .idea/misc.xml	(revision d487dd13607999c0760b6903b964bab1ddee1d7b)
+-+++ .idea/misc.xml	(date 1621728560734)
+-@@ -1,6 +1,6 @@
+- <?xml version="1.0" encoding="UTF-8"?>
+- <project version="4">
+--  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+-+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+-     <output url="file://$PROJECT_DIR$/build/classes" />
+-   </component>
+-   <component name="ProjectType">
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_22_p__m___Default_Changelist_.xml
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_22_p__m___Default_Changelist_.xml	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
++++ .idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_22_p__m___Default_Changelist_.xml	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_22_5_2021_8_22_p__m__[Default_Changelist]" date="1621729376248" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2021_8_22_p__m__[Default_Changelist]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 22/5/2021 8:22 p. m. [Default Changelist]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\n  <component name=\"GradleSettings\">\n    <option name=\"linkedExternalProjectsSettings\">\n      <GradleProjectSettings>\n        <option name=\"testRunner\" value=\"PLATFORM\" />\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"modules\">\n          <set>\n            <option value=\"$PROJECT_DIR$\" />\n            <option value=\"$PROJECT_DIR$/app\" />\n          </set>\n        </option>\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\n<<<<<<< HEAD\n=======\n        <option name=\"testRunner\" value=\"PLATFORM\" />\n>>>>>>> develop\n        <option name=\"useQualifiedModuleNames\" value=\"true\" />\n      </GradleProjectSettings>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
++++ .idea/gradle.xml	(date 1622036728363)
+@@ -7,6 +7,7 @@
+         <option name="testRunner" value="PLATFORM" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="gradleJvm" value="11" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
+@@ -14,11 +15,6 @@
+           </set>
+         </option>
+         <option name="resolveModulePerSourceSet" value="false" />
+-<<<<<<< HEAD
+-=======
+-        <option name="testRunner" value="PLATFORM" />
+->>>>>>> develop
+-        <option name="useQualifiedModuleNames" value="true" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"CompilerConfiguration\">\n<<<<<<< HEAD\n    <bytecodeTargetLevel target=\"1.8\" />\n=======\n    <bytecodeTargetLevel target=\"11\" />\n>>>>>>> develop\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
++++ .idea/compiler.xml	(date 1622036728305)
+@@ -1,10 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="CompilerConfiguration">
+-<<<<<<< HEAD
+-    <bytecodeTargetLevel target="1.8" />
+-=======
+     <bytecodeTargetLevel target="11" />
+->>>>>>> develop
+   </component>
+ </project>
+\ No newline at end of file
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// Top-level build file where you can add configuration options common to all sub-projects/modules.\n\nbuildscript {\n    repositories {\n        google()\n        jcenter()\n        \n    }\n    dependencies {\n        classpath 'com.android.tools.build:gradle:3.5.2'\n        \n        // NOTE: Do not place your application dependencies here; they belong\n        // in the individual module build.gradle files\n    }\n}\n\nallprojects {\n    repositories {\n        google()\n        jcenter()\n        \n    }\n}\n\ntask clean(type: Delete) {\n    delete rootProject.buildDir\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build.gradle	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
++++ build.gradle	(date 1622040064180)
+@@ -7,7 +7,7 @@
+         
+     }
+     dependencies {
+-        classpath 'com.android.tools.build:gradle:3.5.2'
++        classpath 'com.android.tools.build:gradle:4.2.0'
+         
+         // NOTE: Do not place your application dependencies here; they belong
+         // in the individual module build.gradle files
+Index: .idea/codeStyles/Project.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"ProjectCodeStyleConfiguration\">\n  <code_scheme name=\"Project\" version=\"173\">\n    <DBN-PSQL>\n      <case-options enabled=\"true\">\n        <option name=\"KEYWORD_CASE\" value=\"lower\" />\n        <option name=\"FUNCTION_CASE\" value=\"lower\" />\n        <option name=\"PARAMETER_CASE\" value=\"lower\" />\n        <option name=\"DATATYPE_CASE\" value=\"lower\" />\n        <option name=\"OBJECT_CASE\" value=\"preserve\" />\n      </case-options>\n      <formatting-settings enabled=\"false\" />\n    </DBN-PSQL>\n    <DBN-SQL>\n      <case-options enabled=\"true\">\n        <option name=\"KEYWORD_CASE\" value=\"lower\" />\n        <option name=\"FUNCTION_CASE\" value=\"lower\" />\n        <option name=\"PARAMETER_CASE\" value=\"lower\" />\n        <option name=\"DATATYPE_CASE\" value=\"lower\" />\n        <option name=\"OBJECT_CASE\" value=\"preserve\" />\n      </case-options>\n      <formatting-settings enabled=\"false\">\n        <option name=\"STATEMENT_SPACING\" value=\"one_line\" />\n        <option name=\"CLAUSE_CHOP_DOWN\" value=\"chop_down_if_statement_long\" />\n        <option name=\"ITERATION_ELEMENTS_WRAPPING\" value=\"chop_down_if_not_single\" />\n      </formatting-settings>\n    </DBN-SQL>\n    <ScalaCodeStyleSettings>\n      <option name=\"MULTILINE_STRING_CLOSING_QUOTES_ON_NEW_LINE\" value=\"true\" />\n    </ScalaCodeStyleSettings>\n    <codeStyleSettings language=\"XML\">\n      <indentOptions>\n        <option name=\"CONTINUATION_INDENT_SIZE\" value=\"4\" />\n      </indentOptions>\n      <arrangement>\n        <rules>\n          <section>\n            <rule>\n              <match>\n                <AND>\n                  <NAME>xmlns:android</NAME>\n                  <XML_ATTRIBUTE />\n                  <XML_NAMESPACE>^$</XML_NAMESPACE>\n                </AND>\n              </match>\n            </rule>\n          </section>\n          <section>\n            <rule>\n              <match>\n                <AND>\n                  <NAME>xmlns:.*</NAME>\n                  <XML_ATTRIBUTE />\n                  <XML_NAMESPACE>^$</XML_NAMESPACE>\n                </AND>\n              </match>\n              <order>BY_NAME</order>\n            </rule>\n          </section>\n          <section>\n            <rule>\n              <match>\n                <AND>\n                  <NAME>.*:id</NAME>\n                  <XML_ATTRIBUTE />\n                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>\n                </AND>\n              </match>\n            </rule>\n          </section>\n          <section>\n            <rule>\n              <match>\n                <AND>\n                  <NAME>.*:name</NAME>\n                  <XML_ATTRIBUTE />\n                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>\n                </AND>\n              </match>\n            </rule>\n          </section>\n          <section>\n            <rule>\n              <match>\n                <AND>\n                  <NAME>name</NAME>\n                  <XML_ATTRIBUTE />\n                  <XML_NAMESPACE>^$</XML_NAMESPACE>\n                </AND>\n              </match>\n            </rule>\n          </section>\n          <section>\n            <rule>\n              <match>\n                <AND>\n                  <NAME>style</NAME>\n                  <XML_ATTRIBUTE />\n                  <XML_NAMESPACE>^$</XML_NAMESPACE>\n                </AND>\n              </match>\n            </rule>\n          </section>\n          <section>\n            <rule>\n              <match>\n                <AND>\n                  <NAME>.*</NAME>\n                  <XML_ATTRIBUTE />\n                  <XML_NAMESPACE>^$</XML_NAMESPACE>\n                </AND>\n              </match>\n              <order>BY_NAME</order>\n            </rule>\n          </section>\n          <section>\n            <rule>\n              <match>\n                <AND>\n                  <NAME>.*</NAME>\n                  <XML_ATTRIBUTE />\n                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>\n                </AND>\n              </match>\n              <order>ANDROID_ATTRIBUTE_ORDER</order>\n            </rule>\n          </section>\n          <section>\n            <rule>\n              <match>\n                <AND>\n                  <NAME>.*</NAME>\n                  <XML_ATTRIBUTE />\n                  <XML_NAMESPACE>.*</XML_NAMESPACE>\n                </AND>\n              </match>\n              <order>BY_NAME</order>\n            </rule>\n          </section>\n        </rules>\n      </arrangement>\n    </codeStyleSettings>\n  </code_scheme>\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/codeStyles/Project.xml	(revision e61fbadc01f4fcc8756e1ac9fc14b15e21442892)
++++ .idea/codeStyles/Project.xml	(date 1622036018783)
+@@ -24,10 +24,35 @@
+         <option name="ITERATION_ELEMENTS_WRAPPING" value="chop_down_if_not_single" />
+       </formatting-settings>
+     </DBN-SQL>
++    <DBN-PSQL>
++      <case-options enabled="true">
++        <option name="KEYWORD_CASE" value="lower" />
++        <option name="FUNCTION_CASE" value="lower" />
++        <option name="PARAMETER_CASE" value="lower" />
++        <option name="DATATYPE_CASE" value="lower" />
++        <option name="OBJECT_CASE" value="preserve" />
++      </case-options>
++      <formatting-settings enabled="false" />
++    </DBN-PSQL>
++    <DBN-SQL>
++      <case-options enabled="true">
++        <option name="KEYWORD_CASE" value="lower" />
++        <option name="FUNCTION_CASE" value="lower" />
++        <option name="PARAMETER_CASE" value="lower" />
++        <option name="DATATYPE_CASE" value="lower" />
++        <option name="OBJECT_CASE" value="preserve" />
++      </case-options>
++      <formatting-settings enabled="false">
++        <option name="STATEMENT_SPACING" value="one_line" />
++        <option name="CLAUSE_CHOP_DOWN" value="chop_down_if_statement_long" />
++        <option name="ITERATION_ELEMENTS_WRAPPING" value="chop_down_if_not_single" />
++      </formatting-settings>
++    </DBN-SQL>
+     <ScalaCodeStyleSettings>
+       <option name="MULTILINE_STRING_CLOSING_QUOTES_ON_NEW_LINE" value="true" />
+     </ScalaCodeStyleSettings>
+     <codeStyleSettings language="XML">
++      <option name="FORCE_REARRANGE_MODE" value="1" />
+       <indentOptions>
+         <option name="CONTINUATION_INDENT_SIZE" value="4" />
+       </indentOptions>
