@@ -13,10 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".menu_emergente_colores"
-            android:label="@string/title_activity_menuemergentecolores"
+            android:name=".menu_emergente_fuente"
+            android:label="@string/title_activity_menuemergentefuentes"
             android:theme="@style/AppTheme.TemaPopup"
             ></activity>
+        <activity
+            android:name=".menu_emergente_colores"
+            android:label="@string/title_activity_menuemergentecolores"
+            android:theme="@style/AppTheme.TemaPopup" />
         <activity
             android:name=".menu_emergente_fondos"
             android:label="@string/title_activity_menuemergentefondo"

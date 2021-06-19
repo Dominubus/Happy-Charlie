@@ -31,6 +31,7 @@
     <string name="title_activity_popupTempo">Popup</string>
     <string name="title_activity_menuemergentefondo">mefondo</string>
     <string name="title_activity_menuemergentecolores">menuecolores</string>
+    <string name="title_activity_menuemergentefuentes">menuefuentes</string>
     <string name="imaBTempo">btnTempo</string>
     <string name="guia_para_principiantes">Meditación sencilla</string>
     <string name="guia_relajacion">Relajar cuerpo y mente</string>
@@ -73,5 +74,7 @@
     <string name="imageBtnbg1">bg1</string>
     <string name="imageBtnbg2">bg2</string>
     <string name="imageBtnbg3">bg3</string>
+    <string name="fuente1"> • Merriweather</string>
+    <string name="fuente2"> • Raleway</string>
 
 </resources>

@@ -17,6 +17,7 @@ public class configuracion extends AppCompatActivity {
 
     Button btnbg;
     Button btncl;
+    Button btnft;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class configuracion extends AppCompatActivity {
 
         btnbg =findViewById(R.id.botonBG);
         btncl = findViewById(R.id.botonCL);
+        btnft = findViewById(R.id.botonFT);
 
         btnbg.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -35,6 +37,13 @@ public class configuracion extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(configuracion.this, menu_emergente_colores.class));
+            }
+        });
+
+        btnft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(configuracion.this, menu_emergente_fuente.class));
             }
         });
     }
