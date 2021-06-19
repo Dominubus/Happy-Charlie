@@ -16,6 +16,7 @@ import android.widget.ImageView;
 public class configuracion extends AppCompatActivity {
 
     Button btnbg;
+    Button btncl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +24,18 @@ public class configuracion extends AppCompatActivity {
         setContentView(R.layout.activity_configuracion);
 
         btnbg =findViewById(R.id.botonBG);
+        btncl = findViewById(R.id.botonCL);
 
         btnbg.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {startActivity(new Intent(configuracion.this, menu_emergente_fondos.class));}
+        });
+
+        btncl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(configuracion.this, menu_emergente_colores.class));
+            }
         });
     }
 
