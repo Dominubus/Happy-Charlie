@@ -17,4 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/pug_belly"
         tools:layout_editor_absoluteY="2dp" />
+
+    <Button
+        android:id="@+id/dormirAhora"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:text="Dormir Ahora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 </androidx.constraintlayout.widget.ConstraintLayout>
