@@ -1,13 +1,14 @@
 package com.example.happycharlie;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import static com.example.happycharlie.R.id.cancion1;
 
 public class musica extends AppCompatActivity {
     String numCan;
@@ -22,15 +23,16 @@ public class musica extends AppCompatActivity {
     public void irLobby(View view) {
         Intent irLobby = new Intent(this, lobby.class);
         startActivity(irLobby);
-        finish();
+
     }
+
 
 
     @SuppressLint("NonConstantResourceId")
     public void IrPantallaReproductor(View view){
 
         switch (view.getId()){
-            case R.id.cancion1:
+            case cancion1:
                 Toast.makeText(this, "Don't Stop Me Now",Toast.LENGTH_SHORT).show();
                 numCan="0";
                 break;
@@ -79,7 +81,7 @@ public class musica extends AppCompatActivity {
                 numCan="9";
                 break;
 
-        }
+               }
 
         Intent pasarpantalla = new Intent(this, Pantalla_Reproductor.class);
         pasarpantalla.putExtra("dato",numCan);
