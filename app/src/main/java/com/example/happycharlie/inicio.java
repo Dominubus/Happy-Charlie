@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import android.content.Intent;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -160,8 +161,39 @@ public class inicio extends AppCompatActivity {
             case 2:
                 layout.setBackgroundResource(R.drawable.bg2);
                 break;
-            default:
+
+            case 3:
                 layout.setBackgroundResource(R.drawable.bg3);
+                break;
+            default:
+                layout.setBackgroundResource(R.drawable.bghuellitas);
+                break;
+        }
+        TextView mensaje=findViewById(R.id.textView2);
+        sp = getSharedPreferences("COLOR_MENSAJE", MODE_PRIVATE);
+        key = sp.getInt("key", 1);
+        switch(key) {
+            case 1:
+                mensaje.setTextColor(Color.parseColor("#000000"));
+                break;
+            case 2:
+                mensaje.setTextColor(Color.parseColor("#D2691E"));
+                break;
+
+            case 3:
+                mensaje.setTextColor(Color.parseColor("#0000FF"));
+                break;
+            case 4:
+                mensaje.setTextColor(Color.parseColor("#DC143C"));
+                break;
+            case 5:
+                mensaje.setTextColor(Color.parseColor("#8B008B"));
+                break;
+            case 6:
+                mensaje.setTextColor(Color.parseColor("#008000"));
+                break;
+            default:
+                mensaje.setTextColor(Color.parseColor("#000000"));
                 break;
         }
     }

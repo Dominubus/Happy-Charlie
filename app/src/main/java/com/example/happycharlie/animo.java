@@ -1,10 +1,13 @@
 package com.example.happycharlie;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -52,6 +55,34 @@ public class animo extends AppCompatActivity {
     public void mandarMensaje(View view){
         String mensajeAleatoreo = BuscarCodigo();
         tv.setText(mensajeAleatoreo);
+    }
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = getSharedPreferences("COLOR_MENSAJE", MODE_PRIVATE);
+        int key = sp.getInt("key", 1);
+        switch (key) {
+            case 1:
+                tv.setTextColor(Color.parseColor("#000000"));
+                break;
+            case 2:
+                tv.setTextColor(Color.parseColor("#D2691E"));
+                break;
+            case 3:
+                tv.setTextColor(Color.parseColor("#0000FF"));
+                break;
+            case 4:
+                tv.setTextColor(Color.parseColor("#DC143C"));
+                break;
+            case 5:
+                tv.setTextColor(Color.parseColor("#8B008B"));
+                break;
+            case 6:
+                tv.setTextColor(Color.parseColor("#008000"));
+                break;
+            default:
+                tv.setTextColor(Color.parseColor("#000000"));
+                break;
+        }
     }
 
 }
