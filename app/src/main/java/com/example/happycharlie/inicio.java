@@ -3,6 +3,7 @@ package com.example.happycharlie;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,6 +17,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.MotionEventCompat;
 
 import android.os.Handler;
@@ -144,5 +146,23 @@ public class inicio extends AppCompatActivity {
             e.printStackTrace();
         }
         return byteArrayOutputStream.toString().split("\n");
+    }
+
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = getSharedPreferences("FONDO_INICIO", MODE_PRIVATE);
+        int key = sp.getInt("key", 1);
+        ConstraintLayout layout = findViewById(R.id.inicio);
+        switch(key) {
+            case 1:
+                layout.setBackgroundResource(R.drawable.bghuellitas);
+                break;
+            case 2:
+                layout.setBackgroundResource(R.drawable.bg2);
+                break;
+            default:
+                layout.setBackgroundResource(R.drawable.bg3);
+                break;
+        }
     }
 }
