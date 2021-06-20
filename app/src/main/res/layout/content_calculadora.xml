@@ -19,9 +19,9 @@
         tools:layout_editor_absoluteY="2dp" />
 
     <Button
-        android:id="@+id/dormirAhora"
+        android:id="@+id/dormirNow"
         android:layout_width="0dp"
-        android:layout_height="49dp"
+        android:layout_height="50dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="64dp"
@@ -29,4 +29,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+    <Button
+        android:id="@+id/dormirTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dormirNow" />
 </androidx.constraintlayout.widget.ConstraintLayout>
