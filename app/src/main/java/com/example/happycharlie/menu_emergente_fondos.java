@@ -1,13 +1,17 @@
 package com.example.happycharlie;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class menu_emergente_fondos extends AppCompatActivity {
@@ -55,6 +59,31 @@ public class menu_emergente_fondos extends AppCompatActivity {
         edit.putInt("key",3);
         edit.apply();
         finish();
+    }
+
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = getSharedPreferences("FONDO_INICIO", MODE_PRIVATE);
+        int key = sp.getInt("key", 1);
+        ImageButton view;
+        switch (key) {
+            case 1:
+                view=findViewById(R.id.imageButton6);
+                break;
+            case 2:
+                view=findViewById(R.id.imageButton5);
+                break;
+
+            case 3:
+                view=findViewById(R.id.imageButton8);
+                break;
+            default:
+                view=findViewById(R.id.imageButton6);
+                break;
+        }
+        view.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        view.setBackgroundColor(Color.parseColor("#820000"));
+        view.setPadding(5,5,5,5);
     }
 
 }
