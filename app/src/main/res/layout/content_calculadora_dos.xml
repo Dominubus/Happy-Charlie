@@ -6,6 +6,20 @@
     android:layout_height="match_parent">
 
     <Button
+        android:id="@+id/segundoCiclo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:text="hora para dormir/despertar 2do ciclo"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tercerCiclo" />
+
+    <Button
         android:id="@+id/tercerCiclo"
         android:layout_width="0dp"
         android:layout_height="50dp"
