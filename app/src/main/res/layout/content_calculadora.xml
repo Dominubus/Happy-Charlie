@@ -19,16 +19,34 @@
         tools:layout_editor_absoluteY="2dp" />
 
     <Button
+        android:id="@+id/botonClock"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="64dp"
+        android:background="#F1E6E6"
+        android:backgroundTint="#EAE4E4"
+        android:text="10:10:10 a.m."
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+    <Button
         android:id="@+id/dormirNow"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="64dp"
         android:text="Dormir Ahora"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+        app:layout_constraintTop_toBottomOf="@+id/botonClock" />
 
     <Button
         android:id="@+id/dormirWake"
