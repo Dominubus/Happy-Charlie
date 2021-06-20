@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|bottom"
             android:contentDescription="@string/ruido"
-            android:fontFamily="@font/merriweather"
+            android:fontFamily="@font/merriweather_bold"
             android:text="Ruido Blanco"
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
@@ -108,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|bottom"
             android:contentDescription="@string/ruido"
-            android:fontFamily="@font/merriweather"
+            android:fontFamily="@font/merriweather_bold"
             android:text="Música Relajante"
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
@@ -140,7 +140,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|bottom"
             android:contentDescription="@string/ruido"
-            android:fontFamily="@font/merriweather"
+            android:fontFamily="@font/merriweather_bold"
             android:text="Meditación"
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
@@ -172,9 +172,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|bottom"
             android:contentDescription="@string/ruido"
-            android:fontFamily="@font/merriweather"
-            android:textAlignment="center"
+            android:fontFamily="@font/merriweather_bold"
             android:text="Mensajes de ánimo"
+            android:textAlignment="center"
             android:textColor="@android:color/background_light"
             android:textSize="18sp" />
     </FrameLayout>
@@ -205,12 +205,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|bottom"
             android:contentDescription="@string/ruido"
-            android:fontFamily="@font/merriweather"
+            android:fontFamily="@font/merriweather_bold"
             android:text="Calculadora de sueño"
-            android:textColor="@android:color/background_light"
-            android:textSize="18sp"
             android:textAlignment="center"
-             />
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
 
     </FrameLayout>
 
@@ -239,11 +238,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|bottom"
             android:contentDescription="@string/ruido"
-            android:fontFamily="@font/merriweather"
+            android:fontFamily="@font/merriweather_bold"
             android:text="Configuración"
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
-            android:textSize="18sp" />
+            android:textSize="17sp" />
     </FrameLayout>
 
 

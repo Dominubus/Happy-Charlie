@@ -1,9 +1,9 @@
 1;consejos de vida;Las cosas buenas llegan a los que saben esperar.
 2;consejos de vida;No importa lo que pase, siempre tendrás una historia que contar.
 3;consejos de vida;Encuentra lo que te hace feliz y ve hacia ello.
-4;consejos de vida;Todo error deja una enseñanza, toda enseñanza deja una experiencia, y toda experiencia deja una huella.
+4;consejos de vida;“¿Sabes lo que es realmente contagioso? Una gran sonrisa.” Scrubs
 5;consejos de vida;No busques el momento perfecto, solo busca el momento y hazlo perfecto.
-6;frases positivas;El mejor momento para plantar un árbol era hace 20 años. El segundo mejor momento es AHORA.
+6;frases positivas;“Haz de tu sonrisa un paraguas y deja que llueva.” Twin Peaks
 7;frases positivas;Cada día es una nueva oportunidad para cambiar tu vida.
 8;frases positivas;Ningún mar en calma hizo experto a un marinero.
 9;frases positivas;El momento que da más miedo es siempre justo antes de empezar.
@@ -11,19 +11,19 @@
 11;frases positivas;Intenta ser un Arco iris en el día nublado de alguien.
 12;frases positivas;Esperar ser otra persona es una pérdida de tiempo.
 13;frases positivas;Existe el mañana por alguna razón.
-14;frases positivas;Cuando te das cuenta que estás procrastinando preguntarte: ¿ Dé qué estoy intentando huir?
+14;frases positivas;“Haz que se pregunten por qué sigues sonriendo.” Elizabethtown
 15;frases positivas;Cualquier cosa que te plante la vida florecela con gracia.
 16;frases positivas;Eres suficiente tal y como eres.
 17;frases positivas;Debes hacer las cosas que crees que no puedes hacer.
 18;frases positivas;Tu mejor profesor es tu mayor error.
 19;frases de ánimo;Puedes gritar, puedes llorar, pero no te rindas.
 20;frases de ánimo;Eres capaz de cosas increíbles.
-21;frases de ánimo;Se te ha asignado esta montaña para mostrarles a otros que se puede mover.
+21;frases de ánimo;Explora, sueña, descubre.
 22;frases de ánimo;Cree en ti mismo y serás imparable.
 23;frases de ánimo;Solo fallas cuando dejas de intentarlo.
 24;frases de ánimo;Nunca he conocido a una persona fuerte con un pasado fácil.
 25;frases de ánimo;Despierta. Levántate. Repite.
-26;frases de ánimo;No le temo a las tormentas, porque estoy aprendiendo cómo navegar en mi barco.
+26;frases de ánimo;El que está contento con lo que tiene, posee la mayor y más segura riqueza.
 27;frases de ánimo;Sé gentil contigo mismo. ¡Estás haciendo lo mejor que puedes!
 28;frases de ánimo;Comienza donde estás. Usa lo que tienes. Haz lo que puedas. Arthur Ashe
 29;frases de ánimo;No lo pienses, solo hazlo. Horace
@@ -33,84 +33,84 @@
 33;frases de ánimo;No se puede vencer a la persona que nunca se rinde. Babe Ruth
 34;frases de ánimo;O corres hacia el día o el día corre por ti. Jim Rohn
 35;frases de ánimo;Para tener éxito, primero debemos creer que podemos. Nikos Kazantzakis
-36;frases de ánimo;¿Quieres saber quién eres? No preguntes ¡Actúa! La acción te delineará y definirá. Thomas Jefferson
+36;frases de ánimo;“La mejor manera de alegrarte es intentar alegrar a alguien.” Mark Twain
 37;frases de ánimo;Nunca te quejes y nunca lo expliques. Benjamin Disraeli
-38;frases de ánimo;Podemos encontrar muchas derrotas, pero no debemos ser derrotados. Maya Angelou
+38;frases de ánimo;Las notas del amor hacen mayor la alegría.
 39;frases de ánimo;Incluso si te caes de bruces, sigues adelante. Victor Kiam
 40;frases de ánimo;La calidad no es un acto, es un hábito. Aristóteles
-41;frases de ánimo;Acepta los desafíos para que puedas sentir la euforia de la victoria. George S. Patton
+41;frases de ánimo;No puedes ser feliz todo el tiempo.
 42;frases de ánimo;Elige las reglas que vas a romper y acepta lo demás.
 43;frases de ánimo;Debes hacer lo que crees que no puedes hacer. Eleanor Roosevelt
 44;frases de ánimo;No es la montaña lo que conquistamos sino a nosotros mismos.
-45;frases de ánimo;Establecer objetivos es el primer paso para convertir lo invisible en visible. Tony Robbins
+45;frases de ánimo;Siempre quiero estar contento, triste, no valgo la pena.
 46;frases de ánimo;Nunca, nunca, nunca te rindas. Winston Churchill
 47;frases de ánimo;La fortuna golpea una vez, pero la desgracia tiene mucha más paciencia.
-48;frases de ánimo;Aférrate a lo que es bueno, aunque sea un puñado de tierra. Oración de los Hopi
+48;frases de ánimo;El viaje aporta la felicidad, no el destino.
 49;frases de ánimo;Entrénate para encontrar la bendición en todo.
 50;frases de ánimo;Respira profundamente, es sólo un mal día, no una mala vida.
 51;frases de ánimo;Si te caíste ayer, ponte de pie hoy. HG Wells
 52;frases de ánimo;Mantén la vista en las estrellas y los pies en el suelo. Theodore Roosevelt
 53;frases de ánimo;La forma más efectiva de hacerlo, es haciéndolo. Amelia Earhart
 54;palabras de apoyo; La primera receta para la felicidad: evita meditar largamente en el pasado
-55;palabras de apoyo;No hay árbol que el viento no haya sacudido
-56;palabras de apoyo;No son tus años de vida lo que cuenta, sino la vida en tus años
-57;palabras de apoyo;Si cambias el modo en que miras las cosas, las cosas que miras cambian
-58;palabras de apoyo;No puedes esperar la victoria y planear para la derrota
-59;palabras de apoyo;No te juzgues por tu pasado, ya no vives allí
-60;palabras de apoyo; Todo lo que puedas imaginar es real
-61;palabras de apoyo;Tienes que esperar cosas de ti mismo antes de poder hacerlas
-62;palabras de apoyo; La preocupación nos debería llevar a la acción y no a la depresión
-63;palabras de apoyo;Sólo una cosa vuelve un sueño imposible: el miedo a fracasar
-64;palabras de apoyo;Cuanto más grande la dificultad, mayor la gloria
-65;palabras de apoyo;No tengas miedo de renunciar lo bueno para ir a por lo grande
-66;palabras de apoyo;El error no importa, siempre y cuando sepas corregirlo
-67;palabras de apoyo; No habrá nada que te pueda asustar si te niegas a tener miedo
-68;palabras de apoyo;Las cosas más simples pueden traer la mayor felicidad
-69;palabras de apoyo; La curiosa paradoja es que cuando me acepto a mí mismo, puedo cambiar
-70;palabras de apoyo;Si te caes diez veces levántate once
-71;palabras de apoyo;Si eliges la esperanza, todo será posible
-72;palabras de apoyo; El sufrimiento siempre nos enseña algo, nunca es en vano
-73;palabras de apoyo;No hay problema que no tenga solución en vida
-74;palabras de apoyo;Los miembros de tu familia estamos ahí para ti
-75;palabras de apoyo;Alejarse para retomar fuerzas no es pecado
-76;palabras de apoyo;Tomar fuerzas otra vez nos ayuda a retomar los retos
+55;palabras de apoyo;No hay árbol que el viento no haya sacudido.
+56;palabras de apoyo;No son tus años de vida lo que cuenta, sino la vida en tus años.
+57;palabras de apoyo;Si cambias el modo en que miras las cosas, las cosas que miras cambian.
+58;palabras de apoyo;No puedes esperar la victoria y planear para la derrota.
+59;palabras de apoyo;No te juzgues por tu pasado, ya no vives allí.
+60;palabras de apoyo; Todo lo que puedas imaginar es real.
+61;palabras de apoyo;Tienes que esperar cosas de ti mismo antes de poder hacerlas.
+62;palabras de apoyo; La preocupación nos debería llevar a la acción y no a la depresión.
+63;palabras de apoyo;Sólo una cosa vuelve un sueño imposible: el miedo a fracasar.
+64;palabras de apoyo;Cuanto más grande la dificultad, mayor la gloria.
+65;palabras de apoyo;No tengas miedo de renunciar lo bueno para ir a por lo grande.
+66;palabras de apoyo;El error no importa, siempre y cuando sepas corregirlo.
+67;palabras de apoyo; No habrá nada que te pueda asustar si te niegas a tener miedo.
+68;palabras de apoyo;Las cosas más simples pueden traer la mayor felicidad.
+69;palabras de apoyo;Tal vez el mejor adorno de Navidad es una gran sonrisa.
+70;palabras de apoyo;Si te caes diez veces levántate once.
+71;palabras de apoyo;Si eliges la esperanza, todo será posible.
+72;palabras de apoyo; El sufrimiento siempre nos enseña algo, nunca es en vano.
+73;palabras de apoyo;No hay problema que no tenga solución en vida.
+74;palabras de apoyo;Los miembros de tu familia estamos ahí para ti.
+75;palabras de apoyo;Alejarse para retomar fuerzas no es pecado.
+76;palabras de apoyo;Tomar fuerzas otra vez nos ayuda a retomar los retos.
 77;consejos;No dejes que a tus amigos les pase aquello, demuéstrales tu amistad.
-78;frases de familia;“Tu dolor y preocupación pueden ser muy grandes pero no pueden superar tu fuerza de voluntad.
-79;frases de familia;A veces Dios nos pone pruebas para que nos hagamos más fuertes y así poder soportar las dificultades de la vida
-80;frases de familia;Muchas veces nos sentimos débiles y creemos que ya no podemos más. Nunca te rindas, nunca des tu brazo a torcer
+78;frases de familia;La muerte nos sonríe a todos, devolvámosle la sonrisa.
+79;frases de familia;Cuenta tu vida por sonrisas, no por lágrimas.
+80;frases de familia;Para todos los males, hay dos remedios: el tiempo y el silencio.
 81;frases de familia;Esta familia es el mejor regalo que la vida nos ha dado. ¡Gracias!
-82;frases de familia;La familia te quiere y te aprecia tal y como eres
-83;frases de familia;No hay nada más gratificante que pasar tiempo en familia
-84;frases de familia;Los momentos más felices de mi vida han sido en el hogar junto a mi familia
-85;frases de familia;Gracias a mi familia, por hacer mi sonrisa más brillante y mi risa más sonora
-86;frases de familia;Gracias por ser como son y estar en mi vida
-87;frases de familia;Familia significa que nadie se queda atrás y que nadie se olvida
-88;frases de familia;Mi familia: un poco loca, un poco ruidosa, y mucho amor
-89;frases de familia; La familia es la llave de la felicidad
-90;frases de familia;Para una persona no violenta, todo el mundo es familia
+82;frases de familia;La familia te quiere y te aprecia tal y como eres.
+83;frases de familia;No hay nada más gratificante que pasar tiempo en familia.
+84;frases de familia;Comienza tu día con una sonrisa y luego supérala.
+85;frases de familia;La felicidad solo es real si es compartida.
+86;frases de familia;Gracias por ser como son y estar en mi vida.
+87;frases de familia;Familia significa que nadie se queda atrás y que nadie se olvida.
+88;frases de familia;Mi familia: un poco loca, un poco ruidosa, y mucho amor.
+89;frases de familia; La familia es la llave de la felicidad.
+90;frases de familia;Para una persona no violenta, todo el mundo es familia.
 91;frases optimistas;Solo esta vencido, aquel que cree serlo.
 92;frases optimistas;Si vives en un mundo negativo, es tu decisión hacerlo positivo...
 93;frases optimistas;Si ríes el mundo reirá contigo, si lloras, solo tú te mojaras la cara.
 94;frases optimistas;¡El que se arriesga no pierde nada y el que NO se arriesga no gana!
 95;frases optimistas;En tu vida decides tú, yo solo te sugiero que corras tras tus sueños.
-96;frases optimistas;Solo tienes 2 opciones en la vida: TE RINDES o LUCHAS por lo que quieres, ESPERAS que llegue o CORRES a buscarlo.
+96;frases optimistas;Elige las reglas que vas a romper y acepta lo demás.
 97;frases optimistas; ¡Puedes vivir perfectamente sin esos que pueden vivir sin ti!
 98;frases optimistas;No pierdas más tu tiempo con la gente equivocada ¡Aun estas a tiempo!
 99;frases optimistas;Después de cada tropiezo borrón y sonrisa nueva, así funciona.
-100;frases optimistas;Cada día cuando levantes tu cuerpo de la cama, no olvides levantar también tu entusiasmo y tu fe.
-101;frases optimistas;La vida es un largo camino en el que somos maestro y alumno. Unas veces te toca enseñar, todos los días te toca aprender.
-102;frases optimistas;Reza a Dios, pero sigue remando hacia la orilla. (Proverbio anónimo)
+100;frases optimistas;“El corazón alegre hermosea el rostro.” Rey Salomón
+101;frases optimistas;El arte de vencer se aprende en las derrotas.
+102;frases optimistas;Reza a Dios, pero sigue remando hacia la orilla. 
 103;frases optimistas;Alégrate si algo no regresa a ti... te ha dejado libre.
-104;frases optimistas;El éxito de la vida no está en vencer siempre, sino en no darse por vencido nunca.
+104;frases optimistas;La sonrisa es la belleza, lo que la sal es a los alimentos.
 105;frases optimistas;Si buscas resultados distintos, no hagas siempre lo mismo.
 106;frases optimistas;Ningún mar en calma hizo experto un marinero.
 107;frases optimistas;Quien tiene fe y sabe esperar, al fin y al cabo la suerte le llegará.
-108;frases optimistas;En tus peores momentos conocerás esos que deben estar en los mejores.
+108;frases optimistas;Sólo quien es feliz puede repartir felicidad.
 109;frases optimistas;Si el Plan A falla, recuerda que te quedan otras 25 letras. Clint Bond
-110;frases optimistas; Vive en paz con tu pasado
-111;frases optimistas;Haz las cosas que te hacen feliz
-112;frases optimistas;Disfruta cada paso, no es tan importante llegar como disfrutar el camino
+110;frases optimistas; Vive en paz con tu pasado.
+111;frases optimistas;Haz las cosas que te hacen feliz.
+112;frases optimistas;Para el éxito sobra el talento; para la felicidad, ni basta.
 113;frases optimistas;No te compares con nadie, eres único
-114;frases optimistas;Cambia lo que tengas que cambiar, pero solo puedes cambiarte a ti mismo
-115;frases optimistas;Eres tú el 100% de tu felicidad, Tú y nadie más
+114;frases optimistas;Si dominamos nuestra mente, vendrá la felicidad.
+115;frases optimistas;Eres tú el 100% de tu felicidad, Tú y nadie más.
 116;frases optimistas;Sonríe, es gratis y da vida. Llora si tienes que llorar y después sonríe...

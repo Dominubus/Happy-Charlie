@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".lobby"
-    android:background="@drawable/bghuellitas2">
-    <include layout="@layout/content_lobby" />
+    tools:context=".menu_emergente_fondos">
+    <include layout="@layout/content_menuemergente_fondo" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

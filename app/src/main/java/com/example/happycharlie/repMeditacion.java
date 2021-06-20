@@ -56,10 +56,10 @@ public class repMeditacion extends AppCompatActivity {
                 layout.setBackgroundResource(R.drawable.beachmedbg);
                 tv =(TextView) findViewById(R.id.textView8);
                 tv.setText(R.string.guia_relajacion);
-                tv.setTextColor(Color.parseColor("#000000"));
+                tv.setTextColor(Color.parseColor("#ffffff"));
                 tv =(TextView) findViewById(R.id.textView11);
                 tv.setText(R.string.meditacion2);
-                tv.setTextColor(Color.parseColor("#000000"));
+                tv.setTextColor(Color.parseColor("#ffffff"));
                 mp = MediaPlayer.create(this, R.raw.relajar_cuerpo_mente);
 
                 break;
@@ -67,10 +67,10 @@ public class repMeditacion extends AppCompatActivity {
                 layout.setBackgroundResource(R.drawable.salarmedbg);
                 tv =(TextView) findViewById(R.id.textView8);
                 tv.setText(R.string.guia_paz);
-                tv.setTextColor(Color.parseColor("#000000"));
+                tv.setTextColor(Color.parseColor("#9379AD"));
                 tv =(TextView) findViewById(R.id.textView11);
                 tv.setText(R.string.meditacion3);
-                tv.setTextColor(Color.parseColor("#000000"));
+                tv.setTextColor(Color.parseColor("#9379AD"));
                 mp = MediaPlayer.create(this, R.raw.paz_interior);
 
                 break;
