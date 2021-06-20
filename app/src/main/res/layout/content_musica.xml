@@ -1,294 +1,340 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ExtraText">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".musica"
+    tools:showIn="@layout/activity_musica">
+
+    <LinearLayout
+        android:id="@+id/VentanaMusica"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        tools:ignore="ExtraText">
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context=".musica"
-        tools:showIn="@layout/activity_musica">
+        android:background="@drawable/bgceleste"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginBottom="2dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recuadro0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/salir_musica"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#00FFFFFF"
+                android:onClick="irLobby"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/avatar_musica"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/aatras"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/avatar_musica"
+                android:layout_width="wrap_content"
+                android:layout_height="193dp"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/avatar1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fillViewport="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:orientation="vertical"
-                tools:ignore="UselessParent">
+                tools:ignore="ScrollViewSize">
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/avatarmusica">
-
-                    <ImageButton
-                        android:id="@+id/salir_musica"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@android:color/transparent"
-                        android:onClick="irLobby"
-                        app:srcCompat="@drawable/round_arrow_back_black_48"
-                        tools:ignore="ContentDescription" />
-
-
-                </FrameLayout>
-
-                <ScrollView
+                <LinearLayout
+                    android:id="@+id/recuadro1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center">
+                    android:orientation="horizontal">
 
-                    <LinearLayout
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        tools:ignore="ScrollViewSize">
+                        android:layout_height="match_parent">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                        <FrameLayout
+                            android:id="@+id/cuadro3"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:background="@android:color/holo_blue_light"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cuadro4"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                            <FrameLayout
-                                android:layout_width="132dp"
-                                android:layout_height="132dp"
-                                android:background="@drawable/cancion1">
+                            <Button
+                                android:id="@+id/cancion3"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:drawableTop="@drawable/acancion3"
+                                android:onClick="IrPantallaReproductor"
+                                android:text="Good Vibrations"
+                                android:textColor="#ffffff"
+                                android:fontFamily="@font/merriweather"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
 
-                                <Button
-                                    android:id="@+id/cancion1"
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:background="#5CFFFFFF"
-                                    android:onClick="IrPantallaReproductor"
-                                    android:text="Don't Stop Me Now"
-                                    android:textColor="#144770"
-                                    android:textColorHighlight="#FFFFFF"
-                                    android:textColorHint="#2B0606"
-                                    tools:ignore="HardcodedText" />
+                        </FrameLayout>
 
+                        <FrameLayout
+                            android:id="@+id/cuadro4"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:background="@color/design_default_color_primary"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cuadro3"
+                            app:layout_constraintTop_toTopOf="parent">
+                            app:layout_constraintTop_toTopOf="parent">
 
-                            </FrameLayout>
+                            <Button
+                                android:id="@+id/cancion4"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:drawableTop="@drawable/acancion4"
+                                android:onClick="IrPantallaReproductor"
+                                android:text="Uptown Girl"
+                                android:textColor="#ffffff"
+                                android:fontFamily="@font/merriweather"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
 
-                            <FrameLayout
-                                android:layout_width="132dp"
-                                android:layout_height="132dp"
-                                android:background="@drawable/cancion2">
+                        </FrameLayout>
 
-                                <Button
-                                    android:id="@+id/cancion2"
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:background="#5CFFFFFF"
-                                    android:onClick="IrPantallaReproductor"
-                                    android:text="Dancing Queen"
-                                    android:textColor="#144770"
-                                    android:textColorHighlight="#FFFFFF"
-                                    android:textColorHint="#2B0606"
-                                    tools:ignore="HardcodedText" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                            </FrameLayout>
+                </LinearLayout>
 
-                            <FrameLayout
-                                android:layout_width="132dp"
-                                android:layout_height="132dp"
-                                android:background="@drawable/cancion3">
+                <LinearLayout
+                    android:id="@+id/recuadro3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                                <Button
-                                    android:id="@+id/cancion3"
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:background="#5CFFFFFF"
-                                    android:onClick="IrPantallaReproductor"
-                                    android:text="Good Vibrations"
-                                    android:textColor="#144770"
-                                    android:textColorHighlight="#FFFFFF"
-                                    android:textColorHint="#2B0606"
-                                    tools:ignore="HardcodedText" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                            </FrameLayout>
+                        <FrameLayout
+                            android:id="@+id/cuadro5"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:background="@android:color/holo_red_light"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cuadro6"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                        </LinearLayout>
+                            <Button
+                                android:id="@+id/cancion5"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:drawableTop="@drawable/acancion5"
+                                android:onClick="IrPantallaReproductor"
+                                android:text="Eye Of The Tiger"
+                                android:textColor="#ffffff"
+                                android:fontFamily="@font/merriweather"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                        </FrameLayout>
 
-                            <FrameLayout
-                                android:layout_width="132dp"
-                                android:layout_height="132dp"
-                                android:background="@drawable/cancion4">
+                        <FrameLayout
+                            android:id="@+id/cuadro6"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:background="@android:color/holo_green_light"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cuadro5"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                                <Button
-                                    android:id="@+id/cancion4"
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:background="#5CFFFFFF"
-                                    android:onClick="IrPantallaReproductor"
-                                    android:text="Uptown Girl"
-                                    android:textColor="#144770"
-                                    android:textColorHighlight="#FFFFFF"
-                                    android:textColorHint="#2B0606"
-                                    tools:ignore="HardcodedText" />
+                            <Button
+                                android:id="@+id/cancion6"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:drawableTop="@drawable/acancion6"
+                                android:onClick="IrPantallaReproductor"
+                                android:text="I'm a Believer"
+                                android:textColor="#ffffff"
+                                android:fontFamily="@font/merriweather"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
 
-                            </FrameLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                            <FrameLayout
-                                android:layout_width="132dp"
-                                android:layout_height="132dp"
-                                android:background="@drawable/cancion5">
+                </LinearLayout>
 
-                                <Button
-                                    android:id="@+id/cancion5"
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:background="#5CFFFFFF"
-                                    android:onClick="IrPantallaReproductor"
-                                    android:text="Eye Of The Tiger"
-                                    android:textColor="#144770"
-                                    android:textColorHighlight="#FFFFFF"
-                                    android:textColorHint="#2B0606"
-                                    tools:ignore="HardcodedText" />
+                <LinearLayout
+                    android:id="@+id/recuadro4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                            </FrameLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                            <FrameLayout
-                                android:layout_width="132dp"
-                                android:layout_height="132dp"
-                                android:background="@drawable/cancion6">
+                        <FrameLayout
+                            android:id="@+id/cuadro7"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:background="@color/colorPug"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cuadro8"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                                <Button
-                                    android:id="@+id/cancion6"
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:background="#5CFFFFFF"
-                                    android:onClick="IrPantallaReproductor"
-                                    android:text="I'm a Believer"
-                                    android:textColor="#144770"
-                                    android:textColorHighlight="#FFFFFF"
-                                    tools:ignore="HardcodedText" />
-                                android:textColorHint="#2B0606"/>_
+                            <Button
+                                android:id="@+id/cancion7"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:drawableTop="@drawable/acancion7"
+                                android:onClick="IrPantallaReproductor"
+                                android:text="Girls Just Want To Have Fun"
+                                android:textColor="#ffffff"
+                                android:fontFamily="@font/merriweather"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+                        </FrameLayout>
 
-                            </FrameLayout>
-                        </LinearLayout>
+                        <FrameLayout
+                            android:id="@+id/cuadro8"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:background="@android:color/holo_orange_light"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cuadro7"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                            <Button
+                                android:id="@+id/cancion8"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:drawableTop="@drawable/acancion8"
+                                android:onClick="IrPantallaReproductor"
+                                android:text="Living On A Prayer"
+                                android:textColor="#ffffff"
+                                android:fontFamily="@font/merriweather"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
 
-                            <FrameLayout
-                                android:layout_width="132dp"
-                                android:layout_height="132dp"
-                                android:background="@drawable/cancion7">
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                                <Button
-                                    android:id="@+id/cancion7"
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:background="#5CFFFFFF"
-                                    android:onClick="IrPantallaReproductor"
-                                    android:text="Girls Just Want To Have Fun"
-                                    android:textColor="#144770"
-                                    android:textColorHighlight="#FFFFFF"
-                                    android:textColorHint="#2B0606"
-                                    tools:ignore="HardcodedText" />
-                            </FrameLayout>
+                </LinearLayout>
 
-                            <FrameLayout
-                                android:layout_width="132dp"
-                                android:layout_height="132dp"
-                                android:background="@drawable/cancion8">
+                <LinearLayout
+                    android:id="@+id/recuadro5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                                <Button
-                                    android:id="@+id/cancion8"
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:background="#5CFFFFFF"
-                                    android:onClick="IrPantallaReproductor"
-                                    android:text="Living On A Prayer"
-                                    android:textColor="#144770"
-                                    android:textColorHighlight="#FFFFFF"
-                                    tools:ignore="HardcodedText" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                            </FrameLayout>
+                        <FrameLayout
+                            android:id="@+id/cuadro9"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:background="@android:color/holo_blue_bright"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cuadro10"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                            <FrameLayout
-                                android:layout_width="132dp"
-                                android:layout_height="132dp"
-                                android:background="@drawable/cancion9">
+                            <Button
+                                android:id="@+id/cancion9"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:drawableTop="@drawable/acancion9"
+                                android:onClick="IrPantallaReproductor"
+                                android:text="I Will Survive"
+                                android:textColor="#ffffff"
+                                android:fontFamily="@font/merriweather"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
 
-                                <Button
-                                    android:id="@+id/cancion9"
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:background="#5CFFFFFF"
-                                    android:onClick="IrPantallaReproductor"
-                                    android:text="I Will Survive"
-                                    android:textColor="#144770"
-                                    tools:ignore="HardcodedText" />
+                        </FrameLayout>
 
-                            </FrameLayout>
-                        </LinearLayout>
+                        <FrameLayout
+                            android:id="@+id/cuadro10"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:background="@android:color/holo_purple"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cuadro9"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                            <Button
+                                android:id="@+id/cancion10"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:drawableTop="@drawable/acancion10"
+                                android:onClick="IrPantallaReproductor"
+                                android:text="Walking On Sunshine"
+                                android:textColor="#ffffff"
+                                android:fontFamily="@font/merriweather"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
 
-                            <FrameLayout
-                                android:layout_width="132dp"
-                                android:layout_height="132dp"
-                                android:background="@drawable/cancion10">
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                                <Button
-                                    android:id="@+id/cancion10"
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:background="#5CFFFFFF"
-                                    android:onClick="IrPantallaReproductor"
-                                    android:text="Walking On Sunshine"
-                                    android:textColor="#144770"
-                                    android:textColorHighlight="#FFFFFF"
-                                    android:textColorHint="#2B0606"
-                                    tools:ignore="HardcodedText" />
-
-                            </FrameLayout>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </ScrollView>
+                </LinearLayout>
 
             </LinearLayout>
-        </LinearLayout>
+        </ScrollView>
 
+    </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
