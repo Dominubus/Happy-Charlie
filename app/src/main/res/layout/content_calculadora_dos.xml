@@ -9,12 +9,25 @@
         android:id="@+id/msgInfo"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#072C51"
         android:text="Mensaje Informativo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sextoCiclo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:text="hora para dormir/despertar 6to ciclo"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/msgInfo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
