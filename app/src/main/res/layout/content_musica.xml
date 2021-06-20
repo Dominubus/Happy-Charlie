@@ -76,6 +76,70 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/cuadro1"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:background="@color/colorAccent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cuadro2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <Button
+                                android:id="@+id/cancion1"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:drawableTop="@drawable/acancion1"
+                                android:onClick="IrPantallaReproductor"
+                                android:text="Don't Stop Me Now"
+                                android:textColor="#ffffff"
+                                android:fontFamily="@font/merriweather"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/cuadro2"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:background="@android:color/holo_orange_dark"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cuadro1"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <Button
+                                android:id="@+id/cancion2"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:drawableTop="@drawable/acancion2"
+                                android:onClick="IrPantallaReproductor"
+                                android:text="Dancing Queen"
+                                android:textColor="#ffffff"
+                                android:fontFamily="@font/merriweather"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+                        </FrameLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/recuadro2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
