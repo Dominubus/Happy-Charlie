@@ -25,7 +25,6 @@ public class PonerHora extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_colocar_hora);
-
         DisplayMetrics medidasVentana = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(medidasVentana);
 
@@ -55,9 +54,10 @@ public class PonerHora extends AppCompatActivity {
         hora =(EditText) findViewById(R.id.hora_propuesta);
         SimpleDateFormat hs = new SimpleDateFormat("hh:mm a");
         String shora = hs.format(hora.getText());
-
         Intent irResultado = new Intent(this, CalculadoraResultados.class);
+        String dato = getIntent().getStringExtra("dato");
         irResultado.putExtra("date",shora);
+        irResultado.putExtra("dato",dato);
         startActivity(irResultado);
     }
 }

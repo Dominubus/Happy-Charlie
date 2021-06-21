@@ -17,16 +17,12 @@ import static com.example.happycharlie.R.id.boton_dormirNow;
 public class calculadora extends AppCompatActivity {
 
         TextView hora;
-        String tipoCalculo;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora);
-
-        tipoCalculo="";
-
         //obtener hora
         hora = findViewById(R.id.text_hora);
         @SuppressLint("SimpleDateFormat") SimpleDateFormat h = new SimpleDateFormat("hh:mm a");
@@ -39,35 +35,23 @@ public class calculadora extends AppCompatActivity {
         startActivity(irLobbyC);
     }
 
-    public void irSiguientePantalla(View v) {
-
-            switch (v.getId()){
-                case R.id.boton_dormirNow:
-                    Toast.makeText(this, "Cuando se cumplen los ciclos",Toast.LENGTH_LONG).show();
-                    tipoCalculo="0";
-                    break;
-
-                case R.id.boton_Aquehoradormir:
-                    Toast.makeText(this, "Cuando comienzan los ciclos",Toast.LENGTH_LONG).show();
-                    tipoCalculo="1";
-                    break;
-                default:
-                    Toast.makeText(this, "Cuando comienzan los ciclos",Toast.LENGTH_LONG).show();
-                    tipoCalculo="2";
-                    break;
-            }
-
-            if(tipoCalculo.equals("0")){
-                Intent sig= new Intent(this,CalculadoraResultados.class);
-                sig.putExtra("dato",tipoCalculo);
-                startActivity(sig);
-            }else{
-                Intent sig= new Intent(this,PonerHora.class);
-//            irPonerHora.putExtra("dato",tipoCalculo);
-                startActivity(sig);
-
-            }
+    public void irSiguientePantalla1(View v) {
+        Toast.makeText(this, "Cuando se cumplen los ciclos",Toast.LENGTH_LONG).show();
+        Intent sig= new Intent(this,CalculadoraResultados.class);
+        sig.putExtra("dato","0");
+        startActivity(sig);
+    }
+    public void irSiguientePantalla2(View v) {
+        Toast.makeText(this, "Cuando comienzan los ciclos",Toast.LENGTH_LONG).show();
+        Intent sig= new Intent(this,PonerHora.class);
+        sig.putExtra("dato","1");
+        startActivity(sig);
 
     }
-
+    public void irSiguientePantalla3(View v) {
+        Toast.makeText(this, "Cuando comienzan los ciclos",Toast.LENGTH_LONG).show();
+        Intent sig= new Intent(this,PonerHora.class);
+        sig.putExtra("dato","2");
+        startActivity(sig);
+    }
 }

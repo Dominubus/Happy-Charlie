@@ -2,9 +2,12 @@ package com.example.happycharlie;
 
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import java.text.ParseException;
 import java.util.Calendar;
@@ -22,9 +25,6 @@ public class CalculadoraResultados extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora_dos);
-
-        dato = getIntent().getStringExtra("dato");
-        horaPropuesta = getIntent().getStringExtra("date");
     }
 
     public void irCalculadora(View view) {
@@ -40,8 +40,9 @@ public class CalculadoraResultados extends AppCompatActivity {
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void calcularCiclos() throws ParseException {
-
+        dato = getIntent().getStringExtra("dato");
         if(dato.equals("0")){
 
             Date date = new Date();
@@ -110,6 +111,7 @@ public class CalculadoraResultados extends AppCompatActivity {
         else if(dato.equals("1")){
 
             SimpleDateFormat hs = new SimpleDateFormat("hh:mm a");
+            horaPropuesta = getIntent().getStringExtra("date");
             Date varhora = hs.parse(horaPropuesta);
 
             //determina 1° ciclo de sueño
@@ -174,6 +176,7 @@ public class CalculadoraResultados extends AppCompatActivity {
 
         }else if(dato.equals("2")){
             SimpleDateFormat hs = new SimpleDateFormat("hh:mm a");
+            horaPropuesta = getIntent().getStringExtra("date");
             Date varhora = hs.parse(horaPropuesta);
 
             //determina 1° ciclo de sueño
