@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -81,6 +82,20 @@ public class animo extends AppCompatActivity {
                 break;
             default:
                 tv.setTextColor(Color.parseColor("#000000"));
+                break;
+        }
+
+        SharedPreferences sp1 = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
+        int key1 = sp1.getInt("keyf", 1);
+        tv = (TextView)findViewById(R.id.textView4);
+        switch(key1) {
+            case 1:
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                tv.setTypeface(nom_fuen);
+                break;
+            case 2:
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                tv.setTypeface(nom_fue);
                 break;
         }
     }

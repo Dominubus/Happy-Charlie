@@ -1,6 +1,8 @@
 package com.example.happycharlie;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -78,7 +80,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
                 break;
             case 9:
                 id = getResources().getIdentifier("cancion10", "drawable", getPackageName());
-                tv.setText("Walking on Sunshine – Katrina & The Waves");
+                tv.setText("Walking on Sunshine–Katrina & The Waves");
                 break;
         }
         iv.setImageResource(id);
@@ -142,7 +144,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
                 break;
             case 9:
                 iv.setImageResource(R.drawable.cancion10);
-                tv.setText("Walking on Sunshine–Katrina, The Waves");
+                tv.setText("Walking on Sunshine–Katrina & The Waves");
                 break;
         }
         return 0;
@@ -263,5 +265,22 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         Intent atras = new Intent(this, musica.class);
         startActivity(atras);
         finish();
+    }
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
+        int key = sp.getInt("keyf", 1);
+        tv = (TextView)findViewById(R.id.nomb_cancion);
+
+        switch(key) {
+            case 1:
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                tv.setTypeface(nom_fuen);
+                break;
+            case 2:
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                tv.setTypeface(nom_fue);
+                break;
+        }
     }
 }

@@ -11,6 +11,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.content.Intent;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -36,6 +37,9 @@ import java.util.Random;
 public class inicio extends AppCompatActivity {
 
     private TextView tv;
+    private TextView tv0;
+    private TextView tv3;
+
     Handler mHideHandler = new Handler();
     Runnable mHideRunnable = new Runnable() {
         @Override
@@ -62,6 +66,9 @@ public class inicio extends AppCompatActivity {
         iniciar();
         tv = (TextView)findViewById(R.id.textView2);
         tv.setText(BuscarCodigo());
+        tv0 = (TextView)findViewById(R.id.textView);
+        tv3 = (TextView)findViewById(R.id.textView3);
+
 
         ImageButton btnClose = (ImageButton) findViewById(R.id.btnClose);
         btnClose.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +81,7 @@ public class inicio extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarRB);
         setSupportActionBar(toolbar);
+        super.onResume();
     }
 
 
@@ -154,7 +162,7 @@ public class inicio extends AppCompatActivity {
         SharedPreferences sp = getSharedPreferences("FONDO_INICIO", MODE_PRIVATE);
         int key = sp.getInt("key", 1);
         ConstraintLayout layout = findViewById(R.id.inicio);
-        switch(key) {
+        switch (key) {
             case 1:
                 layout.setBackgroundResource(R.drawable.bghuellitas);
                 break;
@@ -169,10 +177,10 @@ public class inicio extends AppCompatActivity {
                 layout.setBackgroundResource(R.drawable.bghuellitas);
                 break;
         }
-        TextView mensaje=findViewById(R.id.textView2);
+        TextView mensaje = findViewById(R.id.textView2);
         sp = getSharedPreferences("COLOR_MENSAJE", MODE_PRIVATE);
         key = sp.getInt("key", 1);
-        switch(key) {
+        switch (key) {
             case 1:
                 mensaje.setTextColor(Color.parseColor("#000000"));
                 break;
@@ -195,6 +203,24 @@ public class inicio extends AppCompatActivity {
             default:
                 mensaje.setTextColor(Color.parseColor("#000000"));
                 break;
+        }
+        SharedPreferences sp1 = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
+        int key1 = sp1.getInt("keyf", 1);
+        tv = (TextView)findViewById(R.id.textView2);
+        tv0 = (TextView) findViewById(R.id.textView);
+        tv3 = (TextView) findViewById(R.id.textView3);
+        switch (key1) {
+            case 1:
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                tv.setTypeface(nom_fuen);
+                tv0.setTypeface(nom_fuen);
+                tv3.setTypeface(nom_fuen);
+                break;
+            case 2:
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                tv.setTypeface(nom_fue);
+                tv0.setTypeface(nom_fue);
+                tv3.setTypeface(nom_fue);
         }
     }
 }

@@ -3,6 +3,7 @@ package com.example.happycharlie;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -23,6 +24,14 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class lobby extends AppCompatActivity {
     int actual = 2;
+    TextView tv2;
+    TextView tv12;
+    TextView tv13;
+    TextView tv14;
+    TextView tv15;
+    TextView tv16;
+    TextView tv17;
+
     Handler mHideHandler = new Handler();
     Runnable mHideRunnable = new Runnable() {
         @Override
@@ -34,6 +43,13 @@ public class lobby extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lobby);
+        tv2 = findViewById(R.id.textView2);
+        tv12 = findViewById(R.id.textView12);
+        tv13 = findViewById(R.id.textView13);
+        tv14 = findViewById(R.id.textView14);
+        tv15 = findViewById(R.id.textView15);
+        tv16 = findViewById(R.id.textView16);
+    super.onResume();
     }
 
     protected void onResume() {
@@ -81,6 +97,41 @@ public class lobby extends AppCompatActivity {
                 break;
             default:
                 mensaje.setTextColor(Color.parseColor("#000000"));
+                break;
+        }
+
+        SharedPreferences sp1 = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
+        int key1 = sp1.getInt("keyf", 1);
+
+        tv2 = findViewById(R.id.textView2);
+        tv12 = findViewById(R.id.textView12);
+        tv13 = findViewById(R.id.textView13);
+        tv14 = findViewById(R.id.textView14);
+        tv15 = findViewById(R.id.textView15);
+        tv16 = findViewById(R.id.textView16);
+        tv17 = findViewById(R.id.textView17);
+        switch(key1) {
+            case 1:
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+
+                tv2.setTypeface(nom_fuen);
+                tv12.setTypeface(nom_fuen);
+                tv13.setTypeface(nom_fuen);
+                tv14.setTypeface(nom_fuen);
+                tv15.setTypeface(nom_fuen);
+                tv16.setTypeface(nom_fuen);
+                tv17.setTypeface(nom_fuen);
+                break;
+            case 2:
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+
+                tv2.setTypeface(nom_fue);
+                tv12.setTypeface(nom_fue);
+                tv13.setTypeface(nom_fue);
+                tv14.setTypeface(nom_fue);
+                tv15.setTypeface(nom_fue);
+                tv16.setTypeface(nom_fue);
+                tv17.setTypeface(nom_fue);
                 break;
         }
     }
@@ -162,6 +213,7 @@ public class lobby extends AppCompatActivity {
             }
 
         }
+
     }
 
 }
