@@ -142,7 +142,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
                 break;
             case 9:
                 iv.setImageResource(R.drawable.cancion10);
-                tv.setText("Walking on Sunshine – Katrina & The Waves");
+                tv.setText("Walking on Sunshine–Katrina, The Waves");
                 break;
         }
         return 0;
