@@ -32,7 +32,7 @@ public class musica extends AppCompatActivity {
     public void IrPantallaReproductor(View view){
 
         switch (view.getId()){
-            case cancion1:
+            case R.id.cancion1:
                 Toast.makeText(this, "Don't Stop Me Now",Toast.LENGTH_SHORT).show();
                 numCan="0";
                 break;

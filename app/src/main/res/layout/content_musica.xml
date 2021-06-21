@@ -81,7 +81,7 @@
                         android:layout_height="match_parent">
 
                         <FrameLayout
-                            android:id="@+id/cuadro1"
+                            android:id="@+id/cuadroCal1"
                             android:layout_width="0dp"
                             android:layout_height="150dp"
                             android:background="@color/colorAccent"
@@ -112,7 +112,7 @@
                             android:background="@android:color/holo_orange_dark"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/cuadro1"
+                            app:layout_constraintStart_toEndOf="@+id/cuadroCal1"
                             app:layout_constraintTop_toTopOf="parent">
 
 

@@ -4,82 +4,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".calculadora"
-    tools:showIn="@layout/activity_calculadora">
+    android:background="#82CF85"
+    android:textAlignment="center">
+
+    <ImageButton
+        android:id="@+id/atras_calculadora"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:onClick="irLobbyC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mascota_calculadora"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/aatras" />
 
     <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="304dp"
+        android:id="@+id/mascota_calculadora"
+        android:layout_width="wrap_content"
         android:layout_height="193dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_hora"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pug_belly" />
 
-    <Button
-        android:id="@+id/botonClock"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="64dp"
-        android:background="#F1E6E6"
-        android:backgroundTint="#EAE4E4"
-        android:text="10:10:10 a.m."
-        android:textAllCaps="false"
+    <TextView
+        android:id="@+id/text_hora"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="28dp"
+        android:background="#249153"
+        android:textAlignment="center"
         android:textColor="#000000"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/boton_dormirNow"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+        app:layout_constraintTop_toBottomOf="@+id/mascota_calculadora"
+        app:layout_constraintVertical_bias="0.557" />
 
     <Button
-        android:id="@+id/dormirNow"
-        android:layout_width="0dp"
+        android:id="@+id/boton_dormirNow"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="8dp"
+        android:background="#166E1A"
+        android:onClick="irSiguientePantalla"
         android:text="Dormir Ahora"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/boton_Aquehoradormir"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonClock" />
+        app:layout_constraintTop_toBottomOf="@+id/text_hora" />
 
     <Button
-        android:id="@+id/dormirWake"
-        android:layout_width="0dp"
+        android:id="@+id/boton_Aquehoradormir"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="64dp"
-        android:text="A que hora despertar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dormirTime" />
-
-    <Button
-        android:id="@+id/dormirTime"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="8dp"
+        android:background="#166E1A"
+        android:onClick="irSiguientePantalla"
         android:text="A que hora dormir"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/boton_Aquehoradespertar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dormirNow" />
+        app:layout_constraintTop_toBottomOf="@+id/boton_dormirNow"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
+    <Button
+        android:id="@+id/boton_Aquehoradespertar"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#166E1A"
+        android:onClick="irSiguientePantalla"
+        android:text="A que hora despertar"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/round_arrow_back_black_48" />
+        app:layout_constraintTop_toBottomOf="@+id/boton_Aquehoradormir"
+        app:layout_constraintVertical_bias="1.0" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
