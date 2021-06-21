@@ -1,7 +1,9 @@
 package com.example.happycharlie;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -28,6 +30,8 @@ public class repMeditacion extends AppCompatActivity {
     private Handler handler;
     private Intent rm;
     private TextView text_temp;
+    private TextView t8;
+    private TextView t11;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +42,9 @@ public class repMeditacion extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         int i = rm.getIntExtra("bg", 1);
         reproduciendo = false;
+
+        t8 = (TextView)findViewById(R.id.textView8);
+        t11 = (TextView)findViewById(R.id.textView11);
         text_temp =(TextView) findViewById(R.id.texView_temp);
         text_temp.setText(R.string.temp);
         switch(i) {
@@ -181,4 +188,24 @@ public class repMeditacion extends AppCompatActivity {
         finish();
     }
 
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
+        int key = sp.getInt("keyf", 1);
+        t8 = (TextView)findViewById(R.id.textView8);
+        t11 = (TextView)findViewById(R.id.textView11);
+
+        switch(key) {
+            case 1:
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                t8.setTypeface(nom_fuen);
+                t11.setTypeface(nom_fuen);
+                break;
+            case 2:
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                t8.setTypeface(nom_fue);
+                t11.setTypeface(nom_fue);
+                break;
+        }
+    }
 }
