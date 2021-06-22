@@ -46,6 +46,14 @@
             android:label="@string/title_activity_calculadora"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".CalculadoraResultados"
+            android:label="CalculadoraResultados"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PonerHora"
+            android:label="PonerHora"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".meditacion"
             android:label="@string/title_activity_meditacion"
             android:screenOrientation="portrait"

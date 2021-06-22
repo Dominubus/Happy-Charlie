@@ -34,7 +34,7 @@
                 android:text="Si te acuestas a una hora determinada, te despertarás en ciclos de sueño de 90 minutos. Un buen descanso requiere de 5-6 ciclos completos de sueño."
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
         </FrameLayout>
