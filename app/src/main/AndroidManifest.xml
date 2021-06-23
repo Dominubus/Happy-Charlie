@@ -46,11 +46,11 @@
             android:label="@string/title_activity_calculadora"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".CalculadoraResultados"
+            android:name=".CalculadoraResultados1"
             android:label="CalculadoraResultados"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".PonerHora"
+            android:name=".PonerHora1"
             android:label="PonerHora"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -89,6 +89,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PonerHora2" />
 
         <service android:name=".AudioService" />
 
