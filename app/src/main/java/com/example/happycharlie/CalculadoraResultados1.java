@@ -23,9 +23,8 @@ public class CalculadoraResultados1 extends AppCompatActivity {
 
         boton1 ="";
         boton1 = getIntent().getStringExtra("dato1");
-        if(boton1.equals("1")){
+
             ahora();
-        }
 
     }
 

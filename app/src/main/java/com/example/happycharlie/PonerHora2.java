@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
 import static android.app.AlertDialog.THEME_HOLO_LIGHT;
@@ -50,9 +52,14 @@ public class PonerHora2 extends AppCompatActivity {
         }
 
     public void irResultados3(View view){
-        Intent sg = new Intent(PonerHora2.this, CalculadoraResultados3.class);
-//        sg.putExtra("hora3", tv_time.getText().toString());
-        startActivity(sg);
+
+            if(!tv_time.getText().toString().isEmpty()){
+                Intent sg = new Intent(PonerHora2.this, CalculadoraResultados3.class);
+                sg.putExtra("hora3", tv_time.getText().toString());
+                startActivity(sg);
+            }else{
+                Toast.makeText(this, "Debes escoger una hora para continuar o cancelar para retroceder",Toast.LENGTH_LONG).show();
+            }
     }
 
     public void irAcalculadora(View view){

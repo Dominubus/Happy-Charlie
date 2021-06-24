@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".menu_emergente_fuente"
             android:label="@string/title_activity_menuemergentefuentes"
@@ -44,14 +45,27 @@
         <activity
             android:name=".calculadora"
             android:label="@string/title_activity_calculadora"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CalculadoraResultados1"
-            android:label="CalculadoraResultados"
+            android:label="CalculadoraResultados1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CalculadoraResultados2"
+            android:label="CalculadoraResultados2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CalculadoraResultados3"
+            android:label="CalculadoraResultados3"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PonerHora1"
-            android:label="PonerHora"
+            android:label="PonerHora1"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".meditacion"
