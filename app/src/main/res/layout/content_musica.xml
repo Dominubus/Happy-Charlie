@@ -97,11 +97,11 @@
                                 android:layout_gravity="center"
                                 android:background="#00FFFFFF"
                                 android:drawableTop="@drawable/acancion1"
+                                android:fontFamily="@font/merriweather"
                                 android:onClick="IrPantallaReproductor"
                                 android:text="Don't Stop Me Now"
-                                android:textColor="#ffffff"
-                                android:fontFamily="@font/merriweather"
                                 android:textAllCaps="false"
+                                android:textColor="#ffffff"
                                 tools:ignore="HardcodedText" />
                         </FrameLayout>
 
@@ -123,11 +123,11 @@
                                 android:layout_gravity="center"
                                 android:background="#00FFFFFF"
                                 android:drawableTop="@drawable/acancion2"
+                                android:fontFamily="@font/merriweather"
                                 android:onClick="IrPantallaReproductor"
                                 android:text="Dancing Queen"
-                                android:textColor="#ffffff"
-                                android:fontFamily="@font/merriweather"
                                 android:textAllCaps="false"
+                                android:textColor="#ffffff"
                                 tools:ignore="HardcodedText" />
                         </FrameLayout>
 
