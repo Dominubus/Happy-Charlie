@@ -6,37 +6,33 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <Button
+    <ImageButton
         android:id="@+id/button8"
         android:layout_width="200dp"
         android:layout_height="56dp"
-        android:layout_marginStart="106dp"
         android:layout_marginTop="265dp"
-        android:layout_marginEnd="105dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
         android:layout_marginBottom="338dp"
-        android:fontFamily="@font/merriweather"
         android:onClick="setfont1"
-        android:text="@string/fuente1"
-        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fuente_merriweather"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/button9"
         android:layout_width="200dp"
         android:layout_height="56dp"
-        android:fontFamily="@font/raleway_italic"
         android:onClick="setfont2"
-        android:text="@string/fuente2"
-        android:visibility="visible"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button8"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/fuente_raleway"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,6 +50,8 @@ public class configuracion extends AppCompatActivity {
         });
     }
 
+
+
     protected void onResume() {
         super.onResume();
         SharedPreferences sp = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
@@ -60,7 +62,7 @@ public class configuracion extends AppCompatActivity {
 
         switch(key) {
             case 1:
-                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_regular.ttf");
                 btnbg.setTypeface(nom_fuen);
                 btncl.setTypeface(nom_fuen);
                 btnft.setTypeface(nom_fuen);
@@ -74,4 +76,7 @@ public class configuracion extends AppCompatActivity {
         }
     }
 
+    public void volverLobby(View view) {
+        finish();
+    }
 }

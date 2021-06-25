@@ -41,6 +41,7 @@
         <activity
             android:name=".configuracion"
             android:label="@string/title_activity_configuracion"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".calculadora"

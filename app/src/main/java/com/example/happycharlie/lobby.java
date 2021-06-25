@@ -59,7 +59,7 @@ public class lobby extends AppCompatActivity {
         ConstraintLayout layout = findViewById(R.id.lobby);
         switch(key) {
             case 1:
-                layout.setBackgroundResource(R.drawable.bghuellitas);
+                layout.setBackgroundResource(R.drawable.bghuellitas2);
                 break;
             case 2:
                 layout.setBackgroundResource(R.drawable.bg2);
@@ -216,4 +216,7 @@ public class lobby extends AppCompatActivity {
 
     }
 
+    public void volverLobby(View view) {
+        finish();
+    }
 }

@@ -9,6 +9,16 @@
     tools:context=".lobby"
     tools:showIn="@layout/activity_lobby">
 
+    <ImageButton
+        android:id="@+id/salir_lobby"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#00FFFFFF"
+        android:onClick="volverLobby"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/aatras"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/msg_lobby"
