@@ -281,7 +281,7 @@
                             android:id="@+id/cuadro7"
                             android:layout_width="0dp"
                             android:layout_height="150dp"
-                            android:background="@color/colorPug"
+                            android:background="@android:color/holo_orange_light"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/cuadro8"
                             app:layout_constraintStart_toStartOf="parent"
@@ -294,11 +294,11 @@
                                 android:layout_gravity="center"
                                 android:background="#00FFFFFF"
                                 android:drawableTop="@drawable/acancion7"
+                                android:fontFamily="@font/merriweather"
                                 android:onClick="IrPantallaReproductor"
                                 android:text="Girls Just Want To Have Fun"
-                                android:textColor="#ffffff"
-                                android:fontFamily="@font/merriweather"
                                 android:textAllCaps="false"
+                                android:textColor="#ffffff"
                                 tools:ignore="HardcodedText" />
                         </FrameLayout>
 
@@ -306,7 +306,7 @@
                             android:id="@+id/cuadro8"
                             android:layout_width="0dp"
                             android:layout_height="150dp"
-                            android:background="@android:color/holo_orange_light"
+                            android:background="#E57373"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/cuadro7"
@@ -319,11 +319,11 @@
                                 android:layout_gravity="center"
                                 android:background="#00FFFFFF"
                                 android:drawableTop="@drawable/acancion8"
+                                android:fontFamily="@font/merriweather"
                                 android:onClick="IrPantallaReproductor"
                                 android:text="Living On A Prayer"
-                                android:textColor="#ffffff"
-                                android:fontFamily="@font/merriweather"
                                 android:textAllCaps="false"
+                                android:textColor="#ffffff"
                                 tools:ignore="HardcodedText" />
 
                         </FrameLayout>
