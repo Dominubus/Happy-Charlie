@@ -1,7 +1,9 @@
 package com.example.happycharlie;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -19,12 +21,18 @@ import android.widget.Toast;
 public class meditacion extends AppCompatActivity {
 
     Toast t;
+    TextView t5;
+    TextView t6;
+    TextView t7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meditacion);
         t=Toast.makeText(this, "Escoge una de estas fabulosas guías", Toast.LENGTH_SHORT);
+        t5 = (TextView)findViewById(R.id.textView5);
+        t6 = (TextView)findViewById(R.id.textView6);
+        t7 = (TextView)findViewById(R.id.textView7);
     }
 
     public void mostrarMensaje(View v){
@@ -65,5 +73,28 @@ public class meditacion extends AppCompatActivity {
     public void onDestroy() {
         t.cancel();
         super.onDestroy();
+    }
+
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
+        int key = sp.getInt("keyf", 1);
+        t5 = (TextView) findViewById(R.id.textView5);
+        t6 = (TextView) findViewById(R.id.textView6);
+        t7 = (TextView) findViewById(R.id.textView7);
+        switch (key) {
+            case 1:
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                t5.setTypeface(nom_fuen);
+                t6.setTypeface(nom_fuen);
+                t7.setTypeface(nom_fuen);
+                break;
+            case 2:
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                t5.setTypeface(nom_fue);
+                t6.setTypeface(nom_fue);
+                t7.setTypeface(nom_fue);
+                break;
+        }
     }
 }

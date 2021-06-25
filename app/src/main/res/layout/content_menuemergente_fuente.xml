@@ -6,36 +6,33 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginEnd="128dp"
-        android:layout_marginBottom="388dp"
-        android:contentDescription="@string/fuente1"
-        android:fontFamily="@font/merriweather"
-        android:text="@string/fuente1"
-        android:textSize="18sp"
+    <ImageButton
+        android:id="@+id/button8"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="265dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="338dp"
+        android:onClick="setfont1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fuente_merriweather"/>
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="388dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginBottom="320dp"
-        android:fontFamily="@font/raleway_italic"
-        android:text="@string/fuente2"
-        android:textSize="20sp"
+    <ImageButton
+        android:id="@+id/button9"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:onClick="setfont2"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/fuente_raleway"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

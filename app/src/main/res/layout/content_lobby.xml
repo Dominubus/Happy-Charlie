@@ -2,12 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lobby"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".lobby"
     tools:showIn="@layout/activity_lobby">
 
+    <ImageButton
+        android:id="@+id/salir_lobby"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#00FFFFFF"
+        android:onClick="volverLobby"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/aatras"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/msg_lobby"
@@ -19,6 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -46,9 +58,7 @@
         android:src="@drawable/pug_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/msg_lobby"
-        />
-
+        app:layout_constraintTop_toBottomOf="@id/msg_lobby" />
 
 
     <FrameLayout
@@ -97,8 +107,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="top|center"
-            android:contentDescription="@string/ruido"
             android:layout_marginBottom="40dp"
+            android:contentDescription="@string/ruido"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/outline_audiotrack_24" />
 
@@ -109,7 +119,7 @@
             android:layout_gravity="center|bottom"
             android:contentDescription="@string/ruido"
             android:fontFamily="@font/merriweather_bold"
-            android:text="Música Relajante"
+            android:text="Música"
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
             android:textSize="18sp" />
@@ -129,8 +139,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="top|center"
-            android:contentDescription="@string/ruido"
             android:layout_marginBottom="35dp"
+            android:contentDescription="@string/ruido"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/outline_self_improvement_24" />
 
@@ -161,8 +171,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="top|center"
-            android:contentDescription="@string/ruido"
             android:layout_marginBottom="40dp"
+            android:contentDescription="@string/ruido"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/outline_message_24" />
 
@@ -193,8 +203,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="top|center"
-            android:contentDescription="@string/ruido"
             android:layout_marginBottom="40dp"
+            android:contentDescription="@string/ruido"
             app:layout_constraintBottom_toTopOf="@id/textView16"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/outline_hotel_24" />
@@ -227,8 +237,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="top|center"
-            android:contentDescription="@string/ruido"
             android:layout_marginBottom="30dp"
+            android:contentDescription="@string/ruido"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/outline_settings_24" />
 
@@ -244,8 +254,6 @@
             android:textColor="@android:color/background_light"
             android:textSize="17sp" />
     </FrameLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

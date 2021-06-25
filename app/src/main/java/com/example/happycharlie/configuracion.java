@@ -1,6 +1,8 @@
 package com.example.happycharlie;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -48,4 +50,33 @@ public class configuracion extends AppCompatActivity {
         });
     }
 
+
+
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
+        int key = sp.getInt("keyf", 1);
+        btnbg =findViewById(R.id.botonBG);
+        btncl = findViewById(R.id.botonCL);
+        btnft = findViewById(R.id.botonFT);
+
+        switch(key) {
+            case 1:
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_regular.ttf");
+                btnbg.setTypeface(nom_fuen);
+                btncl.setTypeface(nom_fuen);
+                btnft.setTypeface(nom_fuen);
+                break;
+            case 2:
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                btnbg.setTypeface(nom_fue);
+                btncl.setTypeface(nom_fue);
+                btnft.setTypeface(nom_fue);
+                break;
+        }
+    }
+
+    public void volverLobby(View view) {
+        finish();
+    }
 }

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <Button
+    <ImageButton
         android:id="@+id/button2"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -13,13 +13,15 @@
         android:layout_marginTop="286dp"
         android:layout_marginEnd="263dp"
         android:layout_marginBottom="379dp"
-        android:background="@android:color/black"
+        android:background="@android:color/transparent"
+        android:onClick="setColor1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/color1"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/button3"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -27,13 +29,15 @@
         android:layout_marginTop="286dp"
         android:layout_marginEnd="38dp"
         android:layout_marginBottom="379dp"
-        android:background="#D2691E"
+        android:background="@android:color/transparent"
+        android:onClick="setColor2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/color2"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/button4"
         style="@android:style/Widget.Material.Button.Borderless.Colored"
         android:layout_width="70dp"
@@ -42,13 +46,15 @@
         android:layout_marginTop="286dp"
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="379dp"
-        android:background="#0000FF"
+        android:background="@android:color/transparent"
+        android:onClick="setColor3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/color3"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/button5"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -56,13 +62,15 @@
         android:layout_marginTop="145dp"
         android:layout_marginEnd="263dp"
         android:layout_marginBottom="158dp"
-        android:background="#DC143C"
+        android:background="@android:color/transparent"
+        android:onClick="setColor4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:srcCompat="@drawable/color4"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/button6"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -70,13 +78,15 @@
         android:layout_marginTop="145dp"
         android:layout_marginEnd="38dp"
         android:layout_marginBottom="158dp"
-        android:background="#8B008B"
+        android:background="@android:color/transparent"
+        android:onClick="setColor5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button7"
         app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:srcCompat="@drawable/color5"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/button7"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -84,11 +94,13 @@
         android:layout_marginTop="145dp"
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="158dp"
-        android:background="#008000"
+        android:background="@android:color/transparent"
+        android:onClick="setColor6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:srcCompat="@drawable/color6"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

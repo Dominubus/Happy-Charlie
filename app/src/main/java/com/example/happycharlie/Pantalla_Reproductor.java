@@ -1,8 +1,8 @@
 package com.example.happycharlie;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
@@ -78,7 +80,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
                 break;
             case 9:
                 id = getResources().getIdentifier("cancion10", "drawable", getPackageName());
-                tv.setText("Walking on Sunshine – Katrina & The Waves");
+                tv.setText("Walking on Sunshine–Katrina & The Waves");
                 break;
         }
         iv.setImageResource(id);
@@ -142,7 +144,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
                 break;
             case 9:
                 iv.setImageResource(R.drawable.cancion10);
-                tv.setText("Walking on Sunshine – Katrina & The Waves");
+                tv.setText("Walking on Sunshine–Katrina & The Waves");
                 break;
         }
         return 0;
@@ -152,11 +154,11 @@ public class Pantalla_Reproductor extends AppCompatActivity {
     public void PlayPause(View view){
         if(vectormp[posicion].isPlaying()){
             vectormp[posicion].pause();
-            play_pause.setBackgroundResource(R.drawable.btn_play_1);
+            play_pause.setBackgroundResource(R.drawable.round_play_arrow_white_48dp);
         } else {
             vectormp[posicion].start();
             int aux1 = AsignarImagNomb();
-            play_pause.setBackgroundResource(R.drawable.btn_pause_1);
+            play_pause.setBackgroundResource(R.drawable.round_pause_white_48dp);
         }
     }
 
@@ -166,7 +168,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
             vectormp[posicion].stop();
             int aux1 = AsignarCanciones();
             posicion = 0;
-            play_pause.setBackgroundResource(R.drawable.btn_play_1);
+            play_pause.setBackgroundResource(R.drawable.round_play_arrow_white_48dp);
             iv.setImageResource(R.drawable.portada1);
         }
     }
@@ -253,6 +255,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         vectormp[posicion].release();
         Intent atras = new Intent(this, musica.class);
         startActivity(atras);
+
     }
 
     @Override
@@ -261,5 +264,23 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         vectormp[posicion].release();
         Intent atras = new Intent(this, musica.class);
         startActivity(atras);
+        finish();
+    }
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
+        int key = sp.getInt("keyf", 1);
+        tv = (TextView)findViewById(R.id.nomb_cancion);
+
+        switch(key) {
+            case 1:
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                tv.setTypeface(nom_fuen);
+                break;
+            case 2:
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                tv.setTypeface(nom_fue);
+                break;
+        }
     }
 }
