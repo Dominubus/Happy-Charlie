@@ -2,29 +2,22 @@ package com.example.happycharlie;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.icu.text.SimpleDateFormat;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Date;
 
-import static com.example.happycharlie.R.id.boton_Aquehoradespertar;
-import static com.example.happycharlie.R.id.boton_Aquehoradormir;
-import static com.example.happycharlie.R.id.boton_dormirNow;
 
 public class calculadora extends AppCompatActivity {
 
-        TextView hora;
-        Button b1;
-        Button b2;
-        Button b3;
+    TextView hora;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -34,11 +27,7 @@ public class calculadora extends AppCompatActivity {
         //obtener hora
         hora = findViewById(R.id.text_hora);
         @SuppressLint("SimpleDateFormat") SimpleDateFormat h = new SimpleDateFormat("hh:mm a");
-        String shora= h.format(new Date());
-        hora.setText(shora);
-        b1 = findViewById(boton_dormirNow);
-        b2 = findViewById(boton_Aquehoradormir);
-        b3 = findViewById(boton_Aquehoradespertar);
+        hora.setText(h.format(new Date()));
     }
 
     public void irLobbyC(View view) {
@@ -46,47 +35,24 @@ public class calculadora extends AppCompatActivity {
         startActivity(irLobbyC);
     }
 
-    public void irSiguientePantalla1(View v) {
-        Toast.makeText(this, "Cuando se cumplen los ciclos",Toast.LENGTH_LONG).show();
-        Intent sig= new Intent(this,CalculadoraResultados.class);
-        sig.putExtra("dato","0");
-        startActivity(sig);
-    }
-    public void irSiguientePantalla2(View v) {
-        Toast.makeText(this, "Cuando comienzan los ciclos",Toast.LENGTH_LONG).show();
-        Intent sig= new Intent(this,PonerHora.class);
-        sig.putExtra("dato","1");
-        startActivity(sig);
-
-    }
-    public void irSiguientePantalla3(View v) {
-        Toast.makeText(this, "Cuando comienzan los ciclos",Toast.LENGTH_LONG).show();
-        Intent sig= new Intent(this,PonerHora.class);
-        sig.putExtra("dato","2");
+    public void irAdormirAhora(View v) {
+        Toast.makeText(this, "Si duermo ahora, voy a despertar a la siguiente hora",Toast.LENGTH_LONG).show();
+        Intent sig= new Intent(this, CalculadoraResultados1.class);
+        sig.putExtra("dato1","1");
         startActivity(sig);
     }
 
-    protected void onResume() {
-        super.onResume();
-        SharedPreferences sp = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
-        int key = sp.getInt("keyf", 1);
-        b1 = findViewById(boton_dormirNow);
-        b2 = findViewById(boton_Aquehoradormir);
-        b3 = findViewById(boton_Aquehoradespertar);
+    public void irAdormir(View v) {
+        Toast.makeText(this, "Para despertar a esa hora, debo dormir en este momento",Toast.LENGTH_LONG).show();
+        Intent sig= new Intent(this, PonerHora1.class);
+        sig.putExtra("dato2","2");
+        startActivity(sig);
+    }
 
-        switch(key) {
-            case 1:
-                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
-                b1.setTypeface(nom_fuen);
-                b2.setTypeface(nom_fuen);
-                b3.setTypeface(nom_fuen);
-                break;
-            case 2:
-                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
-                b1.setTypeface(nom_fue);
-                b2.setTypeface(nom_fue);
-                b3.setTypeface(nom_fue);
-                break;
-        }
+    public void irADespertar(View v) {
+        Toast.makeText(this, "Si me acuestó a esta hora, ¿Cuándo despertaré? ",Toast.LENGTH_LONG).show();
+        Intent sig= new Intent(this,PonerHora2.class);
+        sig.putExtra("dato3","3");
+        startActivity(sig);
     }
 }
