@@ -62,11 +62,11 @@ public class lobby extends AppCompatActivity {
                 layout.setBackgroundResource(R.drawable.bghuellitas2);
                 break;
             case 2:
-                layout.setBackgroundResource(R.drawable.bg2);
+                layout.setBackgroundResource(R.drawable.bghuellitas3);
                 break;
 
             case 3:
-                layout.setBackgroundResource(R.drawable.bg3);
+                layout.setBackgroundResource(R.drawable.bgabstracto);
                 break;
             default:
                 layout.setBackgroundResource(R.drawable.bghuellitas2);
@@ -112,7 +112,7 @@ public class lobby extends AppCompatActivity {
         tv17 = findViewById(R.id.textView17);
         switch(key1) {
             case 1:
-                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_b.ttf");
 
                 tv2.setTypeface(nom_fuen);
                 tv12.setTypeface(nom_fuen);
