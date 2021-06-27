@@ -10,20 +10,26 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Calendar;
+
 import static android.app.AlertDialog.THEME_HOLO_LIGHT;
 
 
 public class PonerHora1 extends AppCompatActivity {
 
     private int  hour, minute;
+    private String cal;
     TextView  tv_time;
-    Button time;
+    Button  time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reloj1);
+
+        tv_time = findViewById(R.id.tv_time);
+        time = findViewById(R.id.time);
 
         tv_time = findViewById(R.id.tv_time);
         time = findViewById(R.id.time);
@@ -36,28 +42,28 @@ public class PonerHora1 extends AppCompatActivity {
                 hour = c.get(Calendar.HOUR_OF_DAY);
                 minute = c.get(Calendar.MINUTE);
 
-                TimePickerDialog timePickerDialog = new TimePickerDialog(PonerHora1.this, THEME_HOLO_LIGHT,  new TimePickerDialog.OnTimeSetListener() {
+                TimePickerDialog timePickerDialog = new TimePickerDialog(PonerHora1.this, THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener() {
                     @Override
-                    public void onTimeSet(TimePicker timePicker, int hour, int min) {
-                        tv_time.setText(hour + ":" + min);
+                    public void onTimeSet(TimePicker timePicker,  int hour, int minute) {
+                        tv_time.setText(hour+":"+ minute);
+
                     }
                 }, hour, minute, true);
 
-                timePickerDialog.setTitle("Coloca la hora para acostarte");
+                timePickerDialog.setTitle("Coloca la hora");
                 timePickerDialog.show();
-
             }
         });
 
     }
 
-    public void irAcalculadora(View view) {
 
-        Intent irCalculadora = new Intent(this, calculadora.class);
-        startActivity(irCalculadora);
+    public void irAcalculadora(View view){
+        Intent i = new Intent(this, calculadora.class);
+        startActivity(i);
         finish();
-
     }
+
 
 
     public void irResultados2(View view) {
@@ -70,5 +76,6 @@ public class PonerHora1 extends AppCompatActivity {
         }else {
             Toast.makeText(this, "Debes escoger una hora para continuar o cancelar para retroceder", Toast.LENGTH_LONG).show();
         }
+        finish();
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/averde"
+    android:background="@drawable/afondov"
     android:textAlignment="center">
 
     <ImageButton
@@ -31,14 +31,14 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pug_belly" />
+        app:srcCompat="@drawable/aaavatar3" />
 
     <TextView
         android:id="@+id/text_hora"
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:layout_marginBottom="28dp"
-        android:background="#5F9539"
+        android:background="#9CCC65"
         android:fontFamily="@font/merriweather"
         android:textAlignment="center"
         android:textColor="#000000"

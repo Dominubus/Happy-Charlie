@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@drawable/averde"
+    android:background="@drawable/afondov"
     android:orientation="vertical"
-    tools:context=".PonerHora2"
-    android:padding="20dp">
+    android:padding="20dp"
+    tools:context=".PonerHora2">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,14 +28,14 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/imageView17"
-                    android:layout_width="139dp"
-                    android:layout_height="126dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="193dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/avatar1" />
+                    app:srcCompat="@drawable/aaavatar4" />
             </FrameLayout>
 
             <FrameLayout
