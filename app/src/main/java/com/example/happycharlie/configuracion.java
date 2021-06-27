@@ -68,7 +68,7 @@ public class configuracion extends AppCompatActivity {
                 btnft.setTypeface(nom_fuen);
                 break;
             case 2:
-                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_bold.ttf");
                 btnbg.setTypeface(nom_fue);
                 btncl.setTypeface(nom_fue);
                 btnft.setTypeface(nom_fue);

@@ -123,7 +123,7 @@ public class lobby extends AppCompatActivity {
                 tv17.setTypeface(nom_fuen);
                 break;
             case 2:
-                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_bold.ttf");
 
                 tv2.setTypeface(nom_fue);
                 tv12.setTypeface(nom_fue);

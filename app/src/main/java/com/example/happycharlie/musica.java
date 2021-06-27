@@ -151,7 +151,7 @@ public class musica extends AppCompatActivity {
                 b10.setTypeface(nom_fuen);
                 break;
             case 2:
-                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_bold.ttf");
                 b1.setTypeface(nom_fue);
                 b2.setTypeface(nom_fue);
                 b3.setTypeface(nom_fue);

@@ -211,13 +211,13 @@ public class inicio extends AppCompatActivity {
         tv3 = (TextView) findViewById(R.id.textView3);
         switch (key1) {
             case 1:
-                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_regular.ttf");
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_b.ttf");
                 tv.setTypeface(nom_fuen);
                 tv0.setTypeface(nom_fuen);
                 tv3.setTypeface(nom_fuen);
                 break;
             case 2:
-                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_bold.ttf");
                 tv.setTypeface(nom_fue);
                 tv0.setTypeface(nom_fue);
                 tv3.setTypeface(nom_fue);

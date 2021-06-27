@@ -202,7 +202,7 @@ public class repMeditacion extends AppCompatActivity {
                 t11.setTypeface(nom_fuen);
                 break;
             case 2:
-                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_bold.ttf");
                 t8.setTypeface(nom_fue);
                 t11.setTypeface(nom_fue);
                 break;

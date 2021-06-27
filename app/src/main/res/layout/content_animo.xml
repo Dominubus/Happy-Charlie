@@ -16,7 +16,7 @@
         android:layout_height="250dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/globo_imagen"
-        android:src="@drawable/clod"
+        android:src="@drawable/clod2"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

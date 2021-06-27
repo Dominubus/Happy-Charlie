@@ -90,7 +90,7 @@ public class meditacion extends AppCompatActivity {
                 t7.setTypeface(nom_fuen);
                 break;
             case 2:
-                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_italic.ttf");
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_bold.ttf");
                 t5.setTypeface(nom_fue);
                 t6.setTypeface(nom_fue);
                 t7.setTypeface(nom_fue);
