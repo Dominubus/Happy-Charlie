@@ -31,9 +31,6 @@ public class PonerHora1 extends AppCompatActivity {
         tv_time = findViewById(R.id.tv_time);
         time = findViewById(R.id.time);
 
-        tv_time = findViewById(R.id.tv_time);
-        time = findViewById(R.id.time);
-
         time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,10 +39,15 @@ public class PonerHora1 extends AppCompatActivity {
                 hour = c.get(Calendar.HOUR_OF_DAY);
                 minute = c.get(Calendar.MINUTE);
 
-                TimePickerDialog timePickerDialog = new TimePickerDialog(PonerHora1.this, THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener() {
+                TimePickerDialog timePickerDialog = new TimePickerDialog(PonerHora1
+                        .this, THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker,  int hour, int minute) {
-                        tv_time.setText(hour+":"+ minute);
+                        if(minute<10 && minute>=0) {
+                            tv_time.setText(hour+":0"+minute);
+                        }else{
+                            tv_time.setText(hour+":"+minute);
+                        }
 
                     }
                 }, hour, minute, true);
