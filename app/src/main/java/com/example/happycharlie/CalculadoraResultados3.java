@@ -29,9 +29,9 @@ public class CalculadoraResultados3 extends AppCompatActivity {
 
         public void despertar(){
 
-            Date date = new Date();
+            Date date = null;
 
-            SimpleDateFormat simpleDateFormat= new SimpleDateFormat("hh:mm aa");
+            SimpleDateFormat simpleDateFormat= new SimpleDateFormat("hh:mm");
             try {
                 date = simpleDateFormat.parse(mensaje3);
             } catch (ParseException e) {

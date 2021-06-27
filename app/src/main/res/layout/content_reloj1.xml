@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@drawable/averde"
+    android:background="@drawable/afondov"
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".PonerHora1">
@@ -27,15 +27,15 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <FrameLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/imageView17"
-                    android:layout_width="139dp"
-                    android:layout_height="126dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="193dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/avatar1" />
+                    app:srcCompat="@drawable/aaavatar4" />
             </FrameLayout>
 
             <FrameLayout

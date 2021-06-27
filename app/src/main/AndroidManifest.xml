@@ -68,6 +68,10 @@
             android:label="PonerHora1"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PonerHora2"
+            android:label="PonerHora1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".meditacion"
             android:label="@string/title_activity_meditacion"
@@ -104,7 +108,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PonerHora2" />
 
         <service android:name=".AudioService" />
 

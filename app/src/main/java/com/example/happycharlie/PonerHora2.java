@@ -36,11 +36,16 @@ public class PonerHora2 extends AppCompatActivity {
                     hour = c.get(Calendar.HOUR_OF_DAY);
                     minute = c.get(Calendar.MINUTE);
 
-                    TimePickerDialog timePickerDialog = new TimePickerDialog(PonerHora2.this, THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener() {
+                    TimePickerDialog timePickerDialog = new TimePickerDialog(PonerHora2
+                            .this, THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener() {
                         @Override
-                        public void onTimeSet(TimePicker timePicker, int hour, int min) {
+                        public void onTimeSet(TimePicker timePicker,  int hour, int minute) {
+                            if(minute<10 && minute>=0) {
+                                tv_time.setText(hour+":0"+ minute);
+                            }else{
+                                tv_time.setText(hour+":"+ minute);
+                            }
 
-                            tv_time.setText(hour+":"+ min);
                         }
                     }, hour, minute, true);
 
