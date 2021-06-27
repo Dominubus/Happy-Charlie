@@ -255,6 +255,7 @@ public class Pantalla_Reproductor extends AppCompatActivity {
         vectormp[posicion].release();
         Intent atras = new Intent(this, musica.class);
         startActivity(atras);
+        finish();
 
     }
 

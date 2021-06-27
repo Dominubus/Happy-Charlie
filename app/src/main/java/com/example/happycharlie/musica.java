@@ -53,9 +53,7 @@ public class musica extends AppCompatActivity {
     }
 
     public void irLobby(View view) {
-        Intent irLobby = new Intent(this, lobby.class);
-        startActivity(irLobby);
-
+        finish();
     }
 
 

@@ -96,8 +96,6 @@ public class CalculadoraResultados2 extends AppCompatActivity {
 
 
     public void irCalculadora(View view) {
-        Intent irCalculadora = new Intent(this, calculadora.class);
-        startActivity(irCalculadora);
         finish();
     }
 

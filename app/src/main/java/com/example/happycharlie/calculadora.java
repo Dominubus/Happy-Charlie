@@ -31,8 +31,7 @@ public class calculadora extends AppCompatActivity {
     }
 
     public void irLobbyC(View view) {
-        Intent irLobbyC = new Intent(this, lobby.class);
-        startActivity(irLobbyC);
+        finish();
     }
 
     public void irAdormirAhora(View v) {
