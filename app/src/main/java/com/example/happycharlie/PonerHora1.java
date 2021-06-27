@@ -61,8 +61,6 @@ public class PonerHora1 extends AppCompatActivity {
 
 
     public void irAcalculadora(View view){
-        Intent i = new Intent(this, calculadora.class);
-        startActivity(i);
         finish();
     }
 
@@ -80,4 +78,5 @@ public class PonerHora1 extends AppCompatActivity {
         }
         finish();
     }
+
 }

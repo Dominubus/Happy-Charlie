@@ -68,8 +68,7 @@ public class PonerHora2 extends AppCompatActivity {
     }
 
     public void irAcalculadora(View view){
-        Intent i = new Intent(this, calculadora.class);
-        startActivity(i);
         finish();
     }
+
 }
