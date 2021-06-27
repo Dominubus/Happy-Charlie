@@ -84,7 +84,7 @@ public class meditacion extends AppCompatActivity {
         t7 = (TextView) findViewById(R.id.textView7);
         switch (key) {
             case 1:
-                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_regular.ttf");
                 t5.setTypeface(nom_fuen);
                 t6.setTypeface(nom_fuen);
                 t7.setTypeface(nom_fuen);

@@ -27,7 +27,7 @@
             android:onClick="volverLobby"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/round_arrow_back_black_48" />
+            app:srcCompat="@drawable/aatras" />
 
         <ImageView
             android:id="@+id/imageView6"

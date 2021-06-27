@@ -52,10 +52,10 @@ public class repMeditacion extends AppCompatActivity {
                 layout.setBackgroundResource(R.drawable.skymedbg);
                 tv =(TextView) findViewById(R.id.textView8);
                 tv.setText(R.string.guia_para_principiantes);
-                tv.setTextColor(Color.parseColor("#6C35A6"));
+                tv.setTextColor(Color.parseColor("#ffffff"));
                 tv =(TextView) findViewById(R.id.textView11);
                 tv.setText(R.string.meditacion1);
-                tv.setTextColor(Color.parseColor("#6C35A6"));
+                tv.setTextColor(Color.parseColor("#ffffff"));
                 mp = MediaPlayer.create(this, R.raw.sencilla);
 
                 break;
@@ -197,7 +197,7 @@ public class repMeditacion extends AppCompatActivity {
 
         switch(key) {
             case 1:
-                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_regular.ttf");
                 t8.setTypeface(nom_fuen);
                 t11.setTypeface(nom_fuen);
                 break;

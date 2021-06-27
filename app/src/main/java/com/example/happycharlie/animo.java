@@ -90,7 +90,7 @@ public class animo extends AppCompatActivity {
         tv = (TextView)findViewById(R.id.textView4);
         switch(key1) {
             case 1:
-                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_regular.ttf");
                 tv.setTypeface(nom_fuen);
                 break;
             case 2:

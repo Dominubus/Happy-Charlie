@@ -167,11 +167,11 @@ public class inicio extends AppCompatActivity {
                 layout.setBackgroundResource(R.drawable.bghuellitas);
                 break;
             case 2:
-                layout.setBackgroundResource(R.drawable.bg2);
+                layout.setBackgroundResource(R.drawable.bghuellitas3);
                 break;
 
             case 3:
-                layout.setBackgroundResource(R.drawable.bg3);
+                layout.setBackgroundResource(R.drawable.bgabstracto);
                 break;
             default:
                 layout.setBackgroundResource(R.drawable.bghuellitas);
@@ -211,7 +211,7 @@ public class inicio extends AppCompatActivity {
         tv3 = (TextView) findViewById(R.id.textView3);
         switch (key1) {
             case 1:
-                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_regular.ttf");
                 tv.setTypeface(nom_fuen);
                 tv0.setTypeface(nom_fuen);
                 tv3.setTypeface(nom_fuen);

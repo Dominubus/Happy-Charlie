@@ -138,7 +138,7 @@ public class musica extends AppCompatActivity {
 
         switch(key) {
             case 1:
-                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_italic.ttf");
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_regular.ttf");
                 b1.setTypeface(nom_fuen);
                 b2.setTypeface(nom_fuen);
                 b3.setTypeface(nom_fuen);
