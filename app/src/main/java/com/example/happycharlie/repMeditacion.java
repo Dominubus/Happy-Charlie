@@ -32,6 +32,7 @@ public class repMeditacion extends AppCompatActivity {
     private TextView text_temp;
     private TextView t8;
     private TextView t11;
+    private int i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,7 @@ public class repMeditacion extends AppCompatActivity {
         rm = getIntent();
         TextView tv;
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        int i = rm.getIntExtra("bg", 1);
+        i = rm.getIntExtra("bg", 1);
         reproduciendo = false;
 
         t8 = (TextView)findViewById(R.id.textView8);
@@ -57,7 +58,6 @@ public class repMeditacion extends AppCompatActivity {
                 tv.setText(R.string.meditacion1);
                 tv.setTextColor(Color.parseColor("#ffffff"));
                 mp = MediaPlayer.create(this, R.raw.sencilla);
-
                 break;
             case 2:
                 layout.setBackgroundResource(R.drawable.beachmedbg);
@@ -74,12 +74,21 @@ public class repMeditacion extends AppCompatActivity {
                 layout.setBackgroundResource(R.drawable.salarmedbg);
                 tv =(TextView) findViewById(R.id.textView8);
                 tv.setText(R.string.guia_paz);
-                tv.setTextColor(Color.parseColor("#9379AD"));
+                tv.setTextColor(Color.parseColor("#000000"));
                 tv =(TextView) findViewById(R.id.textView11);
                 tv.setText(R.string.meditacion3);
-                tv.setTextColor(Color.parseColor("#9379AD"));
+                tv.setTextColor(Color.parseColor("#000000"));
+                ImageButton boton = (ImageButton) findViewById(R.id.imageButton);
+                boton.setImageResource(R.drawable.atras);
+                boton = (ImageButton) findViewById(R.id.btn_play_pause);
+                boton.setImageResource(R.drawable.round_play_arrow_black_48);
+                boton = (ImageButton) findViewById(R.id.btn_retroceder);
+                boton.setImageResource(R.drawable.round_restore_black_48dp);
+                boton = (ImageButton) findViewById(R.id.btn_adelantar);
+                boton.setImageResource(R.drawable.round_update_black_48dp);
+                tv=findViewById(R.id.texView_temp);
+                tv.setTextColor(Color.parseColor("#000000"));
                 mp = MediaPlayer.create(this, R.raw.paz_interior);
-
                 break;
             default:
                 break;
@@ -114,7 +123,11 @@ public class repMeditacion extends AppCompatActivity {
                 int currPos=mp.getCurrentPosition();
                 barra.setProgress(currPos);
                 ImageButton btn = (ImageButton)findViewById(R.id.btn_play_pause);
-                btn.setImageResource(R.drawable.round_play_arrow_black_48);
+                if(i==3){
+                    btn.setImageResource(R.drawable.round_play_arrow_black_48);
+                }else {
+                    btn.setImageResource(R.drawable.round_play_arrow_white_48dp);
+                }
                 reproduciendo = false;
             }
         });
@@ -147,7 +160,11 @@ public class repMeditacion extends AppCompatActivity {
             ImageButton btn = (ImageButton)findViewById(R.id.btn_play_pause);
             reproduciendo = false;
             mp.pause();
+        if(i==3){
             btn.setImageResource(R.drawable.round_play_arrow_black_48);
+        }else {
+            btn.setImageResource(R.drawable.round_play_arrow_white_48dp);
+        }
         super.onPause();
     }
 
@@ -174,12 +191,20 @@ public class repMeditacion extends AppCompatActivity {
         if(reproduciendo){
             reproduciendo = false;
             mp.pause();
-            btn.setImageResource(R.drawable.round_play_arrow_black_48);
+            if(i==3){
+                btn.setImageResource(R.drawable.round_play_arrow_black_48);
+            }else {
+                btn.setImageResource(R.drawable.round_play_arrow_white_48dp);
+            }
         }else{
             reproduciendo = true;
             mp.start();
             updateSB();
-            btn.setImageResource(R.drawable.round_pause_black_48);
+            if(i==3){
+                btn.setImageResource(R.drawable.round_pause_black_48);
+            }else {
+                btn.setImageResource(R.drawable.round_pause_white_48dp);
+            }
         }
     }
     public void volverLobby(View view) {
