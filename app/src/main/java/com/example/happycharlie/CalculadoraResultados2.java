@@ -1,6 +1,5 @@
 package com.example.happycharlie;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -90,7 +89,7 @@ public class CalculadoraResultados2 extends AppCompatActivity {
         t5.getTime();
         ciclo5 = (TextView)findViewById(R.id.text5ciclo2);
         SimpleDateFormat h5 = new SimpleDateFormat("hh:mm a");
-        ciclo5.setText("Debes dormir a las "+ h5.format(t5.getTime())+ " " +"para terminar el 5° ciclo.");
+        ciclo5.setText("Debes dormir a las "+ h5.format(t5.getTime())+ " " +"para terminar el 5° ciclo y tendrás un sueño reparador.");
 
         //determina 6° ciclo de sueño
         Calendar t6 = Calendar.getInstance();
@@ -99,7 +98,7 @@ public class CalculadoraResultados2 extends AppCompatActivity {
         t6.getTime();
         ciclo6 = (TextView)findViewById(R.id.text6ciclo2);
         SimpleDateFormat h6 = new SimpleDateFormat("hh:mm a");
-        ciclo6.setText("Debes dormir a las "+ h6.format(t6.getTime())+ " " +"para terminar el 6° ciclo.");
+        ciclo6.setText("Debes dormir a las "+ h6.format(t6.getTime())+ " " +"para terminar el 6° ciclo y tendrás un sueño reparador.");
 
     }
 

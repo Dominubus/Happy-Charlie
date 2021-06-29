@@ -8,7 +8,6 @@
     android:layout_gravity="center"
     android:background="@drawable/afondov"
     android:orientation="vertical"
-    android:padding="20dp"
     tools:context=".PonerHora2">
 
 
@@ -16,7 +15,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <FrameLayout
+            android:id="@+id/cuadroHora4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/boton_cancelar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="irAcalculadora"
+                android:src="@drawable/round_arrow_back_black_48" />
+
+        </FrameLayout>
+
         <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -24,7 +43,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/cuadroHora4">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -35,6 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="193dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="48dp  "
                     app:srcCompat="@drawable/aaavatar4" />
             </FrameLayout>
 
@@ -54,7 +74,7 @@
                         android:background="#9FA8DA"
                         android:fontFamily="@font/merriweather"
                         android:padding="10dp"
-                        android:text="Elige la hora aquí"
+                        android:text="Elige la hora para ir a dormir aquí"
                         android:textColor="#000000"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -118,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/cuadroHora4"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
@@ -134,32 +154,12 @@
                             android:textColor="#000000" />
                     </FrameLayout>
 
-                    <FrameLayout
-                        android:id="@+id/cuadroHora4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/cuadroHora3"
-                        app:layout_constraintTop_toTopOf="parent">
-
-
-                        <Button
-                            android:id="@+id/boton_cancelar"
-                            android:layout_width="140dp"
-                            android:layout_height="wrap_content"
-                            android:background="#F9A825"
-                            android:fontFamily="@font/merriweather"
-                            android:onClick="irAcalculadora"
-                            android:text="Cancelar"
-                            android:textColor="#000000"
-                            android:textSize="19dp" />
-                    </FrameLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </LinearLayout>
 
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

@@ -1,6 +1,5 @@
 package com.example.happycharlie;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -54,7 +53,7 @@ public class CalculadoraResultados3 extends AppCompatActivity {
             t1.getTime();
             ciclo1 = (TextView)findViewById(R.id.text1ciclo3);
             SimpleDateFormat h1 = new SimpleDateFormat("hh:mm aa");
-            ciclo1.setText("El 1° ciclo termina a las "+ h1.format(t1.getTime()));
+            ciclo1.setText("El 1° ciclo terminara a las "+ h1.format(t1.getTime()));
 
             //determina 2° ciclo de sueño
             Calendar t2 = Calendar.getInstance();
@@ -63,7 +62,7 @@ public class CalculadoraResultados3 extends AppCompatActivity {
             t2.getTime();
             ciclo2 = (TextView)findViewById(R.id.text2ciclo3);
             SimpleDateFormat h2 = new SimpleDateFormat("hh:mm aa");
-            ciclo2.setText("El 2° ciclo termina a las "+ h2.format(t2.getTime()));
+            ciclo2.setText("El 2° ciclo terminara a las "+ h2.format(t2.getTime()));
 
             //determina 3° ciclo de sueño
             Calendar t3 = Calendar.getInstance();
@@ -72,7 +71,7 @@ public class CalculadoraResultados3 extends AppCompatActivity {
             t3.getTime();
             ciclo3 = (TextView)findViewById(R.id.text3ciclo3);
             SimpleDateFormat h3 = new SimpleDateFormat("hh:mm aa");
-            ciclo3.setText("El 3° ciclo termina a las "+ h3.format(t3.getTime()));
+            ciclo3.setText("El 3° ciclo terminara a las "+ h3.format(t3.getTime()));
 
             //determina 4° ciclo de sueño
             Calendar t4 = Calendar.getInstance();
@@ -81,7 +80,7 @@ public class CalculadoraResultados3 extends AppCompatActivity {
             t4.getTime();
             ciclo4 = (TextView)findViewById(R.id.text4ciclo3);
             SimpleDateFormat h4 = new SimpleDateFormat("hh:mm aa");
-            ciclo4.setText("El 4° ciclo termina a las "+ h4.format(t4.getTime()));
+            ciclo4.setText("El 4° ciclo terminara a las "+ h4.format(t4.getTime()));
 
             //determina 5° ciclo de sueño
             Calendar t5 = Calendar.getInstance();
@@ -90,7 +89,7 @@ public class CalculadoraResultados3 extends AppCompatActivity {
             t5.getTime();
             ciclo5 = (TextView)findViewById(R.id.text5ciclo3);
             SimpleDateFormat h5 = new SimpleDateFormat("hh:mm aa");
-            ciclo5.setText("El 5° ciclo termina a las "+ h5.format(t5.getTime()));
+            ciclo5.setText("El 5° ciclo terminara a las "+ h5.format(t5.getTime())+" y conseguiras un sueño reparador. ");
 
             //determina 6° ciclo de sueño
             Calendar t6 = Calendar.getInstance();
@@ -99,7 +98,7 @@ public class CalculadoraResultados3 extends AppCompatActivity {
             t6.getTime();
             ciclo6 = (TextView)findViewById(R.id.text6ciclo3);
             SimpleDateFormat h6 = new SimpleDateFormat("hh:mm aa");
-            ciclo6.setText("El 6° ciclo termina a las "+ h6.format(t6.getTime()));
+            ciclo6.setText("El 6° ciclo terminara a las "+ h6.format(t6.getTime())+" y conseguiras un sueño reparador. ");
 
         }
 

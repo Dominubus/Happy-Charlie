@@ -69,7 +69,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PonerHora2"
-            android:label="PonerHora1"
+            android:label="PonerHor2"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
