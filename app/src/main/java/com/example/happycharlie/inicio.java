@@ -164,7 +164,7 @@ public class inicio extends AppCompatActivity {
         ConstraintLayout layout = findViewById(R.id.inicio);
         switch (key) {
             case 1:
-                layout.setBackgroundResource(R.drawable.bghuellitas);
+                layout.setBackgroundResource(R.drawable.bghuellitas2);
                 break;
             case 2:
                 layout.setBackgroundResource(R.drawable.bghuellitas3);
@@ -174,7 +174,7 @@ public class inicio extends AppCompatActivity {
                 layout.setBackgroundResource(R.drawable.bgabstracto);
                 break;
             default:
-                layout.setBackgroundResource(R.drawable.bghuellitas);
+                layout.setBackgroundResource(R.drawable.bghuellitas2);
                 break;
         }
         TextView mensaje = findViewById(R.id.textView2);
