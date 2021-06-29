@@ -79,8 +79,7 @@ public class repMeditacion extends AppCompatActivity {
                 tv.setText(R.string.meditacion3);
                 tv.setTextColor(Color.parseColor("#000000"));
                 ImageButton boton = (ImageButton) findViewById(R.id.imageButton);
-                boton.setImageResource(R.drawable.atras);
-
+                boton.setImageResource(R.drawable.round_arrow_back_black_48);
                 boton = (ImageButton) findViewById(R.id.btn_play_pause);
                 boton.setImageResource(R.drawable.round_play_arrow_black_48);
                 boton = (ImageButton) findViewById(R.id.btn_retroceder);
