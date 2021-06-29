@@ -1,6 +1,8 @@
 package com.example.happycharlie;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -13,13 +15,20 @@ import java.util.Date;
 
 public class CalculadoraResultados1 extends AppCompatActivity {
 
-    private TextView ciclo1,ciclo2,ciclo3,ciclo4,ciclo5,ciclo6;
+    private TextView ciclo1,ciclo2,ciclo3,ciclo4,ciclo5,ciclo6,tA;
     private String boton1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora_re1);
+        ciclo1 =(TextView)findViewById(R.id.text1ciclo);
+        ciclo2 =(TextView)findViewById(R.id.text2ciclo);
+        ciclo3 =(TextView)findViewById(R.id.text3ciclo);
+        ciclo4 =(TextView)findViewById(R.id.text4ciclo);
+        ciclo5 =(TextView)findViewById(R.id.text5ciclo);
+        ciclo6 =(TextView)findViewById(R.id.text6ciclo);
+        tA =(TextView)findViewById(R.id.TextAclaracion);
 
         boton1 ="";
         boton1 = getIntent().getStringExtra("dato1");
@@ -92,6 +101,40 @@ public class CalculadoraResultados1 extends AppCompatActivity {
         finish();
     }
 
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
+        int key = sp.getInt("keyf", 1);
+        ciclo1 =(TextView)findViewById(R.id.text1ciclo);
+        ciclo2 =(TextView)findViewById(R.id.text2ciclo);
+        ciclo3 =(TextView)findViewById(R.id.text3ciclo);
+        ciclo4 =(TextView)findViewById(R.id.text4ciclo);
+        ciclo5 =(TextView)findViewById(R.id.text5ciclo);
+        ciclo6 =(TextView)findViewById(R.id.text6ciclo);
+        tA =(TextView)findViewById(R.id.TextAclaracion);
+        switch(key) {
+            case 1:
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_regular.ttf");
+                ciclo1.setTypeface(nom_fuen);
+                ciclo2.setTypeface(nom_fuen);
+                ciclo3.setTypeface(nom_fuen);
+                ciclo4.setTypeface(nom_fuen);
+                ciclo5.setTypeface(nom_fuen);
+                ciclo6.setTypeface(nom_fuen);
+                tA.setTypeface(nom_fuen);
+                break;
+            case 2:
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_bold.ttf");
+                ciclo1.setTypeface(nom_fue);
+                ciclo2.setTypeface(nom_fue);
+                ciclo3.setTypeface(nom_fue);
+                ciclo4.setTypeface(nom_fue);
+                ciclo5.setTypeface(nom_fue);
+                ciclo6.setTypeface(nom_fue);
+                tA.setTypeface(nom_fue);
+                break;
+        }
+    }
 }
 
 

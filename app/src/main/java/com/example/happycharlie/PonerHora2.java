@@ -3,6 +3,8 @@ package com.example.happycharlie;
 
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +20,7 @@ public class PonerHora2 extends AppCompatActivity {
 
         private int  hour, minute;
         TextView  tv_time;
-        Button  time;
+        Button  time,b1,b2;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,8 @@ public class PonerHora2 extends AppCompatActivity {
 
             tv_time = findViewById(R.id.tv_time);
             time = findViewById(R.id.time);
+            b1 = findViewById(R.id.boton_calcular);
+            b2 = findViewById(R.id.boton_cancelar);
 
             time.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -71,4 +75,30 @@ public class PonerHora2 extends AppCompatActivity {
         finish();
     }
 
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
+        int key = sp.getInt("keyf", 1);
+        tv_time = findViewById(R.id.tv_time);
+        time = findViewById(R.id.time);
+        b1 = findViewById(R.id.boton_calcular);
+        b2 = findViewById(R.id.boton_cancelar);
+
+        switch(key) {
+            case 1:
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_regular.ttf");
+                time.setTypeface(nom_fuen);
+                b1.setTypeface(nom_fuen);
+                b2.setTypeface(nom_fuen);
+                tv_time.setTypeface(nom_fuen);
+                break;
+            case 2:
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_bold.ttf");
+                time.setTypeface(nom_fue);
+                b1.setTypeface(nom_fue);
+                b2.setTypeface(nom_fue);
+                tv_time.setTypeface(nom_fue);
+                break;
+        }
+    }
 }

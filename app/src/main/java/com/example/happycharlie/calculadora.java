@@ -2,10 +2,13 @@ package com.example.happycharlie;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.icu.text.SimpleDateFormat;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +21,7 @@ import java.util.Date;
 public class calculadora extends AppCompatActivity {
 
     TextView hora;
+    Button b1, b2, b3;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -25,6 +29,9 @@ public class calculadora extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora);
         //obtener hora
+        b1 = findViewById(R.id.boton_dormirNow);
+        b2 = findViewById(R.id.boton_Aquehoradormir);
+        b3 = findViewById(R.id.boton_Aquehoradespertar);
         hora = findViewById(R.id.text_hora);
         @SuppressLint("SimpleDateFormat") SimpleDateFormat h = new SimpleDateFormat("hh:mm a");
         hora.setText(h.format(new Date()));
@@ -53,5 +60,31 @@ public class calculadora extends AppCompatActivity {
         Intent sig= new Intent(this,PonerHora2.class);
         sig.putExtra("dato3","3");
         startActivity(sig);
+    }
+
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = getSharedPreferences("FUENTE_SISTEMA", MODE_PRIVATE);
+        int key = sp.getInt("keyf", 1);
+        b1 = findViewById(R.id.boton_dormirNow);
+        b2 = findViewById(R.id.boton_Aquehoradormir);
+        b3 = findViewById(R.id.boton_Aquehoradespertar);
+        hora = findViewById(R.id.text_hora);
+        switch(key) {
+            case 1:
+                Typeface nom_fuen = Typeface.createFromAsset(getAssets(), "font/merriweather_regular.ttf");
+                b1.setTypeface(nom_fuen);
+                b2.setTypeface(nom_fuen);
+                b3.setTypeface(nom_fuen);
+                hora.setTypeface(nom_fuen);
+                break;
+            case 2:
+                Typeface nom_fue = Typeface.createFromAsset(getAssets(), "font/raleway_bold.ttf");
+                b1.setTypeface(nom_fue);
+                b2.setTypeface(nom_fue);
+                b3.setTypeface(nom_fue);
+                hora.setTypeface(nom_fue);
+                break;
+        }
     }
 }
